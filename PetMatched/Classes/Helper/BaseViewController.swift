@@ -66,6 +66,12 @@ class BaseViewController: UIViewController {
         self.navigationItem.title = title
     }
     
+    // Set Navigation Bar Title Tint
+    func setNavBarTint(color: UIColor) {
+        self.navigationController?.navigationBar.tintColor = color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: color]
+    }
+    
     // Set Navigation Bar Color
     func setNavBarColor(color: UIColor) {
         self.navigationController?.view.backgroundColor = color
@@ -94,11 +100,11 @@ class BaseViewController: UIViewController {
     }
     
     // Set Back Arrow Icon
-    func setBackButton() {
+    func setBackButton(color: UIColor) {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.darkGray
+        self.navigationItem.backBarButtonItem?.tintColor = color
     }
     
     // Set Reset Icon

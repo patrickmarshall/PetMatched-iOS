@@ -7,29 +7,56 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
-class LoginVC: UIViewController {
+class LoginVC: BaseViewController {
 
+    // IB
+    @IBOutlet weak var usernameText: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordText: SkyFloatingLabelTextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setup()
     }
-    */
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    func setup() {
+        self.hideNavBar()
+        self.setBackButton(color: UIColor.white)
+        self.setNavBarTint(color: UIColor.white)
+        self.setNavBarColor(color: UIColor.darkBlue)
+        self.loginButton.asRoundedBorderedButton(radius: 6.0, width: 1.0, color: "FFFFFF")
+    }
+}
 
+extension LoginVC {
+    // Login Button Pressed
+    @IBAction func loginAction(_ sender: Any) {
+        
+    }
+    
+    // Register Button Pressed
+    @IBAction func registerAction(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // Forgot Password Button Pressed
+    @IBAction func forgotAction(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ForgotVC") as! ForgotVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

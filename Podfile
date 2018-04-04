@@ -9,6 +9,8 @@ target 'PetMatched' do
   pod 'HexColors', '~> 6.0'
   pod 'SwiftMessages', '~> 4.1'
   pod 'SDWebImage', '~> 4.3'
+  pod 'SkyFloatingLabelTextField', '~> 3.4'
+  pod 'PopupDialog', '~> 0.7'
   pod 'IQKeyboardManagerSwift'
 
   target 'PetMatchedTests' do

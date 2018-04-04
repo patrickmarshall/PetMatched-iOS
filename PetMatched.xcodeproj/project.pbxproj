@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7271C692074E02900D16D43 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C682074E02900D16D43 /* ForgotVC.swift */; };
+		A7271C6D2074E4D000D16D43 /* ResetPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C6B2074E4D000D16D43 /* ResetPopupVC.swift */; };
+		A7271C6E2074E4D000D16D43 /* ResetPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7271C6C2074E4D000D16D43 /* ResetPopupVC.xib */; };
+		A7271C712074E81F00D16D43 /* ForgotDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C702074E81F00D16D43 /* ForgotDelegate.swift */; };
+		A746144C2074C311007543DC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746144B2074C311007543DC /* RegisterVC.swift */; };
 		A7633CC62074901B00AB48BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7633CC52074901B00AB48BA /* AppDelegate.swift */; };
 		A7633CDB2074901C00AB48BA /* PetMatchedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7633CDA2074901C00AB48BA /* PetMatchedTests.swift */; };
 		A7633CE62074901C00AB48BA /* PetMatchedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7633CE52074901C00AB48BA /* PetMatchedUITests.swift */; };
@@ -50,6 +55,11 @@
 		60401B90E068BA64C9193C51 /* Pods-PetMatchedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchedUITests/Pods-PetMatchedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C4E45031E73EF8C4C9A3594 /* Pods-PetMatchedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchedTests/Pods-PetMatchedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84E3884AAFAF81972842E926 /* Pods_PetMatchedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7271C682074E02900D16D43 /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
+		A7271C6B2074E4D000D16D43 /* ResetPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPopupVC.swift; sourceTree = "<group>"; };
+		A7271C6C2074E4D000D16D43 /* ResetPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPopupVC.xib; sourceTree = "<group>"; };
+		A7271C702074E81F00D16D43 /* ForgotDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotDelegate.swift; sourceTree = "<group>"; };
+		A746144B2074C311007543DC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A7633CC22074901B00AB48BA /* PetMatched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7633CC52074901B00AB48BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7633CD12074901B00AB48BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +124,22 @@
 				60401B90E068BA64C9193C51 /* Pods-PetMatchedUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7271C6A2074E4A900D16D43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7271C6B2074E4D000D16D43 /* ResetPopupVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7271C6F2074E4DB00D16D43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7271C6C2074E4D000D16D43 /* ResetPopupVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A7633CB92074901B00AB48BA = {
@@ -188,6 +214,7 @@
 		A78957AD207495DC002DAFBC /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				A7271C702074E81F00D16D43 /* ForgotDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -234,6 +261,7 @@
 		A78957B8207498C2002DAFBC /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A7271C6F2074E4DB00D16D43 /* View */,
 				A78957B6207498B4002DAFBC /* Login.storyboard */,
 			);
 			path = Login;
@@ -258,7 +286,10 @@
 		A78957BB2074994B002DAFBC /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A7271C6A2074E4A900D16D43 /* View */,
 				A78957BC20749965002DAFBC /* LoginVC.swift */,
+				A746144B2074C311007543DC /* RegisterVC.swift */,
+				A7271C682074E02900D16D43 /* ForgotVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -400,6 +431,7 @@
 			files = (
 				A78957B1207495DC002DAFBC /* Assets.xcassets in Resources */,
 				A78957CA207499E9002DAFBC /* LoadingView.xib in Resources */,
+				A7271C6E2074E4D000D16D43 /* ResetPopupVC.xib in Resources */,
 				A78957B5207498A6002DAFBC /* LaunchScreen.storyboard in Resources */,
 				A78957B7207498B4002DAFBC /* Login.storyboard in Resources */,
 			);
@@ -544,18 +576,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PetMatched/Pods-PetMatched-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -589,9 +627,13 @@
 				A78957BD20749965002DAFBC /* LoginVC.swift in Sources */,
 				A7633CC62074901B00AB48BA /* AppDelegate.swift in Sources */,
 				A78957C8207499E9002DAFBC /* Base.swift in Sources */,
+				A7271C712074E81F00D16D43 /* ForgotDelegate.swift in Sources */,
 				A78957C1207499E1002DAFBC /* Network.swift in Sources */,
 				A78957BF2074997A002DAFBC /* SplashVC.swift in Sources */,
+				A7271C692074E02900D16D43 /* ForgotVC.swift in Sources */,
 				A78957CB207499E9002DAFBC /* LoadingView.swift in Sources */,
+				A746144C2074C311007543DC /* RegisterVC.swift in Sources */,
+				A7271C6D2074E4D000D16D43 /* ResetPopupVC.swift in Sources */,
 				A78957C9207499E9002DAFBC /* BaseViewController.swift in Sources */,
 				A78957CC207499E9002DAFBC /* Helper.swift in Sources */,
 			);
