@@ -1,0 +1,6 @@
+framework module Pods_PetMatchedUITests {
+  umbrella header "Pods-PetMatchedUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

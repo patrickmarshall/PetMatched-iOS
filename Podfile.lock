@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.7.0)
+  - HexColors (6.0.0)
+  - IQKeyboardManagerSwift (5.0.8)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SwiftMessages (4.1.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - HexColors (~> 6.0)
+  - IQKeyboardManagerSwift
+  - SDWebImage (~> 4.3)
+  - SwiftMessages (~> 4.1)
+  - SwiftyJSON (~> 4.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: e7295797b2bd5fd56a80c81f829e62d5044df167
+
+COCOAPODS: 1.3.1
