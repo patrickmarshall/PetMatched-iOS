@@ -115,9 +115,7 @@ extension HomeVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let card = Bundle.main.loadNibNamed("CardView", owner: nil, options: nil)?.first as! CardView
-        card.layer.cornerRadius = 6.0
-        card.layer.masksToBounds = true
-        card.viewParent.layer.cornerRadius = 6.0
+        card.setup()
         return card
     }
 }

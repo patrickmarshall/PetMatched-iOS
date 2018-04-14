@@ -14,4 +14,10 @@ class CardView: UIView {
     @IBOutlet weak var nameAgeLabel: UILabel!
     @IBOutlet weak var variantGenderBreedLabel: UILabel!
     @IBOutlet weak var cityStateLabel: UILabel!
+    
+    func setup() {
+        self.layer.cornerRadius = 6.0
+        self.viewParent.layer.cornerRadius = 6.0
+        self.layer.masksToBounds = true
+    }
 }
