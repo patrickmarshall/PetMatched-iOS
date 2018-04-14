@@ -43,7 +43,7 @@ extension ForgotVC {
     }
 }
 
-extension ForgotVC: ForgotDelegate {
+extension ForgotVC: LoginDelegate {
     func backToSignin() {
         self.navigationController?.popToRootViewController(animated: true)
         self.dismiss(animated: true, completion: nil)

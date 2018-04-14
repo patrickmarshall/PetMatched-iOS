@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aKr-Fc-tAl">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="aKr-Fc-tAl" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jVE-fQ-GV1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,24 +31,24 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" id="g7E-uM-GWE" customClass="LoginVC" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mg2-TT-r4V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rl-Il-STu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-ub-rSx">
-                                        <rect key="frame" x="137" y="75" width="100" height="100"/>
+                                        <rect key="frame" x="156.66666666666666" y="75" width="99.999999999999972" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="rYi-ZI-XfY"/>
                                             <constraint firstAttribute="width" constant="100" id="we4-RM-wuP"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ia-1w-jAT" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="245" width="311" height="37"/>
+                                        <rect key="frame" x="32" y="245" width="350" height="37"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +62,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR USERNAME"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="USERNAME"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -79,10 +79,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOB-LH-3fC" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="298" width="311" height="36.5"/>
+                                        <rect key="frame" x="32" y="298" width="350" height="36.666666666666686"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,7 +96,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR PASSWORD"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="PASSWORD"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -113,9 +113,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anp-ZJ-mpQ">
-                                        <rect key="frame" x="32" y="366.5" width="311" height="35"/>
+                                        <rect key="frame" x="32" y="366.66666666666669" width="350" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="DBg-FI-a6A"/>
+                                            <constraint firstAttribute="height" constant="42" id="DBg-FI-a6A"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <state key="normal" title="LOGIN">
@@ -126,7 +126,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8je-qq-6K0">
-                                        <rect key="frame" x="137" y="425.5" width="101" height="12"/>
+                                        <rect key="frame" x="156.66666666666666" y="432.66666666666669" width="100.99999999999997" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="MaX-WS-L8C"/>
                                         </constraints>
@@ -136,7 +136,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S93-Xu-zhK">
-                                        <rect key="frame" x="107.5" y="407" width="160" height="50"/>
+                                        <rect key="frame" x="127" y="414" width="160" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="5dg-58-aVf"/>
                                             <constraint firstAttribute="height" constant="50" id="mVR-kB-uz9"/>
@@ -146,17 +146,17 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIB-1e-Vc2">
-                                        <rect key="frame" x="137" y="436.5" width="101" height="1"/>
+                                        <rect key="frame" x="156.66666666666666" y="443.66666666666669" width="100.99999999999997" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="rmV-te-XLS"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iX-fh-JRK">
-                                        <rect key="frame" x="0.0" y="563" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="632" width="414" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jg-sI-igO">
-                                                <rect key="frame" x="32" y="13" width="311" height="14"/>
+                                                <rect key="frame" x="32" y="13" width="350" height="14"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="New to PetMatched? ">
                                                         <attributes>
@@ -177,7 +177,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do7-kl-nUA">
-                                                <rect key="frame" x="210" y="0.0" width="125" height="40"/>
+                                                <rect key="frame" x="249" y="0.0" width="125" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="125" id="abt-cM-o7e"/>
                                                 </constraints>
@@ -251,55 +251,21 @@
             <objects>
                 <viewController storyboardIdentifier="RegisterVC" id="UH9-u2-1Wd" customClass="RegisterVC" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WZV-YS-Kbk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOo-6v-VP4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vJW-0x-ZOB">
-                                        <rect key="frame" x="150" y="20" width="75" height="75"/>
+                                        <rect key="frame" x="169.66666666666666" y="32" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="BgO-V0-7kj"/>
                                             <constraint firstAttribute="width" constant="75" id="vJR-GQ-XXV"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-ed-YM0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="120" width="311" height="37"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR FULL NAME"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Full Name"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
-                                                <real key="value" value="1.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTy-8i-CvE" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="173" width="311" height="36.5"/>
+                                        <rect key="frame" x="32" y="139" width="350" height="37"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
@@ -316,7 +282,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR USERNAME"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="USERNAME"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -331,9 +297,12 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="usernameChanged:" destination="UH9-u2-1Wd" eventType="editingChanged" id="2cx-kl-tTA"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-wE-EvT" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="225.5" width="311" height="37"/>
+                                        <rect key="frame" x="32" y="192" width="350" height="36.666666666666657"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
@@ -350,7 +319,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR PASSWORD"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="PASSWORD"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -367,7 +336,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLq-G3-cbi" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="278.5" width="311" height="37"/>
+                                        <rect key="frame" x="32" y="244.66666666666663" width="350" height="37"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
@@ -401,7 +370,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sr-SW-9uw" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="331.5" width="311" height="36.5"/>
+                                        <rect key="frame" x="32" y="297.66666666666669" width="350" height="36.666666666666686"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
@@ -418,7 +387,7 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="YOUR EMAIL"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="EMAIL"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                                 <real key="value" value="1"/>
@@ -435,9 +404,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B06-Vn-juU">
-                                        <rect key="frame" x="32" y="400" width="311" height="35"/>
+                                        <rect key="frame" x="32" y="366.33333333333331" width="350" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="s26-vR-FhT"/>
+                                            <constraint firstAttribute="height" constant="42" id="s26-vR-FhT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <state key="normal" title="SIGN UP">
@@ -449,10 +418,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-F2-hed">
-                                        <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="696" width="414" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVh-mX-7jX">
-                                                <rect key="frame" x="32" y="13.5" width="311" height="14"/>
+                                                <rect key="frame" x="32" y="13.666666666666629" width="350" height="14"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Already has an account? ">
                                                         <attributes>
@@ -480,7 +449,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlh-GV-VYl">
-                                                <rect key="frame" x="210" y="0.0" width="125" height="40"/>
+                                                <rect key="frame" x="249" y="0.0" width="125" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="125" id="fcn-Zy-3cr"/>
                                                 </constraints>
@@ -504,29 +473,26 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.20207223296165466" green="0.80077570676803589" blue="0.9993402361869812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CTy-8i-CvE" secondAttribute="trailing" constant="32" id="BY9-aS-xLE"/>
                                     <constraint firstItem="4sr-SW-9uw" firstAttribute="trailing" secondItem="JLq-G3-cbi" secondAttribute="trailing" id="Dze-An-mfn"/>
                                     <constraint firstItem="JLq-G3-cbi" firstAttribute="leading" secondItem="Keg-wE-EvT" secondAttribute="leading" id="E1C-vt-66e"/>
                                     <constraint firstItem="B06-Vn-juU" firstAttribute="trailing" secondItem="4sr-SW-9uw" secondAttribute="trailing" id="G1N-wf-HnQ"/>
                                     <constraint firstItem="Keg-wE-EvT" firstAttribute="trailing" secondItem="CTy-8i-CvE" secondAttribute="trailing" id="HEj-xv-6uA"/>
+                                    <constraint firstItem="CTy-8i-CvE" firstAttribute="top" secondItem="vJW-0x-ZOB" secondAttribute="bottom" constant="32" id="JgN-29-bB8"/>
                                     <constraint firstItem="Keg-wE-EvT" firstAttribute="leading" secondItem="CTy-8i-CvE" secondAttribute="leading" id="Jhi-Gw-0NB"/>
-                                    <constraint firstItem="aEd-ed-YM0" firstAttribute="leading" secondItem="YOo-6v-VP4" secondAttribute="leading" constant="32" id="OQw-AM-8pa"/>
-                                    <constraint firstItem="CTy-8i-CvE" firstAttribute="trailing" secondItem="aEd-ed-YM0" secondAttribute="trailing" id="Qed-cJ-Mlc"/>
                                     <constraint firstItem="JLq-G3-cbi" firstAttribute="top" secondItem="Keg-wE-EvT" secondAttribute="bottom" constant="16" id="VdC-xb-nxN"/>
-                                    <constraint firstItem="CTy-8i-CvE" firstAttribute="top" secondItem="aEd-ed-YM0" secondAttribute="bottom" constant="16" id="Y2I-7V-yIk"/>
                                     <constraint firstItem="JLq-G3-cbi" firstAttribute="trailing" secondItem="Keg-wE-EvT" secondAttribute="trailing" id="ZR9-Gh-Qm5"/>
-                                    <constraint firstItem="aEd-ed-YM0" firstAttribute="top" secondItem="vJW-0x-ZOB" secondAttribute="bottom" constant="25" id="eL0-mL-8an"/>
                                     <constraint firstItem="GJd-F2-hed" firstAttribute="leading" secondItem="YOo-6v-VP4" secondAttribute="leading" id="hoi-ii-JpC"/>
                                     <constraint firstAttribute="bottom" secondItem="GJd-F2-hed" secondAttribute="bottom" id="ibu-nr-c35"/>
-                                    <constraint firstItem="vJW-0x-ZOB" firstAttribute="top" secondItem="YOo-6v-VP4" secondAttribute="top" constant="20" id="jTl-Zb-ANY"/>
+                                    <constraint firstItem="vJW-0x-ZOB" firstAttribute="top" secondItem="YOo-6v-VP4" secondAttribute="top" constant="32" id="jTl-Zb-ANY"/>
                                     <constraint firstItem="B06-Vn-juU" firstAttribute="leading" secondItem="4sr-SW-9uw" secondAttribute="leading" id="n9o-O5-Msm"/>
                                     <constraint firstItem="4sr-SW-9uw" firstAttribute="top" secondItem="JLq-G3-cbi" secondAttribute="bottom" constant="16" id="ozC-Zz-cpz"/>
                                     <constraint firstAttribute="trailing" secondItem="GJd-F2-hed" secondAttribute="trailing" id="qcb-hI-4el"/>
                                     <constraint firstItem="vJW-0x-ZOB" firstAttribute="centerX" secondItem="YOo-6v-VP4" secondAttribute="centerX" id="rcA-ZJ-t0b"/>
                                     <constraint firstItem="Keg-wE-EvT" firstAttribute="top" secondItem="CTy-8i-CvE" secondAttribute="bottom" constant="16" id="sPk-yi-u09"/>
                                     <constraint firstItem="4sr-SW-9uw" firstAttribute="leading" secondItem="JLq-G3-cbi" secondAttribute="leading" id="tdN-Ve-zRy"/>
-                                    <constraint firstAttribute="trailing" secondItem="aEd-ed-YM0" secondAttribute="trailing" constant="32" id="uJ5-f9-xmm"/>
-                                    <constraint firstItem="CTy-8i-CvE" firstAttribute="leading" secondItem="aEd-ed-YM0" secondAttribute="leading" id="xOd-c0-AZ9"/>
                                     <constraint firstItem="B06-Vn-juU" firstAttribute="top" secondItem="4sr-SW-9uw" secondAttribute="bottom" constant="32" id="yUm-xJ-1LW"/>
+                                    <constraint firstItem="CTy-8i-CvE" firstAttribute="leading" secondItem="YOo-6v-VP4" secondAttribute="leading" constant="32" id="yfR-jP-D6g"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -543,7 +509,6 @@
                     <connections>
                         <outlet property="confirmPasswordText" destination="JLq-G3-cbi" id="AqF-EP-k2P"/>
                         <outlet property="emailText" destination="4sr-SW-9uw" id="IgU-VO-ujY"/>
-                        <outlet property="nameText" destination="aEd-ed-YM0" id="JsM-d8-wJV"/>
                         <outlet property="passwordText" destination="Keg-wE-EvT" id="JtC-lo-KHw"/>
                         <outlet property="signupButton" destination="B06-Vn-juU" id="Mbx-ES-UpY"/>
                         <outlet property="usernameText" destination="CTy-8i-CvE" id="2sC-ng-iRM"/>
@@ -558,21 +523,21 @@
             <objects>
                 <viewController storyboardIdentifier="ForgotVC" id="FGE-9q-F2R" customClass="ForgotVC" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWm-0X-Lj3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjE-l6-anu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XkW-1E-F9o">
-                                        <rect key="frame" x="150" y="20" width="75" height="75"/>
+                                        <rect key="frame" x="169.66666666666666" y="32" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="SVB-SQ-SQx"/>
                                             <constraint firstAttribute="width" constant="75" id="l8M-WC-BG1"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-hd-0Tn">
-                                        <rect key="frame" x="65.5" y="145" width="244.5" height="84"/>
+                                        <rect key="frame" x="84.999999999999986" y="157" width="244.66666666666663" height="84"/>
                                         <string key="text">Don’t worry! 
 It is often to forgot your password.
 Enter your email address down below 
@@ -583,7 +548,7 @@ We will send you your new password!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssi-Gr-mUV" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="32" y="304" width="311" height="36.5"/>
+                                        <rect key="frame" x="32" y="316" width="350" height="37"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
@@ -617,9 +582,9 @@ We will send you your new password!</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-5o-K4p">
-                                        <rect key="frame" x="32" y="372.5" width="311" height="35"/>
+                                        <rect key="frame" x="32" y="385" width="350" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="umB-gu-46b"/>
+                                            <constraint firstAttribute="height" constant="42" id="umB-gu-46b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <state key="normal" title="RESET PASSWORD">
@@ -642,7 +607,7 @@ We will send you your new password!</string>
                                     <constraint firstAttribute="trailing" secondItem="ssi-Gr-mUV" secondAttribute="trailing" constant="32" id="OAW-u3-Ifk"/>
                                     <constraint firstItem="RO6-5o-K4p" firstAttribute="leading" secondItem="ssi-Gr-mUV" secondAttribute="leading" id="YaF-nh-v6d"/>
                                     <constraint firstItem="ssi-Gr-mUV" firstAttribute="leading" secondItem="KjE-l6-anu" secondAttribute="leading" constant="32" id="mT8-Wc-gZh"/>
-                                    <constraint firstItem="XkW-1E-F9o" firstAttribute="top" secondItem="KjE-l6-anu" secondAttribute="top" constant="20" id="uVu-QN-Qzh"/>
+                                    <constraint firstItem="XkW-1E-F9o" firstAttribute="top" secondItem="KjE-l6-anu" secondAttribute="top" constant="32" id="uVu-QN-Qzh"/>
                                     <constraint firstItem="ssi-Gr-mUV" firstAttribute="top" secondItem="Z63-hd-0Tn" secondAttribute="bottom" constant="75" id="vEK-Sz-qDm"/>
                                 </constraints>
                             </view>

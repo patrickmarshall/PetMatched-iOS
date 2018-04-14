@@ -107,6 +107,12 @@ class BaseViewController: UIViewController {
         self.navigationItem.backBarButtonItem?.tintColor = color
     }
     
+    // Hide Back Arrow Icon
+    func hideBackButton() {
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.setHidesBackButton(true, animated:true)
+    }
+    
     // Set Reset Icon
     func setResetButton(caller: BaseViewController) {
         let resetButton = UIBarButtonItem(title: "Reset", style: .done, target: self, action: #selector(caller.resetFilter))

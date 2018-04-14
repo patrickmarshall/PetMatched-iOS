@@ -52,6 +52,36 @@ extension String {
         }
         return Int(value)!
     }
+    
+    func validatePassword() -> Bool {
+        let password = self
+        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+        let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regularExpression)
+        return passwordValidation.evaluate(with: password)
+    }
+    
+    func dateFormatterView() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ssZ"
+        dateFormatter.locale = Locale.init(identifier: "id_ID")
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        return dateFormatter.string(from: dateObj!)
+    }
+    
+    func dateFormatterAPI() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ssZ"
+        dateFormatter.locale = Locale.init(identifier: "id_ID")
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: dateObj!)
+    }
+    
 }
 extension Int {
     func toString() -> String {
@@ -60,11 +90,16 @@ extension Int {
     func toDouble() -> Double {
         return Double(self)
     }
+    var degreesToRadians: CGFloat {
+        return CGFloat(self) * .pi / 180
+    }
 }
 extension UIColor {
     static var baseGreen: UIColor = UIColor("339933")!
     static var baseBlue: UIColor = UIColor("56CCF2")!
     static var darkBlue: UIColor = UIColor("2D9CDB")!
+    static var lightBlue: UIColor = UIColor("AAE5F8")!
+    static var mediumBlue: UIColor = UIColor("88DBF5")!
 }
 
 extension UIButton {
@@ -81,6 +116,28 @@ extension UIButton {
         }
         if let clr = color {
             borderColor = UIColor(clr)!
+        }
+        
+        layer.cornerRadius = cornerRadius
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+    }
+}
+
+extension UIView {
+    func asRoundedBorderedView(width: CGFloat?, color: UIColor?, radius: CGFloat?) {
+        var cornerRadius: CGFloat = 6.0 //default radius
+        var borderWidth: CGFloat = 1.0 //default border widht
+        var borderColor: UIColor = UIColor("#FFFFFF")! //default border color
+        
+        if let rds = radius {
+            cornerRadius = rds
+        }
+        if let wdt = width {
+            borderWidth = wdt
+        }
+        if let clr = color {
+            borderColor = clr
         }
         
         layer.cornerRadius = cornerRadius
@@ -125,5 +182,31 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension UIBezierPath {
+    convenience init(heartIn rect: CGRect) {
+        self.init()
+        
+        //Calculate Radius of Arcs using Pythagoras
+        let sideOne = rect.width * 0.4
+        let sideTwo = rect.height * 0.3
+        let arcRadius = sqrt(sideOne*sideOne + sideTwo*sideTwo)/2
+        
+        //Left Hand Curve
+        self.addArc(withCenter: CGPoint(x: rect.width * 0.3, y: rect.height * 0.35), radius: arcRadius, startAngle: 135.degreesToRadians, endAngle: 315.degreesToRadians, clockwise: true)
+        
+        //Top Centre Dip
+        self.addLine(to: CGPoint(x: rect.width/2, y: rect.height * 0.2))
+        
+        //Right Hand Curve
+        self.addArc(withCenter: CGPoint(x: rect.width * 0.7, y: rect.height * 0.35), radius: arcRadius, startAngle: 225.degreesToRadians, endAngle: 45.degreesToRadians, clockwise: true)
+        
+        //Right Bottom Line
+        self.addLine(to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.95))
+        
+        //Left Bottom Line
+        self.close()
     }
 }

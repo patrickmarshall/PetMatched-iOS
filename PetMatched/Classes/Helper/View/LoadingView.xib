@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="SearchFilter" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="PetMatched" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="322" height="541"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -27,14 +27,14 @@
                             </constraints>
                         </activityIndicatorView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="xfb-rV-gDJ" firstAttribute="centerX" secondItem="hj4-PD-CYq" secondAttribute="centerX" id="Sbu-hR-po5"/>
                         <constraint firstItem="xfb-rV-gDJ" firstAttribute="centerY" secondItem="hj4-PD-CYq" secondAttribute="centerY" id="hfV-wc-cx3"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hj4-PD-CYq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8g4-i2-hSU"/>
                 <constraint firstItem="hj4-PD-CYq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="a8J-6I-NEl"/>

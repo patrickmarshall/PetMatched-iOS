@@ -12,4 +12,9 @@ import UIKit
 struct Base {
     // Setting base API
     static var URL: String = "https://ace.tokopedia.com/"
+    
+    // Setting Preset Cloudinary
+    static let PRESET_TEST = "testing"
+    static let PRESET_PROFILE = "profile_picture"
+    static let PRESET_PET = "pet_picture"
 }

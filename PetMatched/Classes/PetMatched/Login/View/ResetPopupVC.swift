@@ -10,7 +10,7 @@ import UIKit
 
 class ResetPopupVC: UIViewController {
 
-    var delegate: ForgotDelegate?
+    var delegate: LoginDelegate?
     @IBOutlet weak var signinButton: UIButton!
     
     override func viewDidLoad() {

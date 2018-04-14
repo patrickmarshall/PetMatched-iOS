@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LEB-SH-dxx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zjD-qc-kQ0">
+            <objects>
+                <navigationController id="LEB-SH-dxx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UJk-Ih-70D">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d0A-vy-RPn" kind="relationship" relationship="rootViewController" id="G0n-y7-2rr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sV-8e-r14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="-66"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="jdu-oS-0gw">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" id="d0A-vy-RPn" customClass="ChatVC" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rY5-sz-MNg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAy-W7-afh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.20207223299999999" green="0.80077570679999999" blue="0.99934023620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JAy-W7-afh" firstAttribute="leading" secondItem="ojB-bh-FGR" secondAttribute="leading" id="DUA-e9-NJU"/>
+                            <constraint firstItem="ojB-bh-FGR" firstAttribute="bottom" secondItem="JAy-W7-afh" secondAttribute="bottom" id="PqI-mL-ENC"/>
+                            <constraint firstItem="JAy-W7-afh" firstAttribute="top" secondItem="rY5-sz-MNg" secondAttribute="top" id="oAL-Zb-geF"/>
+                            <constraint firstItem="ojB-bh-FGR" firstAttribute="trailing" secondItem="JAy-W7-afh" secondAttribute="trailing" id="yuL-Dy-UIC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ojB-bh-FGR"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="340-MN-cgQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqb-eX-jZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="-66"/>
+        </scene>
+    </scenes>
+</document>

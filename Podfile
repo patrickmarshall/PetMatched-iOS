@@ -4,13 +4,18 @@
 target 'PetMatched' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '~> 4.6'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'HexColors', '~> 6.0'
   pod 'SwiftMessages', '~> 4.1'
   pod 'SDWebImage', '~> 4.3'
   pod 'SkyFloatingLabelTextField', '~> 3.4'
   pod 'PopupDialog', '~> 0.7'
+  pod 'SBPickerSelector', '~> 1.2'
+  pod 'Cloudinary', '~> 2.3'
+  pod 'AlignedCollectionViewFlowLayout', '~> 1.1.1'
+  pod 'Koloda', '~> 4.3'
+  pod 'DPMeterView', '~> 1.0'
   pod 'IQKeyboardManagerSwift'
 
   target 'PetMatchedTests' do
