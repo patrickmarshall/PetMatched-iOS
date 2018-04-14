@@ -53,6 +53,8 @@
 		A78957CA207499E9002DAFBC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78957C5207499E9002DAFBC /* LoadingView.xib */; };
 		A78957CB207499E9002DAFBC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78957C6207499E9002DAFBC /* LoadingView.swift */; };
 		A78957CC207499E9002DAFBC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78957C7207499E9002DAFBC /* Helper.swift */; };
+		A7B37FCB2081BBF4006C1E4A /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */; };
+		A7B37FCD2081BC20006C1E4A /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */; };
 		A7C568712078A4A7003FFFD9 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C568702078A4A7003FFFD9 /* UploadImage.swift */; };
 		A96F111264859903BDECC9C2 /* Pods_PetMatchedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3884AAFAF81972842E926 /* Pods_PetMatchedTests.framework */; };
 		BDC3558795108AB18FC0C439 /* Pods_PetMatchedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F399C56F1D460B817BF8DAAF /* Pods_PetMatchedUITests.framework */; };
@@ -135,6 +137,8 @@
 		A78957C5207499E9002DAFBC /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		A78957C6207499E9002DAFBC /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A78957C7207499E9002DAFBC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
+		A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		A7C568702078A4A7003FFFD9 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		F10BC40718E83A4C2D5A7EA5 /* Pods-PetMatched.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatched.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatched/Pods-PetMatched.release.xcconfig"; sourceTree = "<group>"; };
 		F399C56F1D460B817BF8DAAF /* Pods_PetMatchedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A72799BB20811585005F08CF /* CardView.xib */,
+				A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				A72799BD2081159E005F08CF /* CardView.swift */,
+				A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				A7775E722080601500589EC1 /* Setting.storyboard in Resources */,
 				A749BAAD2076194300034BBB /* LoginSetup.storyboard in Resources */,
 				A701E55620789422006A2A04 /* RegisterSuccessPopupVC.xib in Resources */,
+				A7B37FCB2081BBF4006C1E4A /* CustomOverlayView.xib in Resources */,
 				A7775E702080600B00589EC1 /* History.storyboard in Resources */,
 				A78957B7207498B4002DAFBC /* Login.storyboard in Resources */,
 			);
@@ -894,6 +901,7 @@
 				A7633CC62074901B00AB48BA /* AppDelegate.swift in Sources */,
 				A7775E58208051F800589EC1 /* MainTabBarController.swift in Sources */,
 				A739B6C32079D71C00B50BBF /* InputPreferenceVC.swift in Sources */,
+				A7B37FCD2081BC20006C1E4A /* CustomOverlayView.swift in Sources */,
 				A72799BE2081159E005F08CF /* CardView.swift in Sources */,
 				A701E55520789422006A2A04 /* RegisterSuccessPopupVC.swift in Sources */,
 				A78957C8207499E9002DAFBC /* Base.swift in Sources */,

@@ -45,16 +45,16 @@ class LoginVC: BaseViewController {
 extension LoginVC {
     // Login Button Pressed
     @IBAction func loginAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "LoginSetup", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LoginFirstVC") as! LoginFirstVC
-        self.showNavBar()
-        self.hideBackButton()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "LoginSetup", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "LoginFirstVC") as! LoginFirstVC
+//        self.showNavBar()
+//        self.hideBackButton()
+//        self.navigationController?.pushViewController(vc, animated: true)
         
         // Move to Main Tab Bar
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let mainTab = storyboard.instantiateInitialViewController() as! UITabBarController
-//        self.present(mainTab, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainTab = storyboard.instantiateInitialViewController() as! UITabBarController
+        self.present(mainTab, animated: true, completion: nil)
     }
     
     // Register Button Pressed

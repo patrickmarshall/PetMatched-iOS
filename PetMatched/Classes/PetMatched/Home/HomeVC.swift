@@ -118,4 +118,10 @@ extension HomeVC: KolodaViewDataSource {
         card.setup()
         return card
     }
+    
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        let overlay = Bundle.main.loadNibNamed("CustomOverlayView", owner: nil, options: nil)?.first as! CustomOverlayView
+        overlay.setup()
+        return overlay
+    }
 }
