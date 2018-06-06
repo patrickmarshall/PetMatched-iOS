@@ -11,7 +11,9 @@ import UIKit
 
 struct Base {
     // Setting base API
-    static var URL: String = "https://ace.tokopedia.com/"
+    static var URL: String = "http://www.jihadaamalia.com/"
+    static var URLAuth: String = "http://www.jihadaamalia.com:3000/"
+    static var URLApp: String = "http://www.jihadaamalia.com:8080/"
     
     // Setting Preset Cloudinary
     static let PRESET_TEST = "testing"

@@ -9,6 +9,7 @@
 import UIKit
 import HexColors
 import SwiftMessages
+import UIViewController_KeyboardAnimation
 
 class BaseViewController: UIViewController {
 
@@ -46,6 +47,21 @@ class BaseViewController: UIViewController {
         config.interactiveHide = true
         SwiftMessages.hideAll()
         SwiftMessages.show(config: config, view: view)
+    }
+    
+    // Keyboard in Table View
+    func keyboardViewBottom(heightCons: NSLayoutConstraint, height: CGFloat){
+        self.an_subscribeKeyboard(animations: { (frame, interval, opening) in
+            if opening{
+                heightCons.constant = ((frame.height))
+            }else{
+                heightCons.constant = height
+            }
+        }, completion: nil)
+    }
+    
+    func removeKeyboardScrollView(){
+        self.an_unsubscribeKeyboard()
     }
     
     // Show Loading Progress
@@ -120,8 +136,51 @@ class BaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.baseGreen
     }
     
+    // Set Save Icon
+    func setSaveButton(caller: BaseViewController) {
+        let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(caller.save))
+        self.navigationItem.rightBarButtonItem = saveButton
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+    }
+    
+    // Set Reset Icon
+    func setMatchButton(caller: BaseViewController) {
+        let matchButton = UIBarButtonItem(title: "Match?", style: .done, target: self, action: #selector(caller.match))
+        self.navigationItem.rightBarButtonItem = matchButton
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+    }
+    
+    // Set Loved Icon
+    func setLovedButton(caller: BaseViewController) {
+        let button: UIButton = UIButton(type: .custom)
+        button.setImage(UIImage(named: "ico-heart"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageView?.clipsToBounds = true
+        button.frame = CGRect(x: 5, y: 0, width: 30, height: 30)
+        button.addTarget(self, action: #selector(caller.loved), for: .touchUpInside)
+        let buttonView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        buttonView.addSubview(button)
+        let lovedButton = UIBarButtonItem(customView: buttonView)
+        self.navigationItem.rightBarButtonItem = lovedButton
+    }
+    
     // Set Overrided Reset Method
     @objc func resetFilter() {
+        
+    }
+    
+    // Set Overrided Loved Method
+    @objc func loved() {
+        
+    }
+    
+    // Set Overrided Save Method
+    @objc func save() {
+        
+    }
+    
+    // Set Overrided Match Method
+    @objc func match() {
         
     }
 }

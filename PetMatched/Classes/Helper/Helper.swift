@@ -19,6 +19,15 @@ extension Double {
         return String(self)
     }
 }
+extension Date {
+    func dateParseToString(newFormat: String)-> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = newFormat
+        dateFormatter.locale = Locale(identifier: "id_ID")
+        let dateString = dateFormatter.string(from: self)
+        return dateString
+    }
+}
 extension String {
     func getBool() -> Bool {
         if self == "true" {
@@ -26,6 +35,33 @@ extension String {
         } else {
             return false
         }
+    }
+    
+    func stringParseToDate(oldFormat: String, newFormat: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "id_ID")
+        dateFormatter.dateFormat = oldFormat
+        guard let date = dateFormatter.date(from: self) else {
+            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        }
+        dateFormatter.dateFormat = newFormat
+        let newDate = dateFormatter.string(from: date)
+        guard let convertedDate = dateFormatter.date(from: newDate) else {
+            fatalError("Error: Convert new date")
+        }
+        return convertedDate
+    }
+    
+    func dateParseToString(oldFormat: String, newFormat: String) -> String{
+        let dateFormatter = DateFormatter()
+        var newDateString = "fail to convert date"
+        dateFormatter.dateFormat = oldFormat
+        dateFormatter.locale = Locale(identifier: "id_ID")
+        if let mydate = dateFormatter.date(from: self){
+            dateFormatter.dateFormat = newFormat
+            newDateString = dateFormatter.string(from: mydate)
+        }
+        return newDateString
     }
     
     func asRupiah() -> String {
@@ -64,22 +100,167 @@ extension String {
         let dateString = self
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ssZ"
-        dateFormatter.locale = Locale.init(identifier: "id_ID")
+        dateFormatter.locale = Locale.init(identifier: "en_US")
         
         let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
         dateFormatter.dateFormat = "dd MMMM yyyy"
         return dateFormatter.string(from: dateObj!)
     }
     
-    func dateFormatterAPI() -> String {
+    func dateFormatterToAPI() -> String {
         let dateString = self
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ssZ"
-        dateFormatter.locale = Locale.init(identifier: "id_ID")
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
         
         let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.string(from: dateObj!)
+    }
+    
+    func dateFormatterFromAPI() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        dateFormatter.dateFormat = "yyyy-MM-ddHH:mm:ssZ"
+        return dateFormatter.string(from: dateObj!)
+    }
+    
+    func getHour() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        dateFormatter.dateFormat = "HH.mm"
+        return dateFormatter.string(from: dateObj!)
+    }
+    
+    func historyFormatter() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        dateFormatter.dateFormat = "EEE, d MMM yyyy"
+        return dateFormatter.string(from: dateObj!)
+    }
+    
+    func roomListDateFormatter() -> String {
+        let dateString = self
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.locale = Locale.init(identifier: "en_US")
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringNow = formatter.string(from: Date())
+        let now = formatter.date(from: stringNow)?.addingTimeInterval(3600*7)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let date = formatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        let dateObj = dateFormatter.date(from: dateString)?.addingTimeInterval(3600*7)
+        if formatter.string(from: now!) == formatter.string(from: date!) {
+            dateFormatter.dateFormat = "HH:mm"
+        } else {
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+        }
+        return dateFormatter.string(from: dateObj!)
+    }
+    
+    func timeAgoStringFrom(format: String) -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        dateFormat.locale = Locale(identifier: "id_ID")
+        let dateResult = dateFormat.date(from: self)
+        
+        if dateResult != nil {
+            let formatter = DateComponentsFormatter()
+            formatter.unitsStyle = .full
+            
+            let now = Date()
+            
+            let calendar = Calendar.current
+            let components = calendar.dateComponents(Set<Calendar.Component>([.year, .month, .weekOfMonth, .day, .hour, .minute, .second]), from: dateResult!, to: now)
+            
+            var isMonth = false
+            var isMoreThanWeek = false
+            var isYear = false
+            var isYesterday = false
+            var isToday = false
+            
+            if components.year! > 0 {
+                isYear = true
+                dateFormat.dateFormat = "MMM dd, yyyy"
+            } else if components.month! > 0 {
+                isMonth = true
+                dateFormat.dateFormat = "MMM dd"
+            } else if components.weekOfMonth! > 0 {
+                formatter.allowedUnits = .weekOfMonth
+                if components.weekOfMonth! > 1 {
+                    isMoreThanWeek = true
+                    dateFormat.dateFormat = "MMM dd"
+                }
+            } else if components.day! > 0 {
+                formatter.allowedUnits = .day
+                if components.day! == 1 {
+                    isYesterday = true
+                }
+            } else {
+                isToday = true
+                dateFormat.dateFormat = "h:mm a"
+            }
+            
+            let formatString = NSLocalizedString("%@ ago", comment: "Used to say how much time has passed. e.g. '2 hours ago'")
+            
+            guard let timeString = formatter.string(from: components) else {
+                return "Error"
+            }
+            
+            if isMonth || isYear || isMoreThanWeek {
+                return dateFormat.string(from: dateResult!)
+            } else if isYesterday {
+                return "Yesterday"
+            } else if isToday {
+                return "Today"
+            } else {
+                return String(format: formatString, timeString)
+            }
+        } else {
+            return "Error Date"
+        }
+    }
+    
+    func toAge() -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "yyyy/MM/dd"
+        let dateResult = dateFormat.date(from: self)
+        
+        var result = ""
+        
+        if dateResult != nil {
+            let formatter = DateComponentsFormatter()
+            formatter.unitsStyle = .full
+            
+            let now = Date()
+            
+            let calendar = Calendar.current
+            let calc = calendar.dateComponents(Set<Calendar.Component>([.year, .month]), from: dateResult!, to: now)
+            
+            if calc.year == 0 {
+                result = "\(calc.month!.toString()) Months"
+            } else {
+                result = "\(calc.year!.toString()) y.o"
+            }
+        }
+        
+        return result
     }
     
 }
@@ -96,10 +277,16 @@ extension Int {
 }
 extension UIColor {
     static var baseGreen: UIColor = UIColor("339933")!
-    static var baseBlue: UIColor = UIColor("56CCF2")!
+    static var baseBlue: UIColor = UIColor("34CCFF")!
     static var darkBlue: UIColor = UIColor("2D9CDB")!
     static var lightBlue: UIColor = UIColor("AAE5F8")!
     static var mediumBlue: UIColor = UIColor("88DBF5")!
+}
+
+extension CGFloat {
+    func toInt() -> Int {
+        return Int(self)
+    }
 }
 
 extension UIButton {
@@ -169,6 +356,12 @@ extension UIImageView {
             self.backgroundColor = UIColor.clear
             self.subviews.forEach{ $0.removeFromSuperview() }
         }
+    }
+    
+    // Set Image View to circle
+    func asCircleImageView() {
+        self.layer.cornerRadius = (self.frame.width / 2)
+        self.contentMode = .scaleAspectFill
     }
 }
 

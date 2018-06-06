@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="SettingListCell" customModule="PetMatched" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-EQ-GPo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46p-bv-b5I">
+                                <rect key="frame" x="16" y="16.5" width="82.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="kel-EE-0Wi">
+                                <rect key="frame" x="287" y="14" width="17" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fzc-mj-4Tt"/>
+                                    <constraint firstAttribute="width" constant="17" id="gJL-1v-5Q6"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-Y6-a1N">
+                                <rect key="frame" x="0.0" y="49" width="320" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="wDt-4j-JiG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aCJ-Y6-a1N" secondAttribute="trailing" id="4SI-vw-Dn4"/>
+                            <constraint firstAttribute="height" constant="50" id="64f-vU-gVC"/>
+                            <constraint firstAttribute="trailing" secondItem="kel-EE-0Wi" secondAttribute="trailing" constant="16" id="9WQ-wR-j2u"/>
+                            <constraint firstAttribute="bottom" secondItem="aCJ-Y6-a1N" secondAttribute="bottom" id="QuJ-RO-k54"/>
+                            <constraint firstItem="aCJ-Y6-a1N" firstAttribute="leading" secondItem="J8o-EQ-GPo" secondAttribute="leading" id="lxT-Da-ltd"/>
+                            <constraint firstItem="kel-EE-0Wi" firstAttribute="centerY" secondItem="J8o-EQ-GPo" secondAttribute="centerY" id="nuW-8l-1rP"/>
+                            <constraint firstItem="46p-bv-b5I" firstAttribute="leading" secondItem="J8o-EQ-GPo" secondAttribute="leading" constant="16" id="roM-g0-g3G"/>
+                            <constraint firstItem="46p-bv-b5I" firstAttribute="centerY" secondItem="J8o-EQ-GPo" secondAttribute="centerY" id="uAp-F7-9Rw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="J8o-EQ-GPo" secondAttribute="trailing" id="TlI-bQ-K0a"/>
+                    <constraint firstItem="J8o-EQ-GPo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i8T-vr-dmQ"/>
+                    <constraint firstAttribute="bottom" secondItem="J8o-EQ-GPo" secondAttribute="bottom" id="pDC-z4-kla"/>
+                    <constraint firstItem="J8o-EQ-GPo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vcR-ic-Eg4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="settingNameLabel" destination="46p-bv-b5I" id="4q3-5b-Xsy"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico-rightArrow" width="32" height="32"/>
+    </resources>
+</document>

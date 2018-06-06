@@ -11,6 +11,7 @@ import AlignedCollectionViewFlowLayout
 
 class InputVaccineVC: BaseViewController {
 
+    var variant: String = "1"
     var vaccineList: [VaccineModel] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,12 +22,12 @@ class InputVaccineVC: BaseViewController {
         
         setup()
         setupCollectionView()
+        getVaccineAPI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        getVaccineData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,23 +42,63 @@ class InputVaccineVC: BaseViewController {
         self.nextButton.asRoundedBorderedButton(radius: 6.0, width: 1.0, color: "FFFFFF")
     }
     
-    func getVaccineData() {
-        self.vaccineList.append(VaccineModel(id: 1, name: "Rabies"))
-        self.vaccineList.append(VaccineModel(id: 2, name: "Sulap"))
-        self.vaccineList.append(VaccineModel(id: 3, name: "Mad Dog"))
-        self.vaccineList.append(VaccineModel(id: 4, name: "Anjing Gila"))
-        self.vaccineList.append(VaccineModel(id: 5, name: "Lapar Terus"))
-        self.vaccineList.append(VaccineModel(id: 6, name: "Raksasa"))
-        self.vaccineList.append(VaccineModel(id: 7, name: "Hyperaktif"))
-        self.vaccineList.append(VaccineModel(id: 8, name: "Rajin"))
-        self.vaccineList.append(VaccineModel(id: 9, name: "Hobi Menjilat"))
-        self.vaccineList.append(VaccineModel(id: 10, name: "Malas - Malasan"))
-        self.vaccineList.append(VaccineModel(id: 11, name: "Tidur Terus"))
-        self.vaccineList.append(VaccineModel(id: 12, name: "Skripsian"))
-        self.vaccineList.append(VaccineModel(id: 13, name: "Penakut"))
-        self.vaccineList.append(VaccineModel(id: 14, name: "Penyayang"))
+    func getVaccineAPI() {
+        Network.request(request: APIRegister.getVaccine(variant: variant), onSuccess: { response in
+            
+            let responses = DAOVaccinesBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    if let result = responses.response?.vaccines {
+                        self.vaccineList.removeAll()
+                        for data in result {
+                            self.vaccineList.append(VaccineModel(id: data.id!, name: data.name!))
+                        }
+                    }
+                    
+                    self.collectionView.reloadData()
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            // If fail while calling API
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
+    }
+    
+    func inputVaccineAPI(vaccines: [Int]) {
+        self.showLoading(view: self.view)
         
-        self.collectionView.reloadData()
+        Network.request(request: APIRegister.inputVaccine(vaccines: vaccines.description), onSuccess: { response in
+            self.stopLoading()
+            let responses = DAOInputBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    // Move to Input Preference
+//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "InputPreferenceVC") as! InputPreferenceVC
+//                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                    // Move to Main Tab Bar
+                    self.navigationController?.popToRootViewController(animated: false)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainTab = storyboard.instantiateInitialViewController() as! UITabBarController
+                    self.present(mainTab, animated: true, completion: nil)
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            // If fail while calling API
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
     }
 }
 
@@ -69,9 +110,7 @@ extension InputVaccineVC {
                 selectedVaccine.append(vaccine.id!)
             }
         }
-        print(selectedVaccine)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "InputPreferenceVC") as! InputPreferenceVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        inputVaccineAPI(vaccines: selectedVaccine)
     }
 }
 

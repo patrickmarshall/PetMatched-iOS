@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="KGk-i7-Jjw" customClass="PetContentCell" customModule="PetMatched" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-fc-fkS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KF9-35-NuZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                                <color key="backgroundColor" red="0.20207223299999999" green="0.80077570679999999" blue="0.99934023620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="mc7-IA-IVK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ww3-Qn-js4">
+                                <rect key="frame" x="8" y="8" width="304" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patrickjihada" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO6-9U-I8l">
+                                <rect key="frame" x="8" y="27" width="304" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-2v-cVS">
+                                <rect key="frame" x="8" y="52" width="304" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="YXY-f6-Mwl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aS0-2v-cVS" secondAttribute="trailing" constant="8" id="5Cc-G1-Hnv"/>
+                            <constraint firstItem="aS0-2v-cVS" firstAttribute="top" secondItem="nO6-9U-I8l" secondAttribute="bottom" constant="8" id="Ffd-WJ-rWb"/>
+                            <constraint firstItem="ww3-Qn-js4" firstAttribute="leading" secondItem="bRZ-fc-fkS" secondAttribute="leading" constant="8" id="LSA-zh-vxx"/>
+                            <constraint firstItem="nO6-9U-I8l" firstAttribute="trailing" secondItem="ww3-Qn-js4" secondAttribute="trailing" id="N3b-It-wVn"/>
+                            <constraint firstItem="ww3-Qn-js4" firstAttribute="top" secondItem="bRZ-fc-fkS" secondAttribute="top" constant="8" id="WwW-Px-p3H"/>
+                            <constraint firstItem="KF9-35-NuZ" firstAttribute="leading" secondItem="bRZ-fc-fkS" secondAttribute="leading" id="f3S-d1-igZ"/>
+                            <constraint firstItem="nO6-9U-I8l" firstAttribute="leading" secondItem="ww3-Qn-js4" secondAttribute="leading" id="gZB-HV-pMF"/>
+                            <constraint firstAttribute="bottom" secondItem="aS0-2v-cVS" secondAttribute="bottom" id="lRv-VH-648"/>
+                            <constraint firstItem="KF9-35-NuZ" firstAttribute="top" secondItem="bRZ-fc-fkS" secondAttribute="top" id="qFY-LG-U9S"/>
+                            <constraint firstItem="aS0-2v-cVS" firstAttribute="leading" secondItem="bRZ-fc-fkS" secondAttribute="leading" constant="8" id="sSf-aR-R8a"/>
+                            <constraint firstItem="nO6-9U-I8l" firstAttribute="top" secondItem="ww3-Qn-js4" secondAttribute="bottom" constant="2" id="w2F-Bf-sFr"/>
+                            <constraint firstAttribute="trailing" secondItem="KF9-35-NuZ" secondAttribute="trailing" id="wr9-b0-eKZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ww3-Qn-js4" secondAttribute="trailing" constant="8" id="yr0-Df-UBQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bRZ-fc-fkS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0YV-yp-LGr"/>
+                    <constraint firstAttribute="bottom" secondItem="bRZ-fc-fkS" secondAttribute="bottom" id="A7N-t7-8cH"/>
+                    <constraint firstAttribute="trailing" secondItem="bRZ-fc-fkS" secondAttribute="trailing" id="Vjs-zJ-0bL"/>
+                    <constraint firstItem="bRZ-fc-fkS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iHU-SG-c5Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentLabel" destination="nO6-9U-I8l" id="bPG-U5-AM2"/>
+                <outlet property="titleLabel" destination="ww3-Qn-js4" id="k12-rq-kXa"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

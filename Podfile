@@ -16,7 +16,10 @@ target 'PetMatched' do
   pod 'AlignedCollectionViewFlowLayout', '~> 1.1.1'
   pod 'Koloda', '~> 4.3'
   pod 'DPMeterView', '~> 1.0'
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '~> 6.0.0'
+  pod 'GrowingTextView', '~> 0.5'
+  pod 'MXSegmentedPager', '~> 3.3'
+  pod 'UIViewController+KeyboardAnimation', '~> 1.3'
 
   target 'PetMatchedTests' do
     inherit! :search_paths

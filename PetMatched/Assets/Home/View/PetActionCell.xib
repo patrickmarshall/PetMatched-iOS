@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="PetActionCell" customModule="PetMatched" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zx-bn-hRz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyJ-7d-Iyb">
+                                <rect key="frame" x="8" y="4" width="144" height="41.5"/>
+                                <state key="normal" title="Chat">
+                                    <color key="titleColor" red="0.1764705882" green="0.61176470589999998" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chatAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pel-Fz-nLT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-e9-UrQ">
+                                <rect key="frame" x="168" y="4" width="144" height="41.5"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.1764705882" green="0.61176470589999998" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="historyAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FPx-cp-Brs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="GtD-58-ceT"/>
+                            <constraint firstItem="EyJ-7d-Iyb" firstAttribute="leading" secondItem="8zx-bn-hRz" secondAttribute="leading" constant="8" id="Oe8-kM-pY9"/>
+                            <constraint firstAttribute="centerX" secondItem="EyJ-7d-Iyb" secondAttribute="trailing" constant="8" id="RM8-q1-auf"/>
+                            <constraint firstItem="EyJ-7d-Iyb" firstAttribute="top" secondItem="8zx-bn-hRz" secondAttribute="top" constant="4" id="Uf4-pa-NGE"/>
+                            <constraint firstItem="ddA-e9-UrQ" firstAttribute="top" secondItem="8zx-bn-hRz" secondAttribute="top" constant="4" id="fxZ-xr-tYd"/>
+                            <constraint firstAttribute="bottom" secondItem="EyJ-7d-Iyb" secondAttribute="bottom" constant="4" id="haB-bP-YMf"/>
+                            <constraint firstAttribute="trailing" secondItem="ddA-e9-UrQ" secondAttribute="trailing" constant="8" id="lRB-BP-Vym"/>
+                            <constraint firstAttribute="bottom" secondItem="ddA-e9-UrQ" secondAttribute="bottom" constant="4" id="ln8-CX-wxD"/>
+                            <constraint firstItem="ddA-e9-UrQ" firstAttribute="leading" secondItem="8zx-bn-hRz" secondAttribute="centerX" constant="8" id="tLV-o4-Q6I"/>
+                            <constraint firstAttribute="centerX" secondItem="EyJ-7d-Iyb" secondAttribute="trailing" constant="8" id="wqH-YK-Qdn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8zx-bn-hRz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PJu-Qo-ULM"/>
+                    <constraint firstItem="8zx-bn-hRz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aFi-Wn-XFz"/>
+                    <constraint firstAttribute="bottom" secondItem="8zx-bn-hRz" secondAttribute="bottom" id="aJi-CG-vzU"/>
+                    <constraint firstAttribute="trailing" secondItem="8zx-bn-hRz" secondAttribute="trailing" id="ws4-WL-3LL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chatButton" destination="EyJ-7d-Iyb" id="ive-mO-vPF"/>
+                <outlet property="historyButton" destination="ddA-e9-UrQ" id="CEB-f5-OqC"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="60"/>
+        </tableViewCell>
+    </objects>
+</document>

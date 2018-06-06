@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,25 +21,32 @@
                     <rect key="frame" x="0.0" y="0.0" width="291" height="349"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="R3b-a9-kv7">
-                            <rect key="frame" x="0.0" y="0.0" width="291" height="291"/>
+                            <rect key="frame" x="0.0" y="0.0" width="291" height="269"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-m6-fvt" customClass="CircleImageView" customModule="PetMatched" customModuleProvider="target">
+                            <rect key="frame" x="227" y="205" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="NT9-af-imv"/>
+                                <constraint firstAttribute="width" secondItem="Wh1-m6-fvt" secondAttribute="height" multiplier="1:1" id="wIf-ZN-sXW"/>
+                            </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVs-L2-97D">
-                            <rect key="frame" x="0.0" y="291" width="291" height="58"/>
+                            <rect key="frame" x="0.0" y="269" width="291" height="80"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milo, 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9N-Ti-MUY">
-                                    <rect key="frame" x="8" y="8" width="43.5" height="17"/>
+                                    <rect key="frame" x="16" y="16" width="43.5" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog, Male, Pomsky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1P-R1-bZf">
-                                    <rect key="frame" x="8" y="33" width="124" height="17"/>
+                                    <rect key="frame" x="16" y="47" width="124" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depok, Indonesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-zC-jjJ">
-                                    <rect key="frame" x="171" y="8" width="112" height="17"/>
+                                    <rect key="frame" x="163" y="16" width="112" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -46,14 +54,14 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="dEz-zC-jjJ" firstAttribute="top" secondItem="pVs-L2-97D" secondAttribute="top" constant="8" id="FoB-IT-Q88"/>
-                                <constraint firstAttribute="bottom" secondItem="i1P-R1-bZf" secondAttribute="bottom" constant="8" id="HEJ-rK-A0X"/>
-                                <constraint firstAttribute="height" constant="58" id="TIw-7M-RS0"/>
-                                <constraint firstItem="u9N-Ti-MUY" firstAttribute="top" secondItem="pVs-L2-97D" secondAttribute="top" constant="8" id="VYp-hH-WsQ"/>
-                                <constraint firstItem="i1P-R1-bZf" firstAttribute="top" secondItem="u9N-Ti-MUY" secondAttribute="bottom" constant="8" id="Ztf-Ky-lu8"/>
+                                <constraint firstItem="dEz-zC-jjJ" firstAttribute="top" secondItem="pVs-L2-97D" secondAttribute="top" constant="16" id="FoB-IT-Q88"/>
+                                <constraint firstAttribute="height" constant="80" id="TIw-7M-RS0"/>
+                                <constraint firstItem="u9N-Ti-MUY" firstAttribute="top" secondItem="pVs-L2-97D" secondAttribute="top" constant="16" id="VYp-hH-WsQ"/>
+                                <constraint firstAttribute="bottom" secondItem="i1P-R1-bZf" secondAttribute="bottom" constant="16" id="b00-oY-GDr"/>
                                 <constraint firstItem="i1P-R1-bZf" firstAttribute="leading" secondItem="u9N-Ti-MUY" secondAttribute="leading" id="bHe-mv-69o"/>
-                                <constraint firstItem="u9N-Ti-MUY" firstAttribute="leading" secondItem="pVs-L2-97D" secondAttribute="leading" constant="8" id="jag-Nz-pu9"/>
-                                <constraint firstAttribute="trailing" secondItem="dEz-zC-jjJ" secondAttribute="trailing" constant="8" id="mUF-dP-lVe"/>
+                                <constraint firstItem="u9N-Ti-MUY" firstAttribute="leading" secondItem="pVs-L2-97D" secondAttribute="leading" constant="16" id="jag-Nz-pu9"/>
+                                <constraint firstAttribute="trailing" secondItem="dEz-zC-jjJ" secondAttribute="trailing" constant="16" id="mUF-dP-lVe"/>
+                                <constraint firstItem="i1P-R1-bZf" firstAttribute="top" secondItem="u9N-Ti-MUY" secondAttribute="bottom" constant="14" id="qDk-Qy-Y98"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -62,10 +70,12 @@
                         <constraint firstAttribute="bottom" secondItem="pVs-L2-97D" secondAttribute="bottom" id="1ef-YM-EFw"/>
                         <constraint firstItem="pVs-L2-97D" firstAttribute="leading" secondItem="cD9-UG-X4e" secondAttribute="leading" id="2h4-2e-zBK"/>
                         <constraint firstItem="R3b-a9-kv7" firstAttribute="leading" secondItem="cD9-UG-X4e" secondAttribute="leading" id="5bI-Dl-XKg"/>
+                        <constraint firstAttribute="trailing" secondItem="Wh1-m6-fvt" secondAttribute="trailing" constant="8" id="7Qd-IS-aQK"/>
                         <constraint firstAttribute="trailing" secondItem="pVs-L2-97D" secondAttribute="trailing" id="9Q1-NZ-Tyf"/>
                         <constraint firstAttribute="trailing" secondItem="R3b-a9-kv7" secondAttribute="trailing" id="Mxo-ef-7Ce"/>
                         <constraint firstItem="pVs-L2-97D" firstAttribute="top" secondItem="R3b-a9-kv7" secondAttribute="bottom" id="RDB-0P-73a"/>
                         <constraint firstItem="R3b-a9-kv7" firstAttribute="top" secondItem="cD9-UG-X4e" secondAttribute="top" id="YoR-mY-fpj"/>
+                        <constraint firstItem="pVs-L2-97D" firstAttribute="top" secondItem="Wh1-m6-fvt" secondAttribute="bottom" constant="8" id="hvJ-Be-wlf"/>
                     </constraints>
                 </view>
             </subviews>
@@ -81,6 +91,7 @@
             <connections>
                 <outlet property="cityStateLabel" destination="dEz-zC-jjJ" id="Woh-w5-4yD"/>
                 <outlet property="nameAgeLabel" destination="u9N-Ti-MUY" id="LIP-Fs-cdS"/>
+                <outlet property="ownerImage" destination="Wh1-m6-fvt" id="Uwa-Kp-aGZ"/>
                 <outlet property="petImage" destination="R3b-a9-kv7" id="9pb-Vp-SJc"/>
                 <outlet property="variantGenderBreedLabel" destination="i1P-R1-bZf" id="Y3i-Wn-Bhv"/>
                 <outlet property="viewParent" destination="cD9-UG-X4e" id="wCy-SY-kiK"/>
@@ -90,5 +101,6 @@
     </objects>
     <resources>
         <image name="dummy" width="305" height="281"/>
+        <image name="dummy_profile" width="51" height="51"/>
     </resources>
 </document>

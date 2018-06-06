@@ -8,6 +8,7 @@
 
 import UIKit
 import PopupDialog
+import IQKeyboardManagerSwift
 import SkyFloatingLabelTextField
 
 class RegisterVC: BaseViewController {
@@ -23,6 +24,18 @@ class RegisterVC: BaseViewController {
 
         setup()
         setupTextField()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        IQKeyboardManager.shared.enableAutoToolbar = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        IQKeyboardManager.shared.enableAutoToolbar = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,11 +71,7 @@ extension RegisterVC {
             if usernameText.hasErrorMessage || passwordText.hasErrorMessage || confirmPasswordText.hasErrorMessage || emailText.hasErrorMessage {
                 self.showMessage(message: "Please fix all error field!", error: true)
             } else {
-                let vc = RegisterSuccessPopupVC(nibName: "RegisterSuccessPopupVC", bundle: nil)
-                vc.delegate = self
-                let popup = PopupDialog(viewController: vc, buttonAlignment: .vertical, transitionStyle: .zoomIn, gestureDismissal: true)
-                self.present(popup, animated: true, completion: nil)
-                self.navigationController?.popViewController(animated: true)
+                registerAPI()
             }
         }
     }
@@ -76,12 +85,67 @@ extension RegisterVC {
     @IBAction func usernameChanged(_ sender: Any) {
         // Call API Username
     }
+    
+    func checkUsernameAPI(username: String) {
+        Network.request(request: APILogin.checkUsername(username: username), onSuccess: { response in
+            self.stopLoading()
+            
+            let responses = DAOCheckUsernameBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    if let data = responses.response {
+                        if !data.availability! {
+                            self.usernameText.errorMessage = "Username Already Taken!"
+                        } else {
+                            self.usernameText.errorMessage = ""
+                        }
+                    }
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
+    }
+    
+    func registerAPI() {
+        self.showLoading(view: self.view)
+        Network.request(request: APILogin.register(username: usernameText.text!, password: passwordText.text!, email: emailText.text!), onSuccess: { response in
+            self.stopLoading()
+            
+            let responses = DAORegisterBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    let vc = RegisterSuccessPopupVC(nibName: "RegisterSuccessPopupVC", bundle: nil)
+                    vc.delegate = self
+                    let popup = PopupDialog(viewController: vc, buttonAlignment: .vertical, transitionStyle: .zoomIn, gestureDismissal: true)
+                    self.present(popup, animated: true, completion: nil)
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            // If fail while calling API
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
+    }
 }
 
 extension RegisterVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 1 {
-            
+            if let text = textField.text {
+                checkUsernameAPI(username: text)
+            }
         } else if textField.tag == 2 {
 //            if let text = textField.text {
 //                if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
@@ -107,7 +171,7 @@ extension RegisterVC: UITextFieldDelegate {
         } else if textField.tag == 4 {
             if let text = textField.text {
                 if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
-                    if(text.count < 3 || !text.contains("@")) {
+                    if(text.count < 3 || !text.contains("@") || !text.contains(".")) {
                         floatingLabelTextField.errorMessage = "Invalid email"
                     }
                     else {

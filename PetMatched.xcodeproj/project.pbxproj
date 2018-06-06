@@ -9,21 +9,71 @@
 /* Begin PBXBuildFile section */
 		A701E55520789422006A2A04 /* RegisterSuccessPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701E55320789422006A2A04 /* RegisterSuccessPopupVC.swift */; };
 		A701E55620789422006A2A04 /* RegisterSuccessPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A701E55420789422006A2A04 /* RegisterSuccessPopupVC.xib */; };
+		A7106BCD208B3FE10081E72C /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BCB208B3FE10081E72C /* ChatListCell.swift */; };
+		A7106BCE208B3FE10081E72C /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7106BCC208B3FE10081E72C /* ChatListCell.xib */; };
+		A7106BD4208B483B0081E72C /* SettingTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BD2208B483B0081E72C /* SettingTitleCell.swift */; };
+		A7106BD5208B483B0081E72C /* SettingTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7106BD3208B483B0081E72C /* SettingTitleCell.xib */; };
+		A7106BD8208B484F0081E72C /* SettingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BD6208B484F0081E72C /* SettingListCell.swift */; };
+		A7106BD9208B484F0081E72C /* SettingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7106BD7208B484F0081E72C /* SettingListCell.xib */; };
+		A7106BDC208B48650081E72C /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BDA208B48650081E72C /* LogoutCell.swift */; };
+		A7106BDD208B48650081E72C /* LogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7106BDB208B48650081E72C /* LogoutCell.xib */; };
+		A7106BDF208B54050081E72C /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BDE208B54050081E72C /* ChangePasswordVC.swift */; };
+		A7106BE2208B57390081E72C /* PasswordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BE0208B57390081E72C /* PasswordTextCell.swift */; };
+		A7106BE3208B57390081E72C /* PasswordTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7106BE1208B57390081E72C /* PasswordTextCell.xib */; };
 		A7271C692074E02900D16D43 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C682074E02900D16D43 /* ForgotVC.swift */; };
 		A7271C6D2074E4D000D16D43 /* ResetPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C6B2074E4D000D16D43 /* ResetPopupVC.swift */; };
 		A7271C6E2074E4D000D16D43 /* ResetPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7271C6C2074E4D000D16D43 /* ResetPopupVC.xib */; };
 		A7271C712074E81F00D16D43 /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7271C702074E81F00D16D43 /* LoginDelegate.swift */; };
 		A72799BC20811585005F08CF /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72799BB20811585005F08CF /* CardView.xib */; };
 		A72799BE2081159E005F08CF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72799BD2081159E005F08CF /* CardView.swift */; };
+		A728415820A4563400A17519 /* ProfileContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728415620A4563400A17519 /* ProfileContentCell.swift */; };
+		A728415920A4563400A17519 /* ProfileContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A728415720A4563400A17519 /* ProfileContentCell.xib */; };
+		A7296BAC20B542DC00478C51 /* APIChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BA920B542DC00478C51 /* APIChat.swift */; };
+		A7296BAD20B542DC00478C51 /* APIHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BAB20B542DC00478C51 /* APIHistory.swift */; };
+		A7296BC520B54A4400478C51 /* DAOInputHistoryBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB020B54A4300478C51 /* DAOInputHistoryBaseClass.swift */; };
+		A7296BC620B54A4400478C51 /* DAOInputHistoryErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB120B54A4300478C51 /* DAOInputHistoryErrorMsg.swift */; };
+		A7296BC720B54A4400478C51 /* DAOHistoryListBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB320B54A4300478C51 /* DAOHistoryListBaseClass.swift */; };
+		A7296BC820B54A4400478C51 /* DAOHistoryListErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB420B54A4300478C51 /* DAOHistoryListErrorMsg.swift */; };
+		A7296BC920B54A4400478C51 /* DAOHistoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB520B54A4300478C51 /* DAOHistoryListResponse.swift */; };
+		A7296BCA20B54A4400478C51 /* DAORoomListLastMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB820B54A4300478C51 /* DAORoomListLastMsg.swift */; };
+		A7296BCB20B54A4400478C51 /* DAORoomListBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BB920B54A4300478C51 /* DAORoomListBaseClass.swift */; };
+		A7296BCC20B54A4400478C51 /* DAORoomListRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BBA20B54A4300478C51 /* DAORoomListRooms.swift */; };
+		A7296BCD20B54A4400478C51 /* DAORoomListErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BBB20B54A4300478C51 /* DAORoomListErrorMsg.swift */; };
+		A7296BCE20B54A4400478C51 /* DAORoomListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BBC20B54A4300478C51 /* DAORoomListResponse.swift */; };
+		A7296BD120B54A4400478C51 /* DAOChatListChatMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BC120B54A4300478C51 /* DAOChatListChatMsg.swift */; };
+		A7296BD220B54A4400478C51 /* DAOChatListBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BC220B54A4300478C51 /* DAOChatListBaseClass.swift */; };
+		A7296BD320B54A4400478C51 /* DAOChatListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BC320B54A4300478C51 /* DAOChatListResponse.swift */; };
+		A7296BD420B54A4400478C51 /* DAOChatListErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BC420B54A4300478C51 /* DAOChatListErrorMsg.swift */; };
+		A7296BD620B5A59200478C51 /* HistoryPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7296BD520B5A59200478C51 /* HistoryPetVC.swift */; };
+		A72D62A220877C8400A297B2 /* LovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D62A120877C8400A297B2 /* LovedVC.swift */; };
+		A72D62A52087816F00A297B2 /* LovedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D62A32087816F00A297B2 /* LovedListCell.swift */; };
+		A72D62A62087816F00A297B2 /* LovedListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72D62A42087816F00A297B2 /* LovedListCell.xib */; };
+		A72D62AB2087972100A297B2 /* HistoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D62A92087972100A297B2 /* HistoryListCell.swift */; };
+		A72D62AC2087972100A297B2 /* HistoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72D62AA2087972100A297B2 /* HistoryListCell.xib */; };
 		A732AF682075F4640061BB65 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732AF672075F4640061BB65 /* CircleImageView.swift */; };
-		A732AF6A207606460061BB65 /* LoginFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732AF69207606460061BB65 /* LoginFirstVC.swift */; };
-		A732AF6D207606670061BB65 /* LoginSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732AF6C207606670061BB65 /* LoginSecondVC.swift */; };
+		A732AF6A207606460061BB65 /* InputProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732AF69207606460061BB65 /* InputProfileVC.swift */; };
+		A732AF6D207606670061BB65 /* InputPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732AF6C207606670061BB65 /* InputPetVC.swift */; };
 		A739B6C32079D71C00B50BBF /* InputPreferenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A739B6C22079D71C00B50BBF /* InputPreferenceVC.swift */; };
 		A739B6C52079D7A900B50BBF /* InputVaccineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A739B6C42079D7A900B50BBF /* InputVaccineVC.swift */; };
-		A741A1B9207B9A4200C388C1 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1B8207B9A4200C388C1 /* VaccineModel.swift */; };
+		A73A574A209A09D30093C43D /* ProfileSelfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5749209A09D30093C43D /* ProfileSelfVC.swift */; };
+		A73A574E209A0C550093C43D /* ProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A574D209A0C550093C43D /* ProfileDelegate.swift */; };
+		A73A5751209A1F4F0093C43D /* APILogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5750209A1F4F0093C43D /* APILogin.swift */; };
+		A73A5759209A23670093C43D /* DAOLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5754209A23670093C43D /* DAOLoginResponse.swift */; };
+		A73A575A209A23670093C43D /* DAOLoginBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5755209A23670093C43D /* DAOLoginBaseClass.swift */; };
+		A73A575B209A23670093C43D /* DAOCheckUsernameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5757209A23670093C43D /* DAOCheckUsernameResponse.swift */; };
+		A73A575C209A23670093C43D /* DAOCheckUsernameBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5758209A23670093C43D /* DAOCheckUsernameBaseClass.swift */; };
+		A73A575E209A24DF0093C43D /* Pref.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A575D209A24DF0093C43D /* Pref.swift */; };
+		A73A5761209A2BCA0093C43D /* DAORegisterBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A5760209A2BC90093C43D /* DAORegisterBaseClass.swift */; };
+		A741A1B9207B9A4200C388C1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1B8207B9A4200C388C1 /* Models.swift */; };
 		A741A1BD207BA2BC00C388C1 /* VaccineListColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1BB207BA2BC00C388C1 /* VaccineListColCell.swift */; };
 		A741A1BE207BA2BC00C388C1 /* VaccineListColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */; };
 		A741A1C0207BA7CF00C388C1 /* VaccineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */; };
+		A744EE91208B6C240083E248 /* ChangePasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */; };
+		A744EE93208B734B0083E248 /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE92208B734B0083E248 /* ChatRoomVC.swift */; };
+		A744EE9E208B7B3E0083E248 /* MessageReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE9C208B7B3E0083E248 /* MessageReceiverCell.swift */; };
+		A744EE9F208B7B3E0083E248 /* MessageReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A744EE9D208B7B3E0083E248 /* MessageReceiverCell.xib */; };
+		A744EEA2208B7B4E0083E248 /* MessageSenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EEA0208B7B4E0083E248 /* MessageSenderCell.swift */; };
+		A744EEA3208B7B4E0083E248 /* MessageSenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A744EEA1208B7B4E0083E248 /* MessageSenderCell.xib */; };
 		A746144C2074C311007543DC /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746144B2074C311007543DC /* RegisterVC.swift */; };
 		A749BAAD2076194300034BBB /* LoginSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A749BAAC2076194300034BBB /* LoginSetup.storyboard */; };
 		A7633CC62074901B00AB48BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7633CC52074901B00AB48BA /* AppDelegate.swift */; };
@@ -41,6 +91,26 @@
 		A7775E6E2080600000589EC1 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7775E6D2080600000589EC1 /* Chat.storyboard */; };
 		A7775E702080600B00589EC1 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7775E6F2080600B00589EC1 /* History.storyboard */; };
 		A7775E722080601500589EC1 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7775E712080601500589EC1 /* Setting.storyboard */; };
+		A782DFDA20A18C5E00A04779 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A782DFD920A18C5E00A04779 /* ProfileHeaderView.xib */; };
+		A782DFDD20A18F8700A04779 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFDC20A18F8700A04779 /* ProfileHeaderView.swift */; };
+		A782DFE120A1A6A100A04779 /* ProfilePetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFE020A1A6A100A04779 /* ProfilePetVC.swift */; };
+		A782DFFC20A1B9EA00A04779 /* DAOLikedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFE820A1B9EA00A04779 /* DAOLikedResponse.swift */; };
+		A782DFFD20A1B9EA00A04779 /* DAOLikedErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFE920A1B9EA00A04779 /* DAOLikedErrorMsg.swift */; };
+		A782DFFE20A1B9EA00A04779 /* DAOLikedLikedPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFEA20A1B9EA00A04779 /* DAOLikedLikedPet.swift */; };
+		A782DFFF20A1B9EA00A04779 /* DAOLikedVaccines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFEB20A1B9EA00A04779 /* DAOLikedVaccines.swift */; };
+		A782E00020A1B9EA00A04779 /* DAOLikedBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFEC20A1B9EA00A04779 /* DAOLikedBaseClass.swift */; };
+		A782E00120A1B9EA00A04779 /* DAOLikedMatchedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFED20A1B9EA00A04779 /* DAOLikedMatchedStatus.swift */; };
+		A782E00220A1B9EA00A04779 /* DAOLikedUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFEE20A1B9EA00A04779 /* DAOLikedUserData.swift */; };
+		A782E00320A1B9EA00A04779 /* DAOLoveErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF020A1B9EA00A04779 /* DAOLoveErrorMsg.swift */; };
+		A782E00420A1B9EA00A04779 /* DAOLoveBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF120A1B9EA00A04779 /* DAOLoveBaseClass.swift */; };
+		A782E00520A1B9EA00A04779 /* DAOMatchedBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF320A1B9EA00A04779 /* DAOMatchedBaseClass.swift */; };
+		A782E00620A1B9EA00A04779 /* DAOMatchedUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF420A1B9EA00A04779 /* DAOMatchedUserData.swift */; };
+		A782E00720A1B9EA00A04779 /* DAOMatchedVaccines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF520A1B9EA00A04779 /* DAOMatchedVaccines.swift */; };
+		A782E00820A1B9EA00A04779 /* DAOMatchedMatchedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF620A1B9EA00A04779 /* DAOMatchedMatchedStatus.swift */; };
+		A782E00920A1B9EA00A04779 /* DAOMatchedErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF720A1B9EA00A04779 /* DAOMatchedErrorMsg.swift */; };
+		A782E00A20A1B9EA00A04779 /* DAOMatchedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF820A1B9EA00A04779 /* DAOMatchedResponse.swift */; };
+		A782E00B20A1B9EA00A04779 /* DAOMatchedMatchedPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782DFF920A1B9EA00A04779 /* DAOMatchedMatchedPet.swift */; };
+		A782E01020A1BA7300A04779 /* APIHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782E00F20A1BA7300A04779 /* APIHome.swift */; };
 		A7851917207F8F7A00E4D320 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7851916207F8F7A00E4D320 /* Home.storyboard */; };
 		A78957B1207495DC002DAFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78957B0207495DC002DAFBC /* Assets.xcassets */; };
 		A78957B5207498A6002DAFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78957B4207498A6002DAFBC /* LaunchScreen.storyboard */; };
@@ -53,9 +123,60 @@
 		A78957CA207499E9002DAFBC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78957C5207499E9002DAFBC /* LoadingView.xib */; };
 		A78957CB207499E9002DAFBC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78957C6207499E9002DAFBC /* LoadingView.swift */; };
 		A78957CC207499E9002DAFBC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78957C7207499E9002DAFBC /* Helper.swift */; };
+		A789B7B020B6E73A005F8A67 /* DAOChatStartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789B7AD20B6E739005F8A67 /* DAOChatStartResponse.swift */; };
+		A789B7B120B6E73A005F8A67 /* DAOChatStartBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789B7AE20B6E739005F8A67 /* DAOChatStartBaseClass.swift */; };
+		A789B7B220B6E73A005F8A67 /* DAOChatStartErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789B7AF20B6E739005F8A67 /* DAOChatStartErrorMsg.swift */; };
+		A78F22EC209EFD7D00B4FB93 /* DAOBreedBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F22E8209EFD7D00B4FB93 /* DAOBreedBreeds.swift */; };
+		A78F22ED209EFD7D00B4FB93 /* DAOBreedErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F22E9209EFD7D00B4FB93 /* DAOBreedErrorMsg.swift */; };
+		A78F22EE209EFD7D00B4FB93 /* DAOBreedBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F22EA209EFD7D00B4FB93 /* DAOBreedBaseClass.swift */; };
+		A78F22EF209EFD7D00B4FB93 /* DAOBreedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F22EB209EFD7D00B4FB93 /* DAOBreedResponse.swift */; };
+		A7A0F4E220A3F6D80087A0DA /* APISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4E120A3F6D80087A0DA /* APISetting.swift */; };
+		A7A0F4E520A3FCC20087A0DA /* APIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4E420A3FCC20087A0DA /* APIProfile.swift */; };
+		A7A0F4F420A400CD0087A0DA /* DAOSettingBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4E820A400CD0087A0DA /* DAOSettingBaseClass.swift */; };
+		A7A0F4F520A400CD0087A0DA /* DAOSettingErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4E920A400CD0087A0DA /* DAOSettingErrorMsg.swift */; };
+		A7A0F4F620A400CD0087A0DA /* DAOPetVaccines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4EC20A400CD0087A0DA /* DAOPetVaccines.swift */; };
+		A7A0F4F720A400CD0087A0DA /* DAOPetBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4ED20A400CD0087A0DA /* DAOPetBaseClass.swift */; };
+		A7A0F4F820A400CD0087A0DA /* DAOPetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4EE20A400CD0087A0DA /* DAOPetResponse.swift */; };
+		A7A0F4F920A400CD0087A0DA /* DAOPetErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4EF20A400CD0087A0DA /* DAOPetErrorMsg.swift */; };
+		A7A0F4FA20A400CD0087A0DA /* DAOProfileBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4F120A400CD0087A0DA /* DAOProfileBaseClass.swift */; };
+		A7A0F4FB20A400CD0087A0DA /* DAOProfileErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4F220A400CD0087A0DA /* DAOProfileErrorMsg.swift */; };
+		A7A0F4FC20A400CD0087A0DA /* DAOProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4F320A400CD0087A0DA /* DAOProfileResponse.swift */; };
+		A7A0F4FF20A415D40087A0DA /* SettingTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F4FD20A415D40087A0DA /* SettingTextCell.swift */; };
+		A7A0F50020A415D40087A0DA /* SettingTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A0F4FE20A415D40087A0DA /* SettingTextCell.xib */; };
+		A7A0F50220A41C810087A0DA /* EditAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0F50120A41C810087A0DA /* EditAccountVC.swift */; };
+		A7A7F5F620957F8A00520D6A /* MessageDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7F5F420957F8A00520D6A /* MessageDateCell.swift */; };
+		A7A7F5F720957F8A00520D6A /* MessageDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A7F5F520957F8A00520D6A /* MessageDateCell.xib */; };
+		A7B2F08020B1CC05005538A1 /* PetDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F07F20B1CC05005538A1 /* PetDetailVC.swift */; };
+		A7B2F08320B1D36E005538A1 /* PetHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F08120B1D36E005538A1 /* PetHeaderCell.swift */; };
+		A7B2F08420B1D36E005538A1 /* PetHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F08220B1D36E005538A1 /* PetHeaderCell.xib */; };
+		A7B2F08720B1D513005538A1 /* PetContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F08520B1D513005538A1 /* PetContentCell.swift */; };
+		A7B2F08820B1D513005538A1 /* PetContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F08620B1D513005538A1 /* PetContentCell.xib */; };
+		A7B2F08B20B1D524005538A1 /* PetVaccineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F08920B1D524005538A1 /* PetVaccineCell.swift */; };
+		A7B2F08C20B1D524005538A1 /* PetVaccineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F08A20B1D524005538A1 /* PetVaccineCell.xib */; };
+		A7B2F08F20B1D537005538A1 /* PetActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F08D20B1D537005538A1 /* PetActionCell.swift */; };
+		A7B2F09020B1D537005538A1 /* PetActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F08E20B1D537005538A1 /* PetActionCell.xib */; };
+		A7B2F09220B1E682005538A1 /* PetDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B2F09120B1E682005538A1 /* PetDetailDelegate.swift */; };
 		A7B37FCB2081BBF4006C1E4A /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */; };
 		A7B37FCD2081BC20006C1E4A /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */; };
 		A7C568712078A4A7003FFFD9 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C568702078A4A7003FFFD9 /* UploadImage.swift */; };
+		A7C56D79209DC62C00F05A48 /* DAOLoginErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D78209DC62C00F05A48 /* DAOLoginErrorMsg.swift */; };
+		A7C56D7B209DC63400F05A48 /* DAOCheckUsernameErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D7A209DC63400F05A48 /* DAOCheckUsernameErrorMsg.swift */; };
+		A7C56D7D209DC63B00F05A48 /* DAORegisterErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D7C209DC63B00F05A48 /* DAORegisterErrorMsg.swift */; };
+		A7C56D80209DCDDE00F05A48 /* APIRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D7F209DCDDE00F05A48 /* APIRegister.swift */; };
+		A7C56D94209DDEE300F05A48 /* DAOVaccinesErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D83209DDEE300F05A48 /* DAOVaccinesErrorMsg.swift */; };
+		A7C56D95209DDEE300F05A48 /* DAOVaccinesBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D84209DDEE300F05A48 /* DAOVaccinesBaseClass.swift */; };
+		A7C56D96209DDEE300F05A48 /* DAOVaccinesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D85209DDEE300F05A48 /* DAOVaccinesResponse.swift */; };
+		A7C56D97209DDEE300F05A48 /* DAOVaccinesVaccines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D86209DDEE300F05A48 /* DAOVaccinesVaccines.swift */; };
+		A7C56D98209DDEE300F05A48 /* DAOCityCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D88209DDEE300F05A48 /* DAOCityCities.swift */; };
+		A7C56D99209DDEE300F05A48 /* DAOCityBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D89209DDEE300F05A48 /* DAOCityBaseClass.swift */; };
+		A7C56D9A209DDEE300F05A48 /* DAOCityErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D8A209DDEE300F05A48 /* DAOCityErrorMsg.swift */; };
+		A7C56D9B209DDEE300F05A48 /* DAOCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D8B209DDEE300F05A48 /* DAOCityResponse.swift */; };
+		A7C56D9C209DDEE300F05A48 /* DAOProvinceProvinces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D8D209DDEE300F05A48 /* DAOProvinceProvinces.swift */; };
+		A7C56D9D209DDEE300F05A48 /* DAOProvinceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D8E209DDEE300F05A48 /* DAOProvinceResponse.swift */; };
+		A7C56D9E209DDEE300F05A48 /* DAOProvinceBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D8F209DDEE300F05A48 /* DAOProvinceBaseClass.swift */; };
+		A7C56D9F209DDEE300F05A48 /* DAOProvinceErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D90209DDEE300F05A48 /* DAOProvinceErrorMsg.swift */; };
+		A7C56DA0209DDEE300F05A48 /* DAOInputBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D92209DDEE300F05A48 /* DAOInputBaseClass.swift */; };
+		A7C56DA1209DDEE300F05A48 /* DAOInputErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C56D93209DDEE300F05A48 /* DAOInputErrorMsg.swift */; };
 		A96F111264859903BDECC9C2 /* Pods_PetMatchedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3884AAFAF81972842E926 /* Pods_PetMatchedTests.framework */; };
 		BDC3558795108AB18FC0C439 /* Pods_PetMatchedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F399C56F1D460B817BF8DAAF /* Pods_PetMatchedUITests.framework */; };
 		EDD5D90C54D04FCE8A8EE842 /* Pods_PetMatched.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1415BA74001B6547D9CB9771 /* Pods_PetMatched.framework */; };
@@ -87,21 +208,71 @@
 		84E3884AAFAF81972842E926 /* Pods_PetMatchedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A701E55320789422006A2A04 /* RegisterSuccessPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessPopupVC.swift; sourceTree = "<group>"; };
 		A701E55420789422006A2A04 /* RegisterSuccessPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterSuccessPopupVC.xib; sourceTree = "<group>"; };
+		A7106BCB208B3FE10081E72C /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		A7106BCC208B3FE10081E72C /* ChatListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
+		A7106BD2208B483B0081E72C /* SettingTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleCell.swift; sourceTree = "<group>"; };
+		A7106BD3208B483B0081E72C /* SettingTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTitleCell.xib; sourceTree = "<group>"; };
+		A7106BD6208B484F0081E72C /* SettingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListCell.swift; sourceTree = "<group>"; };
+		A7106BD7208B484F0081E72C /* SettingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingListCell.xib; sourceTree = "<group>"; };
+		A7106BDA208B48650081E72C /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
+		A7106BDB208B48650081E72C /* LogoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutCell.xib; sourceTree = "<group>"; };
+		A7106BDE208B54050081E72C /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		A7106BE0208B57390081E72C /* PasswordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextCell.swift; sourceTree = "<group>"; };
+		A7106BE1208B57390081E72C /* PasswordTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextCell.xib; sourceTree = "<group>"; };
 		A7271C682074E02900D16D43 /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
 		A7271C6B2074E4D000D16D43 /* ResetPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPopupVC.swift; sourceTree = "<group>"; };
 		A7271C6C2074E4D000D16D43 /* ResetPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPopupVC.xib; sourceTree = "<group>"; };
 		A7271C702074E81F00D16D43 /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
 		A72799BB20811585005F08CF /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		A72799BD2081159E005F08CF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A728415620A4563400A17519 /* ProfileContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentCell.swift; sourceTree = "<group>"; };
+		A728415720A4563400A17519 /* ProfileContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileContentCell.xib; sourceTree = "<group>"; };
+		A7296BA920B542DC00478C51 /* APIChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIChat.swift; sourceTree = "<group>"; };
+		A7296BAB20B542DC00478C51 /* APIHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHistory.swift; sourceTree = "<group>"; };
+		A7296BB020B54A4300478C51 /* DAOInputHistoryBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOInputHistoryBaseClass.swift; sourceTree = "<group>"; };
+		A7296BB120B54A4300478C51 /* DAOInputHistoryErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOInputHistoryErrorMsg.swift; sourceTree = "<group>"; };
+		A7296BB320B54A4300478C51 /* DAOHistoryListBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOHistoryListBaseClass.swift; sourceTree = "<group>"; };
+		A7296BB420B54A4300478C51 /* DAOHistoryListErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOHistoryListErrorMsg.swift; sourceTree = "<group>"; };
+		A7296BB520B54A4300478C51 /* DAOHistoryListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOHistoryListResponse.swift; sourceTree = "<group>"; };
+		A7296BB820B54A4300478C51 /* DAORoomListLastMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORoomListLastMsg.swift; sourceTree = "<group>"; };
+		A7296BB920B54A4300478C51 /* DAORoomListBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORoomListBaseClass.swift; sourceTree = "<group>"; };
+		A7296BBA20B54A4300478C51 /* DAORoomListRooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORoomListRooms.swift; sourceTree = "<group>"; };
+		A7296BBB20B54A4300478C51 /* DAORoomListErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORoomListErrorMsg.swift; sourceTree = "<group>"; };
+		A7296BBC20B54A4300478C51 /* DAORoomListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORoomListResponse.swift; sourceTree = "<group>"; };
+		A7296BC120B54A4300478C51 /* DAOChatListChatMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatListChatMsg.swift; sourceTree = "<group>"; };
+		A7296BC220B54A4300478C51 /* DAOChatListBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatListBaseClass.swift; sourceTree = "<group>"; };
+		A7296BC320B54A4300478C51 /* DAOChatListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatListResponse.swift; sourceTree = "<group>"; };
+		A7296BC420B54A4300478C51 /* DAOChatListErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatListErrorMsg.swift; sourceTree = "<group>"; };
+		A7296BD520B5A59200478C51 /* HistoryPetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPetVC.swift; sourceTree = "<group>"; };
+		A72D62A120877C8400A297B2 /* LovedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedVC.swift; sourceTree = "<group>"; };
+		A72D62A32087816F00A297B2 /* LovedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedListCell.swift; sourceTree = "<group>"; };
+		A72D62A42087816F00A297B2 /* LovedListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LovedListCell.xib; sourceTree = "<group>"; };
+		A72D62A92087972100A297B2 /* HistoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListCell.swift; sourceTree = "<group>"; };
+		A72D62AA2087972100A297B2 /* HistoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryListCell.xib; sourceTree = "<group>"; };
 		A732AF672075F4640061BB65 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
-		A732AF69207606460061BB65 /* LoginFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFirstVC.swift; sourceTree = "<group>"; };
-		A732AF6C207606670061BB65 /* LoginSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSecondVC.swift; sourceTree = "<group>"; };
+		A732AF69207606460061BB65 /* InputProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProfileVC.swift; sourceTree = "<group>"; };
+		A732AF6C207606670061BB65 /* InputPetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPetVC.swift; sourceTree = "<group>"; };
 		A739B6C22079D71C00B50BBF /* InputPreferenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPreferenceVC.swift; sourceTree = "<group>"; };
 		A739B6C42079D7A900B50BBF /* InputVaccineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVaccineVC.swift; sourceTree = "<group>"; };
-		A741A1B8207B9A4200C388C1 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineModel.swift; sourceTree = "<group>"; };
+		A73A5749209A09D30093C43D /* ProfileSelfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelfVC.swift; sourceTree = "<group>"; };
+		A73A574D209A0C550093C43D /* ProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegate.swift; sourceTree = "<group>"; };
+		A73A5750209A1F4F0093C43D /* APILogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogin.swift; sourceTree = "<group>"; };
+		A73A5754209A23670093C43D /* DAOLoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLoginResponse.swift; sourceTree = "<group>"; };
+		A73A5755209A23670093C43D /* DAOLoginBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLoginBaseClass.swift; sourceTree = "<group>"; };
+		A73A5757209A23670093C43D /* DAOCheckUsernameResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCheckUsernameResponse.swift; sourceTree = "<group>"; };
+		A73A5758209A23670093C43D /* DAOCheckUsernameBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCheckUsernameBaseClass.swift; sourceTree = "<group>"; };
+		A73A575D209A24DF0093C43D /* Pref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pref.swift; sourceTree = "<group>"; };
+		A73A5760209A2BC90093C43D /* DAORegisterBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORegisterBaseClass.swift; sourceTree = "<group>"; };
+		A741A1B8207B9A4200C388C1 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A741A1BB207BA2BC00C388C1 /* VaccineListColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineListColCell.swift; sourceTree = "<group>"; };
 		A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineListColCell.xib; sourceTree = "<group>"; };
 		A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineDelegate.swift; sourceTree = "<group>"; };
+		A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDelegate.swift; sourceTree = "<group>"; };
+		A744EE92208B734B0083E248 /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
+		A744EE9C208B7B3E0083E248 /* MessageReceiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiverCell.swift; sourceTree = "<group>"; };
+		A744EE9D208B7B3E0083E248 /* MessageReceiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageReceiverCell.xib; sourceTree = "<group>"; };
+		A744EEA0208B7B4E0083E248 /* MessageSenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSenderCell.swift; sourceTree = "<group>"; };
+		A744EEA1208B7B4E0083E248 /* MessageSenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSenderCell.xib; sourceTree = "<group>"; };
 		A746144B2074C311007543DC /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A749BAAC2076194300034BBB /* LoginSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSetup.storyboard; sourceTree = "<group>"; };
 		A7633CC22074901B00AB48BA /* PetMatched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatched.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +296,26 @@
 		A7775E6D2080600000589EC1 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		A7775E6F2080600B00589EC1 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		A7775E712080601500589EC1 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		A782DFD920A18C5E00A04779 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		A782DFDC20A18F8700A04779 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		A782DFE020A1A6A100A04779 /* ProfilePetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePetVC.swift; sourceTree = "<group>"; };
+		A782DFE820A1B9EA00A04779 /* DAOLikedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedResponse.swift; sourceTree = "<group>"; };
+		A782DFE920A1B9EA00A04779 /* DAOLikedErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedErrorMsg.swift; sourceTree = "<group>"; };
+		A782DFEA20A1B9EA00A04779 /* DAOLikedLikedPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedLikedPet.swift; sourceTree = "<group>"; };
+		A782DFEB20A1B9EA00A04779 /* DAOLikedVaccines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedVaccines.swift; sourceTree = "<group>"; };
+		A782DFEC20A1B9EA00A04779 /* DAOLikedBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedBaseClass.swift; sourceTree = "<group>"; };
+		A782DFED20A1B9EA00A04779 /* DAOLikedMatchedStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedMatchedStatus.swift; sourceTree = "<group>"; };
+		A782DFEE20A1B9EA00A04779 /* DAOLikedUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLikedUserData.swift; sourceTree = "<group>"; };
+		A782DFF020A1B9EA00A04779 /* DAOLoveErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLoveErrorMsg.swift; sourceTree = "<group>"; };
+		A782DFF120A1B9EA00A04779 /* DAOLoveBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLoveBaseClass.swift; sourceTree = "<group>"; };
+		A782DFF320A1B9EA00A04779 /* DAOMatchedBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedBaseClass.swift; sourceTree = "<group>"; };
+		A782DFF420A1B9EA00A04779 /* DAOMatchedUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedUserData.swift; sourceTree = "<group>"; };
+		A782DFF520A1B9EA00A04779 /* DAOMatchedVaccines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedVaccines.swift; sourceTree = "<group>"; };
+		A782DFF620A1B9EA00A04779 /* DAOMatchedMatchedStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedMatchedStatus.swift; sourceTree = "<group>"; };
+		A782DFF720A1B9EA00A04779 /* DAOMatchedErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedErrorMsg.swift; sourceTree = "<group>"; };
+		A782DFF820A1B9EA00A04779 /* DAOMatchedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedResponse.swift; sourceTree = "<group>"; };
+		A782DFF920A1B9EA00A04779 /* DAOMatchedMatchedPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOMatchedMatchedPet.swift; sourceTree = "<group>"; };
+		A782E00F20A1BA7300A04779 /* APIHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHome.swift; sourceTree = "<group>"; };
 		A7851916207F8F7A00E4D320 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A78957B0207495DC002DAFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A78957B4207498A6002DAFBC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,9 +328,60 @@
 		A78957C5207499E9002DAFBC /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		A78957C6207499E9002DAFBC /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A78957C7207499E9002DAFBC /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		A789B7AD20B6E739005F8A67 /* DAOChatStartResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatStartResponse.swift; sourceTree = "<group>"; };
+		A789B7AE20B6E739005F8A67 /* DAOChatStartBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatStartBaseClass.swift; sourceTree = "<group>"; };
+		A789B7AF20B6E739005F8A67 /* DAOChatStartErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOChatStartErrorMsg.swift; sourceTree = "<group>"; };
+		A78F22E8209EFD7D00B4FB93 /* DAOBreedBreeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOBreedBreeds.swift; sourceTree = "<group>"; };
+		A78F22E9209EFD7D00B4FB93 /* DAOBreedErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOBreedErrorMsg.swift; sourceTree = "<group>"; };
+		A78F22EA209EFD7D00B4FB93 /* DAOBreedBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOBreedBaseClass.swift; sourceTree = "<group>"; };
+		A78F22EB209EFD7D00B4FB93 /* DAOBreedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOBreedResponse.swift; sourceTree = "<group>"; };
+		A7A0F4E120A3F6D80087A0DA /* APISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISetting.swift; sourceTree = "<group>"; };
+		A7A0F4E420A3FCC20087A0DA /* APIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProfile.swift; sourceTree = "<group>"; };
+		A7A0F4E820A400CD0087A0DA /* DAOSettingBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOSettingBaseClass.swift; sourceTree = "<group>"; };
+		A7A0F4E920A400CD0087A0DA /* DAOSettingErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOSettingErrorMsg.swift; sourceTree = "<group>"; };
+		A7A0F4EC20A400CD0087A0DA /* DAOPetVaccines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPetVaccines.swift; sourceTree = "<group>"; };
+		A7A0F4ED20A400CD0087A0DA /* DAOPetBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPetBaseClass.swift; sourceTree = "<group>"; };
+		A7A0F4EE20A400CD0087A0DA /* DAOPetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPetResponse.swift; sourceTree = "<group>"; };
+		A7A0F4EF20A400CD0087A0DA /* DAOPetErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPetErrorMsg.swift; sourceTree = "<group>"; };
+		A7A0F4F120A400CD0087A0DA /* DAOProfileBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProfileBaseClass.swift; sourceTree = "<group>"; };
+		A7A0F4F220A400CD0087A0DA /* DAOProfileErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProfileErrorMsg.swift; sourceTree = "<group>"; };
+		A7A0F4F320A400CD0087A0DA /* DAOProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProfileResponse.swift; sourceTree = "<group>"; };
+		A7A0F4FD20A415D40087A0DA /* SettingTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextCell.swift; sourceTree = "<group>"; };
+		A7A0F4FE20A415D40087A0DA /* SettingTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTextCell.xib; sourceTree = "<group>"; };
+		A7A0F50120A41C810087A0DA /* EditAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountVC.swift; sourceTree = "<group>"; };
+		A7A7F5F420957F8A00520D6A /* MessageDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDateCell.swift; sourceTree = "<group>"; };
+		A7A7F5F520957F8A00520D6A /* MessageDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageDateCell.xib; sourceTree = "<group>"; };
+		A7B2F07F20B1CC05005538A1 /* PetDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailVC.swift; sourceTree = "<group>"; };
+		A7B2F08120B1D36E005538A1 /* PetHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetHeaderCell.swift; sourceTree = "<group>"; };
+		A7B2F08220B1D36E005538A1 /* PetHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetHeaderCell.xib; sourceTree = "<group>"; };
+		A7B2F08520B1D513005538A1 /* PetContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetContentCell.swift; sourceTree = "<group>"; };
+		A7B2F08620B1D513005538A1 /* PetContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetContentCell.xib; sourceTree = "<group>"; };
+		A7B2F08920B1D524005538A1 /* PetVaccineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVaccineCell.swift; sourceTree = "<group>"; };
+		A7B2F08A20B1D524005538A1 /* PetVaccineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetVaccineCell.xib; sourceTree = "<group>"; };
+		A7B2F08D20B1D537005538A1 /* PetActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetActionCell.swift; sourceTree = "<group>"; };
+		A7B2F08E20B1D537005538A1 /* PetActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetActionCell.xib; sourceTree = "<group>"; };
+		A7B2F09120B1E682005538A1 /* PetDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailDelegate.swift; sourceTree = "<group>"; };
 		A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		A7C568702078A4A7003FFFD9 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		A7C56D78209DC62C00F05A48 /* DAOLoginErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOLoginErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D7A209DC63400F05A48 /* DAOCheckUsernameErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCheckUsernameErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D7C209DC63B00F05A48 /* DAORegisterErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAORegisterErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D7F209DCDDE00F05A48 /* APIRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegister.swift; sourceTree = "<group>"; };
+		A7C56D83209DDEE300F05A48 /* DAOVaccinesErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOVaccinesErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D84209DDEE300F05A48 /* DAOVaccinesBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOVaccinesBaseClass.swift; sourceTree = "<group>"; };
+		A7C56D85209DDEE300F05A48 /* DAOVaccinesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOVaccinesResponse.swift; sourceTree = "<group>"; };
+		A7C56D86209DDEE300F05A48 /* DAOVaccinesVaccines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOVaccinesVaccines.swift; sourceTree = "<group>"; };
+		A7C56D88209DDEE300F05A48 /* DAOCityCities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCityCities.swift; sourceTree = "<group>"; };
+		A7C56D89209DDEE300F05A48 /* DAOCityBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCityBaseClass.swift; sourceTree = "<group>"; };
+		A7C56D8A209DDEE300F05A48 /* DAOCityErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCityErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D8B209DDEE300F05A48 /* DAOCityResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOCityResponse.swift; sourceTree = "<group>"; };
+		A7C56D8D209DDEE300F05A48 /* DAOProvinceProvinces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProvinceProvinces.swift; sourceTree = "<group>"; };
+		A7C56D8E209DDEE300F05A48 /* DAOProvinceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProvinceResponse.swift; sourceTree = "<group>"; };
+		A7C56D8F209DDEE300F05A48 /* DAOProvinceBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProvinceBaseClass.swift; sourceTree = "<group>"; };
+		A7C56D90209DDEE300F05A48 /* DAOProvinceErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOProvinceErrorMsg.swift; sourceTree = "<group>"; };
+		A7C56D92209DDEE300F05A48 /* DAOInputBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOInputBaseClass.swift; sourceTree = "<group>"; };
+		A7C56D93209DDEE300F05A48 /* DAOInputErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOInputErrorMsg.swift; sourceTree = "<group>"; };
 		F10BC40718E83A4C2D5A7EA5 /* Pods-PetMatched.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatched.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatched/Pods-PetMatched.release.xcconfig"; sourceTree = "<group>"; };
 		F399C56F1D460B817BF8DAAF /* Pods_PetMatchedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8214EE537C872CA7A0CCE6B /* Pods-PetMatchedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchedTests/Pods-PetMatchedTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +428,60 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A70074D3209DECBD0085FB32 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D7F209DCDDE00F05A48 /* APIRegister.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A7106BCA208B3FC00081E72C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7106BCC208B3FE10081E72C /* ChatListCell.xib */,
+				A744EE9D208B7B3E0083E248 /* MessageReceiverCell.xib */,
+				A744EEA1208B7B4E0083E248 /* MessageSenderCell.xib */,
+				A7A7F5F520957F8A00520D6A /* MessageDateCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7106BCF208B3FFE0081E72C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7106BCB208B3FE10081E72C /* ChatListCell.swift */,
+				A744EE9C208B7B3E0083E248 /* MessageReceiverCell.swift */,
+				A744EEA0208B7B4E0083E248 /* MessageSenderCell.swift */,
+				A7A7F5F420957F8A00520D6A /* MessageDateCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7106BD0208B480E0081E72C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7106BD3208B483B0081E72C /* SettingTitleCell.xib */,
+				A7106BD7208B484F0081E72C /* SettingListCell.xib */,
+				A7106BDB208B48650081E72C /* LogoutCell.xib */,
+				A7106BE1208B57390081E72C /* PasswordTextCell.xib */,
+				A7A0F4FE20A415D40087A0DA /* SettingTextCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7106BD1208B48240081E72C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7106BD2208B483B0081E72C /* SettingTitleCell.swift */,
+				A7106BD6208B484F0081E72C /* SettingListCell.swift */,
+				A7106BDA208B48650081E72C /* LogoutCell.swift */,
+				A7106BE0208B57390081E72C /* PasswordTextCell.swift */,
+				A7A0F4FD20A415D40087A0DA /* SettingTextCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A7271C6A2074E4A900D16D43 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +505,11 @@
 			children = (
 				A72799BB20811585005F08CF /* CardView.xib */,
 				A7B37FCA2081BBF4006C1E4A /* CustomOverlayView.xib */,
+				A72D62A42087816F00A297B2 /* LovedListCell.xib */,
+				A7B2F08220B1D36E005538A1 /* PetHeaderCell.xib */,
+				A7B2F08620B1D513005538A1 /* PetContentCell.xib */,
+				A7B2F08A20B1D524005538A1 /* PetVaccineCell.xib */,
+				A7B2F08E20B1D537005538A1 /* PetActionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,8 +519,155 @@
 			children = (
 				A72799BD2081159E005F08CF /* CardView.swift */,
 				A7B37FCC2081BC20006C1E4A /* CustomOverlayView.swift */,
+				A72D62A32087816F00A297B2 /* LovedListCell.swift */,
+				A7B2F08120B1D36E005538A1 /* PetHeaderCell.swift */,
+				A7B2F08520B1D513005538A1 /* PetContentCell.swift */,
+				A7B2F08920B1D524005538A1 /* PetVaccineCell.swift */,
+				A7B2F08D20B1D537005538A1 /* PetActionCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A7296BA820B542DC00478C51 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BA920B542DC00478C51 /* APIChat.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A7296BAA20B542DC00478C51 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BAB20B542DC00478C51 /* APIHistory.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		A7296BAE20B54A4300478C51 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BAF20B54A4300478C51 /* DAOInputHistory */,
+				A7296BB220B54A4300478C51 /* DAOHistoryList */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		A7296BAF20B54A4300478C51 /* DAOInputHistory */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BB020B54A4300478C51 /* DAOInputHistoryBaseClass.swift */,
+				A7296BB120B54A4300478C51 /* DAOInputHistoryErrorMsg.swift */,
+			);
+			path = DAOInputHistory;
+			sourceTree = "<group>";
+		};
+		A7296BB220B54A4300478C51 /* DAOHistoryList */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BB320B54A4300478C51 /* DAOHistoryListBaseClass.swift */,
+				A7296BB420B54A4300478C51 /* DAOHistoryListErrorMsg.swift */,
+				A7296BB520B54A4300478C51 /* DAOHistoryListResponse.swift */,
+			);
+			path = DAOHistoryList;
+			sourceTree = "<group>";
+		};
+		A7296BB620B54A4300478C51 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BB720B54A4300478C51 /* DAORoomList */,
+				A7296BBD20B54A4300478C51 /* DAOChatStart */,
+				A7296BC020B54A4300478C51 /* DAOChatList */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A7296BB720B54A4300478C51 /* DAORoomList */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BB820B54A4300478C51 /* DAORoomListLastMsg.swift */,
+				A7296BB920B54A4300478C51 /* DAORoomListBaseClass.swift */,
+				A7296BBA20B54A4300478C51 /* DAORoomListRooms.swift */,
+				A7296BBB20B54A4300478C51 /* DAORoomListErrorMsg.swift */,
+				A7296BBC20B54A4300478C51 /* DAORoomListResponse.swift */,
+			);
+			path = DAORoomList;
+			sourceTree = "<group>";
+		};
+		A7296BBD20B54A4300478C51 /* DAOChatStart */ = {
+			isa = PBXGroup;
+			children = (
+				A789B7AE20B6E739005F8A67 /* DAOChatStartBaseClass.swift */,
+				A789B7AF20B6E739005F8A67 /* DAOChatStartErrorMsg.swift */,
+				A789B7AD20B6E739005F8A67 /* DAOChatStartResponse.swift */,
+			);
+			path = DAOChatStart;
+			sourceTree = "<group>";
+		};
+		A7296BC020B54A4300478C51 /* DAOChatList */ = {
+			isa = PBXGroup;
+			children = (
+				A7296BC120B54A4300478C51 /* DAOChatListChatMsg.swift */,
+				A7296BC220B54A4300478C51 /* DAOChatListBaseClass.swift */,
+				A7296BC320B54A4300478C51 /* DAOChatListResponse.swift */,
+				A7296BC420B54A4300478C51 /* DAOChatListErrorMsg.swift */,
+			);
+			path = DAOChatList;
+			sourceTree = "<group>";
+		};
+		A72D62A72087962A00A297B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A72D62A92087972100A297B2 /* HistoryListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A72D62A82087963400A297B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A72D62AA2087972100A297B2 /* HistoryListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A73A5752209A23670093C43D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A73A575F209A2BC90093C43D /* DAORegister */,
+				A73A5753209A23670093C43D /* DAOLogin */,
+				A73A5756209A23670093C43D /* DAOCheckUsername */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A73A5753209A23670093C43D /* DAOLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D78209DC62C00F05A48 /* DAOLoginErrorMsg.swift */,
+				A73A5754209A23670093C43D /* DAOLoginResponse.swift */,
+				A73A5755209A23670093C43D /* DAOLoginBaseClass.swift */,
+			);
+			path = DAOLogin;
+			sourceTree = "<group>";
+		};
+		A73A5756209A23670093C43D /* DAOCheckUsername */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D7A209DC63400F05A48 /* DAOCheckUsernameErrorMsg.swift */,
+				A73A5757209A23670093C43D /* DAOCheckUsernameResponse.swift */,
+				A73A5758209A23670093C43D /* DAOCheckUsernameBaseClass.swift */,
+			);
+			path = DAOCheckUsername;
+			sourceTree = "<group>";
+		};
+		A73A575F209A2BC90093C43D /* DAORegister */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D7C209DC63B00F05A48 /* DAORegisterErrorMsg.swift */,
+				A73A5760209A2BC90093C43D /* DAORegisterBaseClass.swift */,
+			);
+			path = DAORegister;
 			sourceTree = "<group>";
 		};
 		A741A1B5207B9A1500C388C1 /* Model */ = {
@@ -234,6 +682,13 @@
 		A741A1B6207B9A1F00C388C1 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				A7296BB620B54A4300478C51 /* Chat */,
+				A7296BAE20B54A4300478C51 /* History */,
+				A7A0F4EA20A400CD0087A0DA /* Profile */,
+				A7A0F4E620A400CD0087A0DA /* Setting */,
+				A782DFE620A1B9EA00A04779 /* Home */,
+				A7C56D81209DDEE300F05A48 /* Register */,
+				A73A5752209A23670093C43D /* Login */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -241,7 +696,7 @@
 		A741A1B7207B9A2500C388C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A741A1B8207B9A4200C388C1 /* VaccineModel.swift */,
+				A741A1B8207B9A4200C388C1 /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,8 +713,8 @@
 			isa = PBXGroup;
 			children = (
 				A741A1BA207BA29100C388C1 /* View */,
-				A732AF69207606460061BB65 /* LoginFirstVC.swift */,
-				A732AF6C207606670061BB65 /* LoginSecondVC.swift */,
+				A732AF69207606460061BB65 /* InputProfileVC.swift */,
+				A732AF6C207606670061BB65 /* InputPetVC.swift */,
 				A739B6C42079D7A900B50BBF /* InputVaccineVC.swift */,
 				A739B6C22079D71C00B50BBF /* InputPreferenceVC.swift */,
 			);
@@ -269,8 +724,8 @@
 		A749BAAF2076216200034BBB /* LoginSetup */ = {
 			isa = PBXGroup;
 			children = (
+				A782DFDE20A191DD00A04779 /* View */,
 				A749BAAC2076194300034BBB /* LoginSetup.storyboard */,
-				A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */,
 			);
 			path = LoginSetup;
 			sourceTree = "<group>";
@@ -344,7 +799,10 @@
 		A7775E5B20805F3C00589EC1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A782DFDB20A18F5200A04779 /* View */,
 				A7775E5F20805F9200589EC1 /* ProfileVC.swift */,
+				A73A5749209A09D30093C43D /* ProfileSelfVC.swift */,
+				A782DFE020A1A6A100A04779 /* ProfilePetVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -352,7 +810,9 @@
 		A7775E5C20805F4100589EC1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				A7106BCF208B3FFE0081E72C /* View */,
 				A7775E6120805FA200589EC1 /* ChatVC.swift */,
+				A744EE92208B734B0083E248 /* ChatRoomVC.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -360,7 +820,10 @@
 		A7775E5D20805F4800589EC1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				A7106BD1208B48240081E72C /* View */,
 				A7775E6520805FBF00589EC1 /* SettingVC.swift */,
+				A7106BDE208B54050081E72C /* ChangePasswordVC.swift */,
+				A7A0F50120A41C810087A0DA /* EditAccountVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -368,6 +831,7 @@
 		A7775E5E20805F5200589EC1 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				A72D62A72087962A00A297B2 /* View */,
 				A7775E6320805FB100589EC1 /* HistoryVC.swift */,
 			);
 			path = History;
@@ -376,6 +840,7 @@
 		A7775E6720805FCA00589EC1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				A7106BD0208B480E0081E72C /* View */,
 				A7775E712080601500589EC1 /* Setting.storyboard */,
 			);
 			path = Setting;
@@ -384,6 +849,7 @@
 		A7775E6820805FCF00589EC1 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				A72D62A82087963400A297B2 /* View */,
 				A7775E6F2080600B00589EC1 /* History.storyboard */,
 			);
 			path = History;
@@ -392,6 +858,7 @@
 		A7775E6920805FD700589EC1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				A7106BCA208B3FC00081E72C /* View */,
 				A7775E6D2080600000589EC1 /* Chat.storyboard */,
 			);
 			path = Chat;
@@ -400,9 +867,99 @@
 		A7775E6A20805FDC00589EC1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A782DFDF20A191FF00A04779 /* View */,
 				A7775E6B20805FF200589EC1 /* Profile.storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A782DFDB20A18F5200A04779 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFDC20A18F8700A04779 /* ProfileHeaderView.swift */,
+				A728415620A4563400A17519 /* ProfileContentCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A782DFDE20A191DD00A04779 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A782DFDF20A191FF00A04779 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFD920A18C5E00A04779 /* ProfileHeaderView.xib */,
+				A728415720A4563400A17519 /* ProfileContentCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A782DFE620A1B9EA00A04779 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFE720A1B9EA00A04779 /* DAOLiked */,
+				A782DFEF20A1B9EA00A04779 /* DAOLove */,
+				A782DFF220A1B9EA00A04779 /* DAOMatched */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A782DFE720A1B9EA00A04779 /* DAOLiked */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFE820A1B9EA00A04779 /* DAOLikedResponse.swift */,
+				A782DFE920A1B9EA00A04779 /* DAOLikedErrorMsg.swift */,
+				A782DFEA20A1B9EA00A04779 /* DAOLikedLikedPet.swift */,
+				A782DFEB20A1B9EA00A04779 /* DAOLikedVaccines.swift */,
+				A782DFEC20A1B9EA00A04779 /* DAOLikedBaseClass.swift */,
+				A782DFED20A1B9EA00A04779 /* DAOLikedMatchedStatus.swift */,
+				A782DFEE20A1B9EA00A04779 /* DAOLikedUserData.swift */,
+			);
+			path = DAOLiked;
+			sourceTree = "<group>";
+		};
+		A782DFEF20A1B9EA00A04779 /* DAOLove */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFF020A1B9EA00A04779 /* DAOLoveErrorMsg.swift */,
+				A782DFF120A1B9EA00A04779 /* DAOLoveBaseClass.swift */,
+			);
+			path = DAOLove;
+			sourceTree = "<group>";
+		};
+		A782DFF220A1B9EA00A04779 /* DAOMatched */ = {
+			isa = PBXGroup;
+			children = (
+				A782DFF320A1B9EA00A04779 /* DAOMatchedBaseClass.swift */,
+				A782DFF420A1B9EA00A04779 /* DAOMatchedUserData.swift */,
+				A782DFF520A1B9EA00A04779 /* DAOMatchedVaccines.swift */,
+				A782DFF620A1B9EA00A04779 /* DAOMatchedMatchedStatus.swift */,
+				A782DFF720A1B9EA00A04779 /* DAOMatchedErrorMsg.swift */,
+				A782DFF820A1B9EA00A04779 /* DAOMatchedResponse.swift */,
+				A782DFF920A1B9EA00A04779 /* DAOMatchedMatchedPet.swift */,
+			);
+			path = DAOMatched;
+			sourceTree = "<group>";
+		};
+		A782E00C20A1BA1B00A04779 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A782E00F20A1BA7300A04779 /* APIHome.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A782E00E20A1BA2700A04779 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4E120A3F6D80087A0DA /* APISetting.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		A7851915207F8F6800E4D320 /* Home */ = {
@@ -419,6 +976,9 @@
 			children = (
 				A72799BA2081152A005F08CF /* View */,
 				A7775E5020804E4100589EC1 /* HomeVC.swift */,
+				A72D62A120877C8400A297B2 /* LovedVC.swift */,
+				A7B2F07F20B1CC05005538A1 /* PetDetailVC.swift */,
+				A7296BD520B5A59200478C51 /* HistoryPetVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -438,6 +998,13 @@
 		A78957AC207495DC002DAFBC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A7296BA820B542DC00478C51 /* Chat */,
+				A7296BAA20B542DC00478C51 /* History */,
+				A7A0F4E320A3FC9E0087A0DA /* Profile */,
+				A782E00E20A1BA2700A04779 /* Setting */,
+				A782E00C20A1BA1B00A04779 /* Home */,
+				A70074D3209DECBD0085FB32 /* Register */,
+				A7C56D7E209DCBCE00F05A48 /* Login */,
 				A78957C0207499E1002DAFBC /* Network.swift */,
 				A7C568702078A4A7003FFFD9 /* UploadImage.swift */,
 			);
@@ -450,6 +1017,9 @@
 				A7271C702074E81F00D16D43 /* LoginDelegate.swift */,
 				A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */,
 				A7775E59208053A200589EC1 /* RootDelegate.swift */,
+				A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */,
+				A73A574D209A0C550093C43D /* ProfileDelegate.swift */,
+				A7B2F09120B1E682005538A1 /* PetDetailDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -461,6 +1031,7 @@
 				A78957C2207499E9002DAFBC /* Base.swift */,
 				A78957C3207499E9002DAFBC /* BaseViewController.swift */,
 				A78957C7207499E9002DAFBC /* Helper.swift */,
+				A73A575D209A24DF0093C43D /* Pref.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -553,6 +1124,134 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A78F22E7209EFD7D00B4FB93 /* DAOBreed */ = {
+			isa = PBXGroup;
+			children = (
+				A78F22E8209EFD7D00B4FB93 /* DAOBreedBreeds.swift */,
+				A78F22E9209EFD7D00B4FB93 /* DAOBreedErrorMsg.swift */,
+				A78F22EA209EFD7D00B4FB93 /* DAOBreedBaseClass.swift */,
+				A78F22EB209EFD7D00B4FB93 /* DAOBreedResponse.swift */,
+			);
+			path = DAOBreed;
+			sourceTree = "<group>";
+		};
+		A7A0F4E320A3FC9E0087A0DA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4E420A3FCC20087A0DA /* APIProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A7A0F4E620A400CD0087A0DA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4E720A400CD0087A0DA /* DAOSetting */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A7A0F4E720A400CD0087A0DA /* DAOSetting */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4E820A400CD0087A0DA /* DAOSettingBaseClass.swift */,
+				A7A0F4E920A400CD0087A0DA /* DAOSettingErrorMsg.swift */,
+			);
+			path = DAOSetting;
+			sourceTree = "<group>";
+		};
+		A7A0F4EA20A400CD0087A0DA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4EB20A400CD0087A0DA /* DAOPet */,
+				A7A0F4F020A400CD0087A0DA /* DAOProfile */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A7A0F4EB20A400CD0087A0DA /* DAOPet */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4EC20A400CD0087A0DA /* DAOPetVaccines.swift */,
+				A7A0F4ED20A400CD0087A0DA /* DAOPetBaseClass.swift */,
+				A7A0F4EE20A400CD0087A0DA /* DAOPetResponse.swift */,
+				A7A0F4EF20A400CD0087A0DA /* DAOPetErrorMsg.swift */,
+			);
+			path = DAOPet;
+			sourceTree = "<group>";
+		};
+		A7A0F4F020A400CD0087A0DA /* DAOProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0F4F120A400CD0087A0DA /* DAOProfileBaseClass.swift */,
+				A7A0F4F220A400CD0087A0DA /* DAOProfileErrorMsg.swift */,
+				A7A0F4F320A400CD0087A0DA /* DAOProfileResponse.swift */,
+			);
+			path = DAOProfile;
+			sourceTree = "<group>";
+		};
+		A7C56D7E209DCBCE00F05A48 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A73A5750209A1F4F0093C43D /* APILogin.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A7C56D81209DDEE300F05A48 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A78F22E7209EFD7D00B4FB93 /* DAOBreed */,
+				A7C56D82209DDEE300F05A48 /* DAOVaccines */,
+				A7C56D87209DDEE300F05A48 /* DAOCity */,
+				A7C56D8C209DDEE300F05A48 /* DAOProvince */,
+				A7C56D91209DDEE300F05A48 /* DAOInput */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A7C56D82209DDEE300F05A48 /* DAOVaccines */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D83209DDEE300F05A48 /* DAOVaccinesErrorMsg.swift */,
+				A7C56D84209DDEE300F05A48 /* DAOVaccinesBaseClass.swift */,
+				A7C56D85209DDEE300F05A48 /* DAOVaccinesResponse.swift */,
+				A7C56D86209DDEE300F05A48 /* DAOVaccinesVaccines.swift */,
+			);
+			path = DAOVaccines;
+			sourceTree = "<group>";
+		};
+		A7C56D87209DDEE300F05A48 /* DAOCity */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D88209DDEE300F05A48 /* DAOCityCities.swift */,
+				A7C56D89209DDEE300F05A48 /* DAOCityBaseClass.swift */,
+				A7C56D8A209DDEE300F05A48 /* DAOCityErrorMsg.swift */,
+				A7C56D8B209DDEE300F05A48 /* DAOCityResponse.swift */,
+			);
+			path = DAOCity;
+			sourceTree = "<group>";
+		};
+		A7C56D8C209DDEE300F05A48 /* DAOProvince */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D8D209DDEE300F05A48 /* DAOProvinceProvinces.swift */,
+				A7C56D8E209DDEE300F05A48 /* DAOProvinceResponse.swift */,
+				A7C56D8F209DDEE300F05A48 /* DAOProvinceBaseClass.swift */,
+				A7C56D90209DDEE300F05A48 /* DAOProvinceErrorMsg.swift */,
+			);
+			path = DAOProvince;
+			sourceTree = "<group>";
+		};
+		A7C56D91209DDEE300F05A48 /* DAOInput */ = {
+			isa = PBXGroup;
+			children = (
+				A7C56D92209DDEE300F05A48 /* DAOInputBaseClass.swift */,
+				A7C56D93209DDEE300F05A48 /* DAOInputErrorMsg.swift */,
+			);
+			path = DAOInput;
+			sourceTree = "<group>";
+		};
 		DA2DD4BB2C58C28FCF50B9E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,7 +1274,6 @@
 				A7633CBF2074901B00AB48BA /* Frameworks */,
 				A7633CC02074901B00AB48BA /* Resources */,
 				D2BF9921E944607E229049A1 /* [CP] Embed Pods Frameworks */,
-				CB9F39247D0755610AD9CB97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -594,8 +1292,6 @@
 				A7633CD22074901C00AB48BA /* Sources */,
 				A7633CD32074901C00AB48BA /* Frameworks */,
 				A7633CD42074901C00AB48BA /* Resources */,
-				A66E816A8D83015521BC8B8A /* [CP] Embed Pods Frameworks */,
-				3AFC3952505EBCF497A8353B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -615,8 +1311,6 @@
 				A7633CDD2074901C00AB48BA /* Sources */,
 				A7633CDE2074901C00AB48BA /* Frameworks */,
 				A7633CDF2074901C00AB48BA /* Resources */,
-				FA1D22703E9B383BA2DDFBF8 /* [CP] Embed Pods Frameworks */,
-				8F3E9BBA0341E4F0DE31EAEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -640,7 +1334,7 @@
 				TargetAttributes = {
 					A7633CC12074901B00AB48BA = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A7633CD52074901C00AB48BA = {
 						CreatedOnToolsVersion = 9.2;
@@ -681,20 +1375,37 @@
 			files = (
 				A78957B1207495DC002DAFBC /* Assets.xcassets in Resources */,
 				A7775E6C20805FF200589EC1 /* Profile.storyboard in Resources */,
+				A744EE9F208B7B3E0083E248 /* MessageReceiverCell.xib in Resources */,
 				A72799BC20811585005F08CF /* CardView.xib in Resources */,
 				A7775E552080517400589EC1 /* Main.storyboard in Resources */,
+				A7B2F08C20B1D524005538A1 /* PetVaccineCell.xib in Resources */,
 				A78957CA207499E9002DAFBC /* LoadingView.xib in Resources */,
+				A744EEA3208B7B4E0083E248 /* MessageSenderCell.xib in Resources */,
 				A741A1BE207BA2BC00C388C1 /* VaccineListColCell.xib in Resources */,
+				A7B2F08820B1D513005538A1 /* PetContentCell.xib in Resources */,
 				A7851917207F8F7A00E4D320 /* Home.storyboard in Resources */,
 				A7775E6E2080600000589EC1 /* Chat.storyboard in Resources */,
 				A7271C6E2074E4D000D16D43 /* ResetPopupVC.xib in Resources */,
+				A782DFDA20A18C5E00A04779 /* ProfileHeaderView.xib in Resources */,
+				A7A7F5F720957F8A00520D6A /* MessageDateCell.xib in Resources */,
+				A7106BD5208B483B0081E72C /* SettingTitleCell.xib in Resources */,
 				A78957B5207498A6002DAFBC /* LaunchScreen.storyboard in Resources */,
+				A72D62AC2087972100A297B2 /* HistoryListCell.xib in Resources */,
+				A7B2F08420B1D36E005538A1 /* PetHeaderCell.xib in Resources */,
 				A7775E722080601500589EC1 /* Setting.storyboard in Resources */,
 				A749BAAD2076194300034BBB /* LoginSetup.storyboard in Resources */,
 				A701E55620789422006A2A04 /* RegisterSuccessPopupVC.xib in Resources */,
 				A7B37FCB2081BBF4006C1E4A /* CustomOverlayView.xib in Resources */,
+				A7B2F09020B1D537005538A1 /* PetActionCell.xib in Resources */,
+				A7106BE3208B57390081E72C /* PasswordTextCell.xib in Resources */,
 				A7775E702080600B00589EC1 /* History.storyboard in Resources */,
+				A7106BDD208B48650081E72C /* LogoutCell.xib in Resources */,
+				A7106BCE208B3FE10081E72C /* ChatListCell.xib in Resources */,
+				A7106BD9208B484F0081E72C /* SettingListCell.xib in Resources */,
+				A728415920A4563400A17519 /* ProfileContentCell.xib in Resources */,
 				A78957B7207498B4002DAFBC /* Login.storyboard in Resources */,
+				A72D62A62087816F00A297B2 /* LovedListCell.xib in Resources */,
+				A7A0F50020A415D40087A0DA /* SettingTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,21 +1462,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3AFC3952505EBCF497A8353B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatchedTests/Pods-PetMatchedTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6FCF90B9BC8EA4175A7547C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,51 +1480,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F3E9BBA0341E4F0DE31EAEA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatchedUITests/Pods-PetMatchedUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A66E816A8D83015521BC8B8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatchedTests/Pods-PetMatchedTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB9F39247D0755610AD9CB97 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatched/Pods-PetMatched-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D2BF9921E944607E229049A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -841,15 +1492,21 @@
 				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
 				"${BUILT_PRODUCTS_DIR}/DPMeterView/DPMeterView.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/MXPagerView/MXPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/MXSegmentedPager/MXSegmentedPager.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SBPickerSelector/SBPickerSelector.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIViewController+KeyboardAnimation/UIViewController_KeyboardAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -859,35 +1516,26 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DPMeterView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXSegmentedPager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBPickerSelector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIViewController_KeyboardAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatched/Pods-PetMatched-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA1D22703E9B383BA2DDFBF8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetMatchedUITests/Pods-PetMatchedUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -898,36 +1546,140 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78957BD20749965002DAFBC /* LoginVC.swift in Sources */,
+				A73A575A209A23670093C43D /* DAOLoginBaseClass.swift in Sources */,
+				A7106BD4208B483B0081E72C /* SettingTitleCell.swift in Sources */,
+				A7C56D96209DDEE300F05A48 /* DAOVaccinesResponse.swift in Sources */,
 				A7633CC62074901B00AB48BA /* AppDelegate.swift in Sources */,
 				A7775E58208051F800589EC1 /* MainTabBarController.swift in Sources */,
+				A72D62A52087816F00A297B2 /* LovedListCell.swift in Sources */,
+				A7A0F4F420A400CD0087A0DA /* DAOSettingBaseClass.swift in Sources */,
+				A7C56DA0209DDEE300F05A48 /* DAOInputBaseClass.swift in Sources */,
+				A73A5751209A1F4F0093C43D /* APILogin.swift in Sources */,
+				A7106BDF208B54050081E72C /* ChangePasswordVC.swift in Sources */,
 				A739B6C32079D71C00B50BBF /* InputPreferenceVC.swift in Sources */,
+				A744EE93208B734B0083E248 /* ChatRoomVC.swift in Sources */,
+				A7296BC620B54A4400478C51 /* DAOInputHistoryErrorMsg.swift in Sources */,
 				A7B37FCD2081BC20006C1E4A /* CustomOverlayView.swift in Sources */,
+				A7C56D9D209DDEE300F05A48 /* DAOProvinceResponse.swift in Sources */,
 				A72799BE2081159E005F08CF /* CardView.swift in Sources */,
+				A782E00420A1B9EA00A04779 /* DAOLoveBaseClass.swift in Sources */,
+				A73A575E209A24DF0093C43D /* Pref.swift in Sources */,
+				A7C56DA1209DDEE300F05A48 /* DAOInputErrorMsg.swift in Sources */,
+				A78F22EF209EFD7D00B4FB93 /* DAOBreedResponse.swift in Sources */,
 				A701E55520789422006A2A04 /* RegisterSuccessPopupVC.swift in Sources */,
+				A7A0F4FF20A415D40087A0DA /* SettingTextCell.swift in Sources */,
+				A782DFDD20A18F8700A04779 /* ProfileHeaderView.swift in Sources */,
+				A782E01020A1BA7300A04779 /* APIHome.swift in Sources */,
+				A782E00720A1B9EA00A04779 /* DAOMatchedVaccines.swift in Sources */,
+				A7C56D9F209DDEE300F05A48 /* DAOProvinceErrorMsg.swift in Sources */,
+				A73A5761209A2BCA0093C43D /* DAORegisterBaseClass.swift in Sources */,
+				A78F22ED209EFD7D00B4FB93 /* DAOBreedErrorMsg.swift in Sources */,
+				A7C56D79209DC62C00F05A48 /* DAOLoginErrorMsg.swift in Sources */,
 				A78957C8207499E9002DAFBC /* Base.swift in Sources */,
+				A7C56D99209DDEE300F05A48 /* DAOCityBaseClass.swift in Sources */,
+				A73A574E209A0C550093C43D /* ProfileDelegate.swift in Sources */,
+				A782E00B20A1B9EA00A04779 /* DAOMatchedMatchedPet.swift in Sources */,
+				A7296BCD20B54A4400478C51 /* DAORoomListErrorMsg.swift in Sources */,
+				A7B2F09220B1E682005538A1 /* PetDetailDelegate.swift in Sources */,
 				A7271C712074E81F00D16D43 /* LoginDelegate.swift in Sources */,
+				A7106BCD208B3FE10081E72C /* ChatListCell.swift in Sources */,
+				A73A574A209A09D30093C43D /* ProfileSelfVC.swift in Sources */,
+				A7C56D94209DDEE300F05A48 /* DAOVaccinesErrorMsg.swift in Sources */,
+				A7296BC520B54A4400478C51 /* DAOInputHistoryBaseClass.swift in Sources */,
 				A78957C1207499E1002DAFBC /* Network.swift in Sources */,
 				A7775E6020805F9200589EC1 /* ProfileVC.swift in Sources */,
+				A7C56D95209DDEE300F05A48 /* DAOVaccinesBaseClass.swift in Sources */,
+				A7C56D9E209DDEE300F05A48 /* DAOProvinceBaseClass.swift in Sources */,
+				A7A0F4F720A400CD0087A0DA /* DAOPetBaseClass.swift in Sources */,
+				A782E00820A1B9EA00A04779 /* DAOMatchedMatchedStatus.swift in Sources */,
+				A7296BC920B54A4400478C51 /* DAOHistoryListResponse.swift in Sources */,
 				A7775E6620805FBF00589EC1 /* SettingVC.swift in Sources */,
 				A739B6C52079D7A900B50BBF /* InputVaccineVC.swift in Sources */,
 				A78957BF2074997A002DAFBC /* SplashVC.swift in Sources */,
+				A7A0F50220A41C810087A0DA /* EditAccountVC.swift in Sources */,
+				A7A0F4E520A3FCC20087A0DA /* APIProfile.swift in Sources */,
+				A7296BD620B5A59200478C51 /* HistoryPetVC.swift in Sources */,
 				A732AF682075F4640061BB65 /* CircleImageView.swift in Sources */,
+				A744EEA2208B7B4E0083E248 /* MessageSenderCell.swift in Sources */,
+				A7106BE2208B57390081E72C /* PasswordTextCell.swift in Sources */,
+				A7296BCB20B54A4400478C51 /* DAORoomListBaseClass.swift in Sources */,
+				A7C56D7D209DC63B00F05A48 /* DAORegisterErrorMsg.swift in Sources */,
+				A78F22EE209EFD7D00B4FB93 /* DAOBreedBaseClass.swift in Sources */,
+				A7A0F4FC20A400CD0087A0DA /* DAOProfileResponse.swift in Sources */,
+				A782E00120A1B9EA00A04779 /* DAOLikedMatchedStatus.swift in Sources */,
+				A782DFFE20A1B9EA00A04779 /* DAOLikedLikedPet.swift in Sources */,
+				A7296BCC20B54A4400478C51 /* DAORoomListRooms.swift in Sources */,
+				A7296BD320B54A4400478C51 /* DAOChatListResponse.swift in Sources */,
 				A7271C692074E02900D16D43 /* ForgotVC.swift in Sources */,
-				A741A1B9207B9A4200C388C1 /* VaccineModel.swift in Sources */,
+				A741A1B9207B9A4200C388C1 /* Models.swift in Sources */,
 				A741A1C0207BA7CF00C388C1 /* VaccineDelegate.swift in Sources */,
+				A782DFFC20A1B9EA00A04779 /* DAOLikedResponse.swift in Sources */,
 				A7775E5120804E4100589EC1 /* HomeVC.swift in Sources */,
 				A741A1BD207BA2BC00C388C1 /* VaccineListColCell.swift in Sources */,
 				A7775E5A208053A200589EC1 /* RootDelegate.swift in Sources */,
 				A7775E6220805FA200589EC1 /* ChatVC.swift in Sources */,
-				A732AF6D207606670061BB65 /* LoginSecondVC.swift in Sources */,
+				A7A0F4F620A400CD0087A0DA /* DAOPetVaccines.swift in Sources */,
+				A7C56D80209DCDDE00F05A48 /* APIRegister.swift in Sources */,
+				A782E00A20A1B9EA00A04779 /* DAOMatchedResponse.swift in Sources */,
+				A782E00520A1B9EA00A04779 /* DAOMatchedBaseClass.swift in Sources */,
+				A732AF6D207606670061BB65 /* InputPetVC.swift in Sources */,
 				A78957CB207499E9002DAFBC /* LoadingView.swift in Sources */,
 				A7775E6420805FB100589EC1 /* HistoryVC.swift in Sources */,
+				A789B7B220B6E73A005F8A67 /* DAOChatStartErrorMsg.swift in Sources */,
+				A7106BD8208B484F0081E72C /* SettingListCell.swift in Sources */,
 				A746144C2074C311007543DC /* RegisterVC.swift in Sources */,
+				A728415820A4563400A17519 /* ProfileContentCell.swift in Sources */,
+				A7C56D9C209DDEE300F05A48 /* DAOProvinceProvinces.swift in Sources */,
 				A7271C6D2074E4D000D16D43 /* ResetPopupVC.swift in Sources */,
+				A744EE9E208B7B3E0083E248 /* MessageReceiverCell.swift in Sources */,
+				A7296BD420B54A4400478C51 /* DAOChatListErrorMsg.swift in Sources */,
+				A7B2F08020B1CC05005538A1 /* PetDetailVC.swift in Sources */,
+				A744EE91208B6C240083E248 /* ChangePasswordDelegate.swift in Sources */,
+				A7296BD120B54A4400478C51 /* DAOChatListChatMsg.swift in Sources */,
+				A782E00220A1B9EA00A04779 /* DAOLikedUserData.swift in Sources */,
+				A7A7F5F620957F8A00520D6A /* MessageDateCell.swift in Sources */,
+				A7B2F08B20B1D524005538A1 /* PetVaccineCell.swift in Sources */,
+				A7C56D9A209DDEE300F05A48 /* DAOCityErrorMsg.swift in Sources */,
+				A7A0F4FB20A400CD0087A0DA /* DAOProfileErrorMsg.swift in Sources */,
+				A7A0F4F820A400CD0087A0DA /* DAOPetResponse.swift in Sources */,
+				A7296BC820B54A4400478C51 /* DAOHistoryListErrorMsg.swift in Sources */,
+				A782DFE120A1A6A100A04779 /* ProfilePetVC.swift in Sources */,
+				A7296BCE20B54A4400478C51 /* DAORoomListResponse.swift in Sources */,
+				A789B7B020B6E73A005F8A67 /* DAOChatStartResponse.swift in Sources */,
+				A7296BCA20B54A4400478C51 /* DAORoomListLastMsg.swift in Sources */,
+				A7C56D7B209DC63400F05A48 /* DAOCheckUsernameErrorMsg.swift in Sources */,
+				A7B2F08F20B1D537005538A1 /* PetActionCell.swift in Sources */,
+				A7296BC720B54A4400478C51 /* DAOHistoryListBaseClass.swift in Sources */,
+				A7C56D9B209DDEE300F05A48 /* DAOCityResponse.swift in Sources */,
+				A72D62A220877C8400A297B2 /* LovedVC.swift in Sources */,
+				A7A0F4FA20A400CD0087A0DA /* DAOProfileBaseClass.swift in Sources */,
+				A782DFFD20A1B9EA00A04779 /* DAOLikedErrorMsg.swift in Sources */,
+				A73A5759209A23670093C43D /* DAOLoginResponse.swift in Sources */,
+				A7A0F4F520A400CD0087A0DA /* DAOSettingErrorMsg.swift in Sources */,
+				A782E00920A1B9EA00A04779 /* DAOMatchedErrorMsg.swift in Sources */,
 				A78957C9207499E9002DAFBC /* BaseViewController.swift in Sources */,
+				A782E00320A1B9EA00A04779 /* DAOLoveErrorMsg.swift in Sources */,
+				A7106BDC208B48650081E72C /* LogoutCell.swift in Sources */,
+				A7A0F4E220A3F6D80087A0DA /* APISetting.swift in Sources */,
 				A7C568712078A4A7003FFFD9 /* UploadImage.swift in Sources */,
+				A78F22EC209EFD7D00B4FB93 /* DAOBreedBreeds.swift in Sources */,
+				A7B2F08720B1D513005538A1 /* PetContentCell.swift in Sources */,
+				A7A0F4F920A400CD0087A0DA /* DAOPetErrorMsg.swift in Sources */,
+				A7296BAD20B542DC00478C51 /* APIHistory.swift in Sources */,
 				A78957CC207499E9002DAFBC /* Helper.swift in Sources */,
-				A732AF6A207606460061BB65 /* LoginFirstVC.swift in Sources */,
+				A7C56D97209DDEE300F05A48 /* DAOVaccinesVaccines.swift in Sources */,
+				A72D62AB2087972100A297B2 /* HistoryListCell.swift in Sources */,
+				A7C56D98209DDEE300F05A48 /* DAOCityCities.swift in Sources */,
+				A73A575C209A23670093C43D /* DAOCheckUsernameBaseClass.swift in Sources */,
+				A782E00020A1B9EA00A04779 /* DAOLikedBaseClass.swift in Sources */,
+				A73A575B209A23670093C43D /* DAOCheckUsernameResponse.swift in Sources */,
+				A789B7B120B6E73A005F8A67 /* DAOChatStartBaseClass.swift in Sources */,
+				A7B2F08320B1D36E005538A1 /* PetHeaderCell.swift in Sources */,
+				A782DFFF20A1B9EA00A04779 /* DAOLikedVaccines.swift in Sources */,
+				A782E00620A1B9EA00A04779 /* DAOMatchedUserData.swift in Sources */,
+				A7296BD220B54A4400478C51 /* DAOChatListBaseClass.swift in Sources */,
+				A7296BAC20B542DC00478C51 /* APIChat.swift in Sources */,
+				A732AF6A207606460061BB65 /* InputProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,13 +1827,16 @@
 			baseConfigurationReference = 1F461F8885F6BCCF8C83DB5D /* Pods-PetMatched.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZS3HEA636;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PetMatched/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.patrickmarshall.PetMatched;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1092,13 +1847,16 @@
 			baseConfigurationReference = F10BC40718E83A4C2D5A7EA5 /* Pods-PetMatched.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZS3HEA636;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PetMatched/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.patrickmarshall.PetMatched;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

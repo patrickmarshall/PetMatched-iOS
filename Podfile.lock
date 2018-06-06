@@ -5,10 +5,18 @@ PODS:
     - Alamofire (~> 4.6.0)
   - DPMeterView (1.0.1)
   - DynamicBlurView (2.0.2)
+  - GrowingTextView (0.5.6)
   - HexColors (6.0.0)
-  - IQKeyboardManagerSwift (5.0.8)
+  - HMSegmentedControl (1.5.3)
+  - IQKeyboardManagerSwift (6.0.2)
   - Koloda (4.3.1):
     - pop (~> 1.0)
+  - MXPagerView (0.2.1)
+  - MXParallaxHeader (0.6.1)
+  - MXSegmentedPager (3.3.0):
+    - HMSegmentedControl (= 1.5.3)
+    - MXPagerView (= 0.2.1)
+    - MXParallaxHeader (= 0.6.1)
   - pop (1.0.10)
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
@@ -16,24 +24,52 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
-  - SkyFloatingLabelTextField (3.4.0)
-  - SwiftMessages (4.1.0)
-  - SwiftyJSON (4.0.0)
+  - SkyFloatingLabelTextField (3.4.1)
+  - SwiftMessages (4.1.2)
+  - SwiftyJSON (4.1.0)
+  - "UIViewController+KeyboardAnimation (1.3)"
 
 DEPENDENCIES:
   - Alamofire (~> 4.6)
   - AlignedCollectionViewFlowLayout (~> 1.1.1)
   - Cloudinary (~> 2.3)
   - DPMeterView (~> 1.0)
+  - GrowingTextView (~> 0.5)
   - HexColors (~> 6.0)
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (~> 6.0.0)
   - Koloda (~> 4.3)
+  - MXSegmentedPager (~> 3.3)
   - PopupDialog (~> 0.7)
   - SBPickerSelector (~> 1.2)
   - SDWebImage (~> 4.3)
   - SkyFloatingLabelTextField (~> 3.4)
   - SwiftMessages (~> 4.1)
   - SwiftyJSON (~> 4.0)
+  - "UIViewController+KeyboardAnimation (~> 1.3)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlignedCollectionViewFlowLayout
+    - Cloudinary
+    - DPMeterView
+    - DynamicBlurView
+    - GrowingTextView
+    - HexColors
+    - HMSegmentedControl
+    - IQKeyboardManagerSwift
+    - Koloda
+    - MXPagerView
+    - MXParallaxHeader
+    - MXSegmentedPager
+    - pop
+    - PopupDialog
+    - SBPickerSelector
+    - SDWebImage
+    - SkyFloatingLabelTextField
+    - SwiftMessages
+    - SwiftyJSON
+    - "UIViewController+KeyboardAnimation"
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -41,17 +77,23 @@ SPEC CHECKSUMS:
   Cloudinary: fd611d907bd6608f3556c40673b628e466809816
   DPMeterView: f6a917eaec2b2ef7844cb43f2ce2c6ac4b4abc85
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
   HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
-  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
+  MXPagerView: ede184b5191b2ed689ccf05a750a9978cce42414
+  MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
+  MXSegmentedPager: a35ebaf939e1629f24db3bb26653c1c557362f59
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
   SBPickerSelector: ca8defc713bf229a35a06100ba2e6e96c424ac6a
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
-  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
+  SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  "UIViewController+KeyboardAnimation": 4c6000b4a2e450a6105f007f96bb7142aebed220
 
-PODFILE CHECKSUM: cc46313601a52331b3fd858d8de649936e7c0d5b
+PODFILE CHECKSUM: 631c3f17f042b470b0a30b46c411471558e35502
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
