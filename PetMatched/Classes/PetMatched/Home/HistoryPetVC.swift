@@ -17,6 +17,8 @@ class HistoryPetVC: BaseViewController {
     var petId = 0
     var historyList: [DAOHistoryListResponse] = []
     
+    @IBOutlet weak var emptyView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +43,7 @@ class HistoryPetVC: BaseViewController {
         self.setBackButton(color: UIColor.white)
         self.setNavBarTint(color: UIColor.white)
         self.setNavBarColor(color: UIColor.darkBlue)
+        self.emptyView.isHidden = true
     }
     
     func getHistoryAPI() {
@@ -55,6 +58,11 @@ class HistoryPetVC: BaseViewController {
                     self.showMessage(message: responses.errorMsg!.title!, error: true)
                 } else {
                     self.historyList = responses.response!
+                    if self.historyList.count == 0 {
+                        self.emptyView.isHidden = false
+                    } else {
+                        self.emptyView.isHidden = true
+                    }
                     self.tableView.reloadData()
                 }
             } else {

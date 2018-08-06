@@ -78,28 +78,28 @@ extension InputPreferenceVC {
             }
         }
         
-        Network.request(request: APIRegister.inputPreferences(breed: breed, city: self.cityCode.getValue(), ageMin: (self.ageMinText.text?.getValue())!, ageMax: (self.ageMaxText.text?.getValue())!), onSuccess: { response in
-            self.stopLoading()
-            let responses = DAOInputBaseClass(json: response)
-            
-            if responses.status == 200 {
-                if responses.error! {
-                    self.showMessage(message: responses.errorMsg!.title!, error: true)
-                } else {
-                    // Move to Main Tab Bar
-                    self.navigationController?.popToRootViewController(animated: false)
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let mainTab = storyboard.instantiateInitialViewController() as! UITabBarController
-                    self.present(mainTab, animated: true, completion: nil)
-                }
-            } else {
-                self.showMessage(message: responses.errorMsg!.title!, error: true)
-            }
-        }, onFailure: { error in
-            // If fail while calling API
-            self.showMessage(message: error, error: true)
-            self.stopLoading()
-        })
+//        Network.request(request: APIRegister.inputPreferences(breed: breed, city: self.cityCode.getValue(), ageMin: (self.ageMinText.text?.getValue())!, ageMax: (self.ageMaxText.text?.getValue())!), onSuccess: { response in
+//            self.stopLoading()
+//            let responses = DAOInputBaseClass(json: response)
+//
+//            if responses.status == 200 {
+//                if responses.error! {
+//                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+//                } else {
+//                    // Move to Main Tab Bar
+//                    self.navigationController?.popToRootViewController(animated: false)
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let mainTab = storyboard.instantiateInitialViewController() as! UITabBarController
+//                    self.present(mainTab, animated: true, completion: nil)
+//                }
+//            } else {
+//                self.showMessage(message: responses.errorMsg!.title!, error: true)
+//            }
+//        }, onFailure: { error in
+//            // If fail while calling API
+//            self.showMessage(message: error, error: true)
+//            self.stopLoading()
+//        })
     }
 }
 extension InputPreferenceVC: SBPickerSelectorDelegate {

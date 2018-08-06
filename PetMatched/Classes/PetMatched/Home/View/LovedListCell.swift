@@ -10,8 +10,9 @@
 import UIKit
 import DPMeterView
 import SDWebImage
+import SwipeCellKit
 
-class LovedListCell: UITableViewCell {
+class LovedListCell: SwipeTableViewCell {
 
     var liked: DAOMatchedMatchedPet?
     var meter: Float = 0.0

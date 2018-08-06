@@ -13,10 +13,12 @@ public final class DAOMatchedResponse: NSCoding {
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
     static let matchedPet = "matchedPet"
+    static let totalMatchedPet = "totalMatchedPet"
   }
 
   // MARK: Properties
   public var matchedPet: [DAOMatchedMatchedPet]?
+  public var totalMatchedPet: Int?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -32,6 +34,7 @@ public final class DAOMatchedResponse: NSCoding {
   /// - parameter json: JSON object from SwiftyJSON.
   public required init(json: JSON) {
     if let items = json[SerializationKeys.matchedPet].array { matchedPet = items.map { DAOMatchedMatchedPet(json: $0) } }
+    totalMatchedPet = json[SerializationKeys.totalMatchedPet].int
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -40,16 +43,19 @@ public final class DAOMatchedResponse: NSCoding {
   public func dictionaryRepresentation() -> [String: Any] {
     var dictionary: [String: Any] = [:]
     if let value = matchedPet { dictionary[SerializationKeys.matchedPet] = value.map { $0.dictionaryRepresentation() } }
+    if let value = totalMatchedPet { dictionary[SerializationKeys.totalMatchedPet] = value }
     return dictionary
   }
 
   // MARK: NSCoding Protocol
   required public init(coder aDecoder: NSCoder) {
     self.matchedPet = aDecoder.decodeObject(forKey: SerializationKeys.matchedPet) as? [DAOMatchedMatchedPet]
+    self.totalMatchedPet = aDecoder.decodeObject(forKey: SerializationKeys.totalMatchedPet) as? Int
   }
 
   public func encode(with aCoder: NSCoder) {
     aCoder.encode(matchedPet, forKey: SerializationKeys.matchedPet)
+    aCoder.encode(totalMatchedPet, forKey: SerializationKeys.totalMatchedPet)
   }
 
 }

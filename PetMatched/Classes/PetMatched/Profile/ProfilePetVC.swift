@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlignedCollectionViewFlowLayout
 
 class ProfilePetVC: BaseViewController {
 
@@ -16,6 +17,9 @@ class ProfilePetVC: BaseViewController {
     // Data
     var pet: DAOPetResponse?
     var titleList: [String] = ["Name", "Variant", "Breed", "Date of Birth", "Sex", "Fur Color", "Weight", "Size", "Pedigree Status", "Special Story"]
+    
+    var first: Bool = true
+    var collHeight: CGFloat = 80
     
     @IBOutlet var tableView: UITableView!
     
@@ -43,6 +47,7 @@ extension ProfilePetVC: UITableViewDelegate {
         self.tableView.estimatedRowHeight = 100
         
         self.tableView.register(UINib(nibName: "ProfileContentCell", bundle: self.nibBundle), forCellReuseIdentifier: "ProfileContentCell")
+        self.tableView.register(UINib(nibName: "PetVaccineCell", bundle: self.nibBundle), forCellReuseIdentifier: "PetVaccineCell")
         
         self.tableView.reloadData()
         
@@ -53,7 +58,12 @@ extension ProfilePetVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        switch indexPath.row {
+        case 10:
+            return (self.pet!.vaccines!.count == 0) ? 0 : self.collHeight
+        default:
+            return UITableViewAutomaticDimension
+        }
     }
 }
 
@@ -63,14 +73,16 @@ extension ProfilePetVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.pet != nil {
-            return self.titleList.count
+            return self.titleList.count + 1
         } else {
             return 0
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileContentCell") as! ProfileContentCell
-        cell.titleLabel.text = self.titleList[indexPath.row]
+        if indexPath.row != 10 {
+            cell.titleLabel.text = self.titleList[indexPath.row]
+        }
         if indexPath.row == 0 {
             cell.topLineView.isHidden = false
         } else {
@@ -115,6 +127,13 @@ extension ProfilePetVC: UITableViewDataSource {
                 let cert = (data.breedCert! == "0") ? "Not Available" : "Available"
                 cell.contentLabel.text = cert
             }
+        case 10:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PetVaccineCell") as! PetVaccineCell
+            self.setupCollectionView(cell: cell)
+            if !first {
+                self.stopLoading()
+            }
+            return cell
         default:
             if let data = self.pet {
                 cell.contentLabel.text = data.petDesc!
@@ -123,3 +142,54 @@ extension ProfilePetVC: UITableViewDataSource {
         return cell
     }
 }
+
+extension ProfilePetVC: UICollectionViewDelegate {
+    func setupCollectionView(cell: PetVaccineCell) {
+        cell.collectionView.register(UINib(nibName: "VaccineListColCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "VaccineListColCell")
+        
+        cell.collectionView.delegate = self
+        cell.collectionView.dataSource = self
+        
+        let alignedFlowLayout = cell.collectionView.collectionViewLayout as? AlignedCollectionViewFlowLayout
+        alignedFlowLayout?.horizontalAlignment = .left
+        alignedFlowLayout?.verticalAlignment = .center
+        alignedFlowLayout?.minimumInteritemSpacing = 0
+        alignedFlowLayout?.minimumLineSpacing = 0
+        alignedFlowLayout?.estimatedItemSize = .init(width: 100, height: 40)
+        cell.collectionView.collectionViewLayout = alignedFlowLayout!
+        
+        cell.collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension ProfilePetVC: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.pet?.vaccines?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == self.pet!.vaccines!.count - 1 && first {
+            self.showLoading(view: self.view)
+            first = false
+            self.collHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + ((collectionView.collectionViewLayout.collectionViewContentSize.height / 40) * 8) + 29
+            self.tableView.reloadData()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VaccineListColCell", for: indexPath) as! VaccineListColCell
+        cell.viewCircle.layer.cornerRadius = 17.5
+        cell.vaccineName.text = self.pet?.vaccines![indexPath.row].name
+        cell.viewCircle.backgroundColor = UIColor.darkBlue
+        return cell
+    }
+}
+

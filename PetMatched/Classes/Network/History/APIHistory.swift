@@ -33,11 +33,11 @@ public enum APIHistory: URLRequestConvertible {
     var path: String {
         switch self {
         case .getHistorySelf():
-            return "matched/history"
+            return "pet/history"
         case .getHistory(let id):
-            return "matched/history/\(id)"
+            return "pets/\(id)/history"
         case .postHistory(_, _):
-            return "matched/history/"
+            return "pet/history"
         }
     }
     

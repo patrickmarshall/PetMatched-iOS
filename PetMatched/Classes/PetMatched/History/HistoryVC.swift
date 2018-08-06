@@ -18,6 +18,7 @@ class HistoryVC: BaseViewController {
     
     // Table View
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class HistoryVC: BaseViewController {
         self.setNavBarTint(color: UIColor.white)
         self.setNavBarColor(color: UIColor.darkBlue)
         self.hideBackButton()
+        self.emptyView.isHidden = true
     }
     
     func getHistoryAPI() {
@@ -59,6 +61,11 @@ class HistoryVC: BaseViewController {
                     self.showMessage(message: responses.errorMsg!.title!, error: true)
                 } else {
                     self.historyList = responses.response!
+                    if self.historyList.count == 0 {
+                        self.emptyView.isHidden = false
+                    } else {
+                        self.emptyView.isHidden = true
+                    }
                     self.tableView.reloadData()
                 }
             } else {

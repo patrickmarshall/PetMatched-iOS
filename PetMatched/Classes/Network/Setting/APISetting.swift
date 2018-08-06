@@ -18,28 +18,25 @@ public enum APISetting: URLRequestConvertible {
     case editProfile(param: ProfileDataModel)
     case editPet(param: PetDataModel)
     case editVaccine(vaccines: String)
-    case editPreferences(breed: Int, city: Int, ageMin: Int, ageMax: Int)
     
     // Set HTTP Method
     var method: HTTPMethod {
-        return .post
+        return .put
     }
     
     // Set path according to base
     var path: String {
         switch self {
         case .changePassword(_, _):
-            return "setting/change-password"
+            return "user/password"
         case .editAccount(_, _):
-            return "setting/user"
+            return "user"
         case .editProfile(_):
-            return "setting/user-profile"
+            return "user/profile"
         case .editPet(_):
-            return "setting/pet"
+            return "pet"
         case .editVaccine(_):
-            return "setting/vaccine"
-        case .editPreferences(_, _, _, _):
-            return "setting/preference"
+            return "pet/vaccine"
         }
     }
     
@@ -56,8 +53,6 @@ public enum APISetting: URLRequestConvertible {
             return param.asParam()
         case .editVaccine(let vaccines):
             return ["vaccines":vaccines]
-        case .editPreferences(let breed, let city, let ageMin, let ageMax):
-            return ["breed_pref":breed, "city_pref":city, "age_min":ageMin, "age_max":ageMax]
         }
     }
     

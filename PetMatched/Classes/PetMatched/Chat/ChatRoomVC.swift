@@ -135,7 +135,7 @@ class ChatRoomVC: BaseViewController {
                             let chat = MessageModel(message: data.text!, date: data.addedAt!, isMe: isMe, name: data.name!, photo: data.photo!)
                             messageModel.append(chat)
                         }
-                        self.messageListProcess(model: messageModel)
+                        self.messageListProcess(model: messageModel, method: "get")
                     }
                 }
             } else {
@@ -165,7 +165,7 @@ class ChatRoomVC: BaseViewController {
                             let chat = MessageModel(message: data.text!, date: data.addedAt!, isMe: isMe, name: data.name!, photo: data.photo!)
                             messageModel.append(chat)
                         }
-                        self.messageListProcess(model: messageModel)
+                        self.messageListProcess(model: messageModel, method: "send")
                     }
                 }
             } else {
@@ -178,7 +178,7 @@ class ChatRoomVC: BaseViewController {
         })
     }
     
-    func messageListProcess(model: [MessageModel]) {
+    func messageListProcess(model: [MessageModel], method: String) {
         self.stopLoading()
         var messages: [MessageDateModel] = []
         var dateNow = Date()
@@ -205,18 +205,20 @@ class ChatRoomVC: BaseViewController {
         self.messageList = messages
         self.tableView.reloadData()
         
-        DispatchQueue.main.async {
-            if self.messageList.count != 0 {
-                let lastRowNumber = self.tableView.numberOfRows(inSection: self.messageList.count-1) - 1
-                let ip: IndexPath = IndexPath(row: lastRowNumber, section: self.messageList.count-1)
-                print("section \(self.messageList.count-1), row \(lastRowNumber)")
-                self.tableView.scrollToRow(at: ip, at: .top, animated: false)
+        if method != "get" {
+            DispatchQueue.main.async {
+                if self.messageList.count != 0 {
+                    let lastRowNumber = self.tableView.numberOfRows(inSection: self.messageList.count-1) - 1
+                    let ip: IndexPath = IndexPath(row: lastRowNumber, section: self.messageList.count-1)
+                    print("section \(self.messageList.count-1), row \(lastRowNumber)")
+                    self.tableView.scrollToRow(at: ip, at: .top, animated: false)
+                }
             }
         }
     }
     
-    func postHistoryAPI() {
-        Network.request(request: APIHistory.postHistory(id: self.petID, status: 1), onSuccess: { response in
+    func postHistoryAPI(status: Int) {
+        Network.request(request: APIHistory.postHistory(id: self.petID, status: status), onSuccess: { response in
             self.stopLoading()
             
             let responses = DAOInputHistoryBaseClass(json: response)
@@ -258,11 +260,12 @@ class ChatRoomVC: BaseViewController {
     }
     
     @IBAction func notMatchedAction(_ sender: Any) {
+        self.postHistoryAPI(status: 0)
         self.matchView.isHidden = true
     }
     
     @IBAction func matchedAction(_ sender: Any) {
-        self.postHistoryAPI()
+        self.postHistoryAPI(status: 1)
         self.matchView.isHidden = true
     }
     

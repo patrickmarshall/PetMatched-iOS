@@ -16,6 +16,7 @@ public enum APIHome: URLRequestConvertible {
     case getLiked()
     case postLove(id: Int, status: Int)
     case getMatched(start: Int, size: Int)
+    case unlike(id: Int)
     
     // Set HTTP Method
     var method: HTTPMethod {
@@ -26,6 +27,8 @@ public enum APIHome: URLRequestConvertible {
             return .get
         case .postLove(_, _):
             return .post
+        case .unlike(_):
+            return .delete
         }
     }
     
@@ -33,11 +36,13 @@ public enum APIHome: URLRequestConvertible {
     var path: String {
         switch self {
         case .getLiked():
-            return "matched/liked"
+            return "pet/liked"
         case .getMatched(_, _):
-            return "matched/pet"
+            return "pet/matched"
         case .postLove(_, _):
-            return "matched/liked"
+            return "pet/liked"
+        case .unlike(_):
+            return "pet/liked"
         }
     }
     
@@ -50,6 +55,8 @@ public enum APIHome: URLRequestConvertible {
             return ["start":start, "size":size]
         case .postLove(let id, let status):
             return ["liked_pet":id, "liked_status":status]
+        case .unlike(let id):
+            return ["pet_id":id]
         }
     }
     
@@ -65,6 +72,7 @@ public enum APIHome: URLRequestConvertible {
         print("Content-type: "+(urlRequest?.value(forHTTPHeaderField: "Content-Type"))!)
         print("Token => "+(urlRequest?.value(forHTTPHeaderField: "token"))!)
         print("URL API => "+(urlRequest?.url?.absoluteString)!)
+        print("Method => "+(urlRequest?.httpMethod)!)
         print("Parameter => \(param)")
         return urlRequest!
     }

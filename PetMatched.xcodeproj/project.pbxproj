@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904C927A20F1147A00C46D24 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C927820F1147A00C46D24 /* TextViewCell.swift */; };
+		904C927B20F1147A00C46D24 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904C927920F1147A00C46D24 /* TextViewCell.xib */; };
+		907C858620E5E6B20037B97F /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C858520E5E6B20037B97F /* EditProfileVC.swift */; };
+		907C858820E5E6C40037B97F /* EditPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C858720E5E6C40037B97F /* EditPetVC.swift */; };
+		907C858B20E624390037B97F /* PickerTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C858920E624390037B97F /* PickerTextCell.swift */; };
+		907C858C20E624390037B97F /* PickerTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907C858A20E624390037B97F /* PickerTextCell.xib */; };
+		907C858F20E625890037B97F /* SkyTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C858D20E625890037B97F /* SkyTextCell.swift */; };
+		907C859020E625890037B97F /* SkyTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907C858E20E625890037B97F /* SkyTextCell.xib */; };
+		90C6819A20ECE03F00883558 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6819820ECE03F00883558 /* PictureCell.swift */; };
+		90C6819B20ECE03F00883558 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C6819920ECE03F00883558 /* PictureCell.xib */; };
+		90E3651520F31F5500974D8D /* EditVaccineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3651420F31F5500974D8D /* EditVaccineVC.swift */; };
 		A701E55520789422006A2A04 /* RegisterSuccessPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701E55320789422006A2A04 /* RegisterSuccessPopupVC.swift */; };
 		A701E55620789422006A2A04 /* RegisterSuccessPopupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A701E55420789422006A2A04 /* RegisterSuccessPopupVC.xib */; };
 		A7106BCD208B3FE10081E72C /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106BCB208B3FE10081E72C /* ChatListCell.swift */; };
@@ -68,7 +79,7 @@
 		A741A1BD207BA2BC00C388C1 /* VaccineListColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1BB207BA2BC00C388C1 /* VaccineListColCell.swift */; };
 		A741A1BE207BA2BC00C388C1 /* VaccineListColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */; };
 		A741A1C0207BA7CF00C388C1 /* VaccineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */; };
-		A744EE91208B6C240083E248 /* ChangePasswordDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */; };
+		A744EE91208B6C240083E248 /* SettingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE90208B6C240083E248 /* SettingDelegate.swift */; };
 		A744EE93208B734B0083E248 /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE92208B734B0083E248 /* ChatRoomVC.swift */; };
 		A744EE9E208B7B3E0083E248 /* MessageReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744EE9C208B7B3E0083E248 /* MessageReceiverCell.swift */; };
 		A744EE9F208B7B3E0083E248 /* MessageReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A744EE9D208B7B3E0083E248 /* MessageReceiverCell.xib */; };
@@ -206,6 +217,17 @@
 		60401B90E068BA64C9193C51 /* Pods-PetMatchedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchedUITests/Pods-PetMatchedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C4E45031E73EF8C4C9A3594 /* Pods-PetMatchedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetMatchedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetMatchedTests/Pods-PetMatchedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84E3884AAFAF81972842E926 /* Pods_PetMatchedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetMatchedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		904C927820F1147A00C46D24 /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
+		904C927920F1147A00C46D24 /* TextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
+		907C858520E5E6B20037B97F /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileVC.swift; path = PetMatched/Classes/PetMatched/Setting/EditProfileVC.swift; sourceTree = SOURCE_ROOT; };
+		907C858720E5E6C40037B97F /* EditPetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetVC.swift; sourceTree = "<group>"; };
+		907C858920E624390037B97F /* PickerTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextCell.swift; sourceTree = "<group>"; };
+		907C858A20E624390037B97F /* PickerTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerTextCell.xib; sourceTree = "<group>"; };
+		907C858D20E625890037B97F /* SkyTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyTextCell.swift; sourceTree = "<group>"; };
+		907C858E20E625890037B97F /* SkyTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkyTextCell.xib; sourceTree = "<group>"; };
+		90C6819820ECE03F00883558 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
+		90C6819920ECE03F00883558 /* PictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
+		90E3651420F31F5500974D8D /* EditVaccineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVaccineVC.swift; sourceTree = "<group>"; };
 		A701E55320789422006A2A04 /* RegisterSuccessPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessPopupVC.swift; sourceTree = "<group>"; };
 		A701E55420789422006A2A04 /* RegisterSuccessPopupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterSuccessPopupVC.xib; sourceTree = "<group>"; };
 		A7106BCB208B3FE10081E72C /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
@@ -267,7 +289,7 @@
 		A741A1BB207BA2BC00C388C1 /* VaccineListColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineListColCell.swift; sourceTree = "<group>"; };
 		A741A1BC207BA2BC00C388C1 /* VaccineListColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineListColCell.xib; sourceTree = "<group>"; };
 		A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineDelegate.swift; sourceTree = "<group>"; };
-		A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDelegate.swift; sourceTree = "<group>"; };
+		A744EE90208B6C240083E248 /* SettingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDelegate.swift; sourceTree = "<group>"; };
 		A744EE92208B734B0083E248 /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		A744EE9C208B7B3E0083E248 /* MessageReceiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiverCell.swift; sourceTree = "<group>"; };
 		A744EE9D208B7B3E0083E248 /* MessageReceiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageReceiverCell.xib; sourceTree = "<group>"; };
@@ -466,6 +488,10 @@
 				A7106BDB208B48650081E72C /* LogoutCell.xib */,
 				A7106BE1208B57390081E72C /* PasswordTextCell.xib */,
 				A7A0F4FE20A415D40087A0DA /* SettingTextCell.xib */,
+				907C858A20E624390037B97F /* PickerTextCell.xib */,
+				907C858E20E625890037B97F /* SkyTextCell.xib */,
+				90C6819920ECE03F00883558 /* PictureCell.xib */,
+				904C927920F1147A00C46D24 /* TextViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,6 +504,10 @@
 				A7106BDA208B48650081E72C /* LogoutCell.swift */,
 				A7106BE0208B57390081E72C /* PasswordTextCell.swift */,
 				A7A0F4FD20A415D40087A0DA /* SettingTextCell.swift */,
+				907C858920E624390037B97F /* PickerTextCell.swift */,
+				907C858D20E625890037B97F /* SkyTextCell.swift */,
+				90C6819820ECE03F00883558 /* PictureCell.swift */,
+				904C927820F1147A00C46D24 /* TextViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -824,6 +854,9 @@
 				A7775E6520805FBF00589EC1 /* SettingVC.swift */,
 				A7106BDE208B54050081E72C /* ChangePasswordVC.swift */,
 				A7A0F50120A41C810087A0DA /* EditAccountVC.swift */,
+				907C858520E5E6B20037B97F /* EditProfileVC.swift */,
+				907C858720E5E6C40037B97F /* EditPetVC.swift */,
+				90E3651420F31F5500974D8D /* EditVaccineVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1017,7 +1050,7 @@
 				A7271C702074E81F00D16D43 /* LoginDelegate.swift */,
 				A741A1BF207BA7CF00C388C1 /* VaccineDelegate.swift */,
 				A7775E59208053A200589EC1 /* RootDelegate.swift */,
-				A744EE90208B6C240083E248 /* ChangePasswordDelegate.swift */,
+				A744EE90208B6C240083E248 /* SettingDelegate.swift */,
 				A73A574D209A0C550093C43D /* ProfileDelegate.swift */,
 				A7B2F09120B1E682005538A1 /* PetDetailDelegate.swift */,
 			);
@@ -1329,7 +1362,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Patrick Marshall";
 				TargetAttributes = {
 					A7633CC12074901B00AB48BA = {
@@ -1381,6 +1414,7 @@
 				A7B2F08C20B1D524005538A1 /* PetVaccineCell.xib in Resources */,
 				A78957CA207499E9002DAFBC /* LoadingView.xib in Resources */,
 				A744EEA3208B7B4E0083E248 /* MessageSenderCell.xib in Resources */,
+				904C927B20F1147A00C46D24 /* TextViewCell.xib in Resources */,
 				A741A1BE207BA2BC00C388C1 /* VaccineListColCell.xib in Resources */,
 				A7B2F08820B1D513005538A1 /* PetContentCell.xib in Resources */,
 				A7851917207F8F7A00E4D320 /* Home.storyboard in Resources */,
@@ -1393,7 +1427,9 @@
 				A72D62AC2087972100A297B2 /* HistoryListCell.xib in Resources */,
 				A7B2F08420B1D36E005538A1 /* PetHeaderCell.xib in Resources */,
 				A7775E722080601500589EC1 /* Setting.storyboard in Resources */,
+				90C6819B20ECE03F00883558 /* PictureCell.xib in Resources */,
 				A749BAAD2076194300034BBB /* LoginSetup.storyboard in Resources */,
+				907C859020E625890037B97F /* SkyTextCell.xib in Resources */,
 				A701E55620789422006A2A04 /* RegisterSuccessPopupVC.xib in Resources */,
 				A7B37FCB2081BBF4006C1E4A /* CustomOverlayView.xib in Resources */,
 				A7B2F09020B1D537005538A1 /* PetActionCell.xib in Resources */,
@@ -1401,6 +1437,7 @@
 				A7775E702080600B00589EC1 /* History.storyboard in Resources */,
 				A7106BDD208B48650081E72C /* LogoutCell.xib in Resources */,
 				A7106BCE208B3FE10081E72C /* ChatListCell.xib in Resources */,
+				907C858C20E624390037B97F /* PickerTextCell.xib in Resources */,
 				A7106BD9208B484F0081E72C /* SettingListCell.xib in Resources */,
 				A728415920A4563400A17519 /* ProfileContentCell.xib in Resources */,
 				A78957B7207498B4002DAFBC /* Login.storyboard in Resources */,
@@ -1506,6 +1543,7 @@
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UIViewController+KeyboardAnimation/UIViewController_KeyboardAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -1530,6 +1568,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIViewController_KeyboardAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -1557,6 +1596,7 @@
 				A73A5751209A1F4F0093C43D /* APILogin.swift in Sources */,
 				A7106BDF208B54050081E72C /* ChangePasswordVC.swift in Sources */,
 				A739B6C32079D71C00B50BBF /* InputPreferenceVC.swift in Sources */,
+				90C6819A20ECE03F00883558 /* PictureCell.swift in Sources */,
 				A744EE93208B734B0083E248 /* ChatRoomVC.swift in Sources */,
 				A7296BC620B54A4400478C51 /* DAOInputHistoryErrorMsg.swift in Sources */,
 				A7B37FCD2081BC20006C1E4A /* CustomOverlayView.swift in Sources */,
@@ -1567,9 +1607,11 @@
 				A7C56DA1209DDEE300F05A48 /* DAOInputErrorMsg.swift in Sources */,
 				A78F22EF209EFD7D00B4FB93 /* DAOBreedResponse.swift in Sources */,
 				A701E55520789422006A2A04 /* RegisterSuccessPopupVC.swift in Sources */,
+				907C858620E5E6B20037B97F /* EditProfileVC.swift in Sources */,
 				A7A0F4FF20A415D40087A0DA /* SettingTextCell.swift in Sources */,
 				A782DFDD20A18F8700A04779 /* ProfileHeaderView.swift in Sources */,
 				A782E01020A1BA7300A04779 /* APIHome.swift in Sources */,
+				907C858B20E624390037B97F /* PickerTextCell.swift in Sources */,
 				A782E00720A1B9EA00A04779 /* DAOMatchedVaccines.swift in Sources */,
 				A7C56D9F209DDEE300F05A48 /* DAOProvinceErrorMsg.swift in Sources */,
 				A73A5761209A2BCA0093C43D /* DAORegisterBaseClass.swift in Sources */,
@@ -1602,6 +1644,7 @@
 				A732AF682075F4640061BB65 /* CircleImageView.swift in Sources */,
 				A744EEA2208B7B4E0083E248 /* MessageSenderCell.swift in Sources */,
 				A7106BE2208B57390081E72C /* PasswordTextCell.swift in Sources */,
+				904C927A20F1147A00C46D24 /* TextViewCell.swift in Sources */,
 				A7296BCB20B54A4400478C51 /* DAORoomListBaseClass.swift in Sources */,
 				A7C56D7D209DC63B00F05A48 /* DAORegisterErrorMsg.swift in Sources */,
 				A78F22EE209EFD7D00B4FB93 /* DAOBreedBaseClass.swift in Sources */,
@@ -1609,6 +1652,7 @@
 				A782E00120A1B9EA00A04779 /* DAOLikedMatchedStatus.swift in Sources */,
 				A782DFFE20A1B9EA00A04779 /* DAOLikedLikedPet.swift in Sources */,
 				A7296BCC20B54A4400478C51 /* DAORoomListRooms.swift in Sources */,
+				907C858820E5E6C40037B97F /* EditPetVC.swift in Sources */,
 				A7296BD320B54A4400478C51 /* DAOChatListResponse.swift in Sources */,
 				A7271C692074E02900D16D43 /* ForgotVC.swift in Sources */,
 				A741A1B9207B9A4200C388C1 /* Models.swift in Sources */,
@@ -1630,11 +1674,12 @@
 				A746144C2074C311007543DC /* RegisterVC.swift in Sources */,
 				A728415820A4563400A17519 /* ProfileContentCell.swift in Sources */,
 				A7C56D9C209DDEE300F05A48 /* DAOProvinceProvinces.swift in Sources */,
+				90E3651520F31F5500974D8D /* EditVaccineVC.swift in Sources */,
 				A7271C6D2074E4D000D16D43 /* ResetPopupVC.swift in Sources */,
 				A744EE9E208B7B3E0083E248 /* MessageReceiverCell.swift in Sources */,
 				A7296BD420B54A4400478C51 /* DAOChatListErrorMsg.swift in Sources */,
 				A7B2F08020B1CC05005538A1 /* PetDetailVC.swift in Sources */,
-				A744EE91208B6C240083E248 /* ChangePasswordDelegate.swift in Sources */,
+				A744EE91208B6C240083E248 /* SettingDelegate.swift in Sources */,
 				A7296BD120B54A4400478C51 /* DAOChatListChatMsg.swift in Sources */,
 				A782E00220A1B9EA00A04779 /* DAOLikedUserData.swift in Sources */,
 				A7A7F5F620957F8A00520D6A /* MessageDateCell.swift in Sources */,
@@ -1653,6 +1698,7 @@
 				A7C56D9B209DDEE300F05A48 /* DAOCityResponse.swift in Sources */,
 				A72D62A220877C8400A297B2 /* LovedVC.swift in Sources */,
 				A7A0F4FA20A400CD0087A0DA /* DAOProfileBaseClass.swift in Sources */,
+				907C858F20E625890037B97F /* SkyTextCell.swift in Sources */,
 				A782DFFD20A1B9EA00A04779 /* DAOLikedErrorMsg.swift in Sources */,
 				A73A5759209A23670093C43D /* DAOLoginResponse.swift in Sources */,
 				A7A0F4F520A400CD0087A0DA /* DAOSettingErrorMsg.swift in Sources */,
@@ -1729,6 +1775,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1736,6 +1783,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1786,6 +1834,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1793,6 +1842,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1829,14 +1879,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YZS3HEA636;
 				INFOPLIST_FILE = "$(SRCROOT)/PetMatched/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.patrickmarshall.PetMatched;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "31aa315c-e993-43c1-879c-7b10e43527e4";
+				PROVISIONING_PROFILE_SPECIFIER = "TOYOTA TEST NEW DEVEL";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1847,16 +1897,16 @@
 			baseConfigurationReference = F10BC40718E83A4C2D5A7EA5 /* Pods-PetMatched.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YZS3HEA636;
 				INFOPLIST_FILE = "$(SRCROOT)/PetMatched/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.patrickmarshall.PetMatched;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "fa31f16c-656b-4030-8020-83c7f9d2d3d0";
+				PROVISIONING_PROFILE_SPECIFIER = "TOYOTA TEST NEW DISTR";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

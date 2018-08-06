@@ -17,7 +17,7 @@ class EditAccountVC: BaseViewController {
     var titleName:[String] = ["Username", "Email"]
     var placeholder:[String] = ["Username", "Email"]
     
-    // Password
+    // Value
     var username: String = ""
     var email: String = ""
     
@@ -138,7 +138,7 @@ extension EditAccountVC: UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTextCell") as! SettingTextCell
-            cell.settingText.placeholder = self.placeholder[indexPath.section]
+            cell.settingText.text = self.placeholder[indexPath.section]
             cell.delegate = self
             cell.settingText.tag = indexPath.section
             return cell

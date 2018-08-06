@@ -12,7 +12,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="fef-CX-KlL">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="u11-tJ-fJw" customClass="MainTabBarController" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" providesPresentationContextTransitionStyle="YES" id="u11-tJ-fJw" customClass="MainTabBarController" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="7Ah-7d-zyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

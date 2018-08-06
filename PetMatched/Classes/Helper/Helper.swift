@@ -277,6 +277,8 @@ extension Int {
 }
 extension UIColor {
     static var baseGreen: UIColor = UIColor("339933")!
+    static var okayGreen: UIColor = UIColor("6FCF97")!
+    static var cancelRed: UIColor = UIColor("EB5757")!
     static var baseBlue: UIColor = UIColor("34CCFF")!
     static var darkBlue: UIColor = UIColor("2D9CDB")!
     static var lightBlue: UIColor = UIColor("AAE5F8")!

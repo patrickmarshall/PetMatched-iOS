@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import PetMatched
+
 class PetMatchedUITests: XCTestCase {
         
     override func setUp() {

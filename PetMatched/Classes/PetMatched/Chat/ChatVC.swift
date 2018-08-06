@@ -18,6 +18,7 @@ class ChatVC: BaseViewController {
     
     // Table View
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class ChatVC: BaseViewController {
         self.setNavBarTint(color: UIColor.white)
         self.setNavBarColor(color: UIColor.darkBlue)
         self.hideBackButton()
+        self.emptyView.isHidden = true
     }
 
     func getRoomListAPI() {
@@ -61,6 +63,11 @@ class ChatVC: BaseViewController {
                 } else {
                     if let rooms = responses.response?.rooms {
                         self.roomList = rooms
+                        if self.roomList.count == 0 {
+                            self.emptyView.isHidden = false
+                        } else {
+                            self.emptyView.isHidden = true
+                        }
                         self.tableView.reloadData()
                     }
                 }

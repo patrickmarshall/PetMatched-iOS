@@ -16,6 +16,7 @@ public enum APILogin: URLRequestConvertible {
     case login(username: String, password: String)
     case checkUsername(username: String)
     case register(username: String, password: String, email: String)
+    case forgot(email: String)
     
     // Set HTTP Method
     var method: HTTPMethod {
@@ -26,6 +27,8 @@ public enum APILogin: URLRequestConvertible {
             return .post
         case .register(_,_,_):
             return .post
+        case .forgot(_):
+            return .post
         }
     }
     
@@ -33,11 +36,13 @@ public enum APILogin: URLRequestConvertible {
     var path: String {
         switch self {
         case .login(_,_):
-            return  "signin"
+            return  "token"
         case .checkUsername(_):
-            return "check_username"
+            return "users/username"
         case .register(_,_,_):
-            return "signup_user"
+            return "users"
+        case .forgot(_):
+            return "users/password-reset"
         }
     }
     
@@ -50,6 +55,8 @@ public enum APILogin: URLRequestConvertible {
             return ["username":username]
         case .register(let username, let password, let email):
             return ["username":username, "password":password, "email":email]
+        case .forgot(let email):
+            return ["email":email]
         }
     }
     

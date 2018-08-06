@@ -30,9 +30,9 @@ public enum APIProfile: URLRequestConvertible {
     var path: String {
         switch self {
         case .getProfile():
-            return "profile/user-profile"
+            return "user/profile"
         case .getPet():
-            return "profile/pet"
+            return "pet"
         }
     }
     

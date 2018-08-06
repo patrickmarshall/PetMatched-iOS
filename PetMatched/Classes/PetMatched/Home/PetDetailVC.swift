@@ -14,7 +14,9 @@ class PetDetailVC: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var petData: DAOMatchedMatchedPet?
-    var collHeight: CGFloat = 0
+    var collHeight: CGFloat = 80
+    
+    var first = true
     
     var titleList: [String] = ["Name", "Variant", "Breed", "Date of Birth", "Sex", "Fur Color", "Weight", "Size", "Pedigree Status", "Special Story"]
     
@@ -30,6 +32,9 @@ class PetDetailVC: BaseViewController {
         
         self.tableView.layoutIfNeeded()
         self.tableView.setNeedsLayout()
+        if let cell = self.tableView.cellForRow(at: IndexPath(row: 11, section: 0)) as? PetVaccineCell {
+            cell.collectionView.reloadData()
+        }
         self.tableView.reloadData()
     }
 
@@ -148,7 +153,7 @@ extension PetDetailVC: UITableViewDelegate {
         case 0:
             return self.view.bounds.width
         case 11:
-            return (self.petData!.vaccines!.count == 0) ? 0 : UITableViewAutomaticDimension
+            return (self.petData!.vaccines!.count == 0) ? 0 : self.collHeight
         default:
             return UITableViewAutomaticDimension
         }
@@ -173,21 +178,72 @@ extension PetDetailVC: UITableViewDataSource {
                     cell.petImage.image = UIImage(named: "dummyPlaceholder")
                 }
             }
+            cell.petImage.contentMode = .scaleAspectFill
             return cell
         case 11:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PetVaccineCell") as! PetVaccineCell
-            cell.bundle = self.nibBundle
-            cell.delegate = self
-            cell.vaccine = self.petData?.vaccines
-            cell.setupCollectionView()
+            self.setupCollectionView(cell: cell)
             return cell
         case 12:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PetActionCell") as! PetActionCell
             cell.delegate = self
             cell.setup()
+            if !first {
+                self.stopLoading()
+            }
             return cell
         default: // 1 - 10
             return contentCell(index: indexPath.row)
         }
+    }
+}
+
+extension PetDetailVC: UICollectionViewDelegate {
+    func setupCollectionView(cell: PetVaccineCell) {
+        cell.collectionView.register(UINib(nibName: "VaccineListColCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "VaccineListColCell")
+        
+        cell.collectionView.delegate = self
+        cell.collectionView.dataSource = self
+        
+        let alignedFlowLayout = cell.collectionView.collectionViewLayout as? AlignedCollectionViewFlowLayout
+        alignedFlowLayout?.horizontalAlignment = .left
+        alignedFlowLayout?.verticalAlignment = .center
+        alignedFlowLayout?.minimumInteritemSpacing = 0
+        alignedFlowLayout?.minimumLineSpacing = 0
+        alignedFlowLayout?.estimatedItemSize = .init(width: 100, height: 40)
+        cell.collectionView.collectionViewLayout = alignedFlowLayout!
+        
+        cell.collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension PetDetailVC: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.petData?.vaccines?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == self.petData!.vaccines!.count - 1 && first {
+            self.showLoading(view: self.view)
+            first = false
+            self.collHeight = collectionView.collectionViewLayout.collectionViewContentSize.height + ((collectionView.collectionViewLayout.collectionViewContentSize.height / 40) * 8) + 29
+            self.tableView.reloadData()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VaccineListColCell", for: indexPath) as! VaccineListColCell
+        cell.viewCircle.layer.cornerRadius = 17.5
+        cell.vaccineName.text = self.petData?.vaccines![indexPath.row].name
+        cell.viewCircle.backgroundColor = UIColor.darkBlue
+        return cell
     }
 }

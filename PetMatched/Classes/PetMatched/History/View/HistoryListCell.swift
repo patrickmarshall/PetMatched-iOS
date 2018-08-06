@@ -20,6 +20,8 @@ class HistoryListCell: UITableViewCell {
     @IBOutlet weak var secondPetNameLabel: UILabel!
     @IBOutlet var meterView: DPMeterView!
     @IBOutlet weak var percentageLabel: UILabel!
+    @IBOutlet weak var matchedView: UIView!
+    @IBOutlet weak var matchedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +45,21 @@ class HistoryListCell: UITableViewCell {
                 if error != nil && image == nil {
                     self.secondPetImage.image = UIImage(named: "dummyPlaceholder")
                 }
+            }
+            if data.matchStat == "0" {
+                self.matchedLabel.text = "Not Matched :("
+//                self.matchedLabel.textColor = UIColor.cancelRed
+//                self.matchedView.backgroundColor = UIColor.white
+                
+                self.matchedLabel.textColor = UIColor.white
+                self.matchedView.backgroundColor = UIColor.cancelRed
+            } else {
+                self.matchedLabel.text = "Matched :)"
+//                self.matchedLabel.textColor = UIColor.okayGreen
+//                self.matchedView.backgroundColor = UIColor.white
+                
+                self.matchedLabel.textColor = UIColor.white
+                self.matchedView.backgroundColor = UIColor.okayGreen
             }
             self.firstPetNameLabel.text = data.fromName!
             self.secondPetNameLabel.text = data.toName!

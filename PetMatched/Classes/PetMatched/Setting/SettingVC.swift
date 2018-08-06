@@ -22,6 +22,8 @@ class SettingVC: BaseViewController {
     
     // Data
     let settingList:[[String]] = [["Edit Account", "Change Password"], ["Edit My Profile", "Edit Pet Profile"]]
+    var pet: DAOPetResponse?
+    var profile: DAOProfileResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,10 @@ class SettingVC: BaseViewController {
         
         setup()
         setupTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getDataAPI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +64,47 @@ class SettingVC: BaseViewController {
         IQKeyboardManager.shared.enableAutoToolbar = true
     }
 
+    func getDataAPI() {
+        self.showLoading(view: self.view)
+        Network.request(request: APIProfile.getProfile(), onSuccess: { response in
+            
+            let responses = DAOProfileBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    self.profile = responses.response!
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            // If fail while calling API
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
+        
+        Network.request(request: APIProfile.getPet(), onSuccess: { response in
+            self.stopLoading()
+            
+            let responses = DAOPetBaseClass(json: response)
+            
+            if responses.status == 200 {
+                if responses.error! {
+                    self.showMessage(message: responses.errorMsg!.title!, error: true)
+                } else {
+                    self.pet = responses.response!
+                }
+            } else {
+                self.showMessage(message: responses.errorMsg!.title!, error: true)
+            }
+        }, onFailure: { error in
+            // If fail while calling API
+            self.showMessage(message: error, error: true)
+            self.stopLoading()
+        })
+    }
 }
 
 extension SettingVC: UITableViewDelegate {
@@ -82,6 +129,10 @@ extension SettingVC: UITableViewDelegate {
             case 1: // Edit Account
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditAccountVC") as! EditAccountVC
                 vc.hidesBottomBarWhenPushed = true
+                vc.placeholder[0] = self.profile?.username ?? ""
+                vc.placeholder[1] = self.profile?.email ?? ""
+                vc.username = self.profile?.username ?? ""
+                vc.email = self.profile?.email ?? ""
                 self.navigationController?.pushViewController(vc, animated: true)
             case 2: // Change Password
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
@@ -93,13 +144,30 @@ extension SettingVC: UITableViewDelegate {
         case 1: // Profile
             switch indexPath.row {
             case 1: // My Profile
-                print("My Profile")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") as! EditProfileVC
+                vc.hidesBottomBarWhenPushed = true
+                vc.image = self.profile?.photo ?? ""
+                vc.data[0] = self.profile?.name ?? ""
+                vc.data[1] = self.profile?.userDob?.dateFormatterFromAPI().dateFormatterView() ?? ""
+                vc.data[2] = (self.profile?.sex! == "m") ? "Male" : "Female"
+                vc.data[3] = self.profile?.provinces ?? ""
+                vc.data[4] = self.profile?.city ?? ""
+                self.navigationController?.pushViewController(vc, animated: true)
             case 2: // Pet Profile
-                print("Pet Profile")
-            case 3: // Preferences
-                print("Preferences")
-            case 4: // Vaccine
-                print("Vaccine")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditPetVC") as! EditPetVC
+                vc.hidesBottomBarWhenPushed = true
+                vc.image = self.pet?.petPhoto ?? ""
+                vc.data[0] = self.pet?.petName ?? ""
+                vc.data[1] = self.pet?.variant ?? ""
+                vc.data[2] = self.pet?.petDob?.dateFormatterFromAPI().dateFormatterView() ?? ""
+                vc.data[3] = (self.pet?.petSex! == "m") ? "Male" : "Female"
+                vc.data[4] = self.pet?.breedName ?? ""
+                vc.data[5] = self.pet?.furcolor ?? ""
+                vc.data[6] = "\(self.pet?.weight ?? "0") kg"
+                vc.data[7] = (self.pet?.breedCert ?? "0" == "0") ? "Not Available" : "Available"
+                vc.data[8] = self.pet?.petDesc ?? ""
+                vc.vaccines = self.pet?.vaccines ?? []
+                self.navigationController?.pushViewController(vc, animated: true)
             default:
                 break
             }
@@ -117,10 +185,6 @@ extension SettingVC: UITableViewDelegate {
         default:
             break
         }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
     }
 }
 

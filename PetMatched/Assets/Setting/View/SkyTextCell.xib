@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="SkyTextCell" customModule="PetMatched" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-yR-dUN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-9A-bHL" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="16" y="10.5" width="288" height="37"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeText:" destination="KGk-i7-Jjw" eventType="editingChanged" id="PgZ-si-QCJ"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-Ys-Gdh">
+                                <rect key="frame" x="0.0" y="59" width="320" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="MLi-l8-6sW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aY8-Ys-Gdh" secondAttribute="trailing" id="Gs3-ze-fWS"/>
+                            <constraint firstItem="yJw-9A-bHL" firstAttribute="centerY" secondItem="rb0-yR-dUN" secondAttribute="centerY" id="UZP-s6-f8g"/>
+                            <constraint firstAttribute="height" constant="60" id="ZJ5-hh-rxH"/>
+                            <constraint firstAttribute="trailing" secondItem="yJw-9A-bHL" secondAttribute="trailing" constant="16" id="bYd-9Y-0xw"/>
+                            <constraint firstAttribute="bottom" secondItem="aY8-Ys-Gdh" secondAttribute="bottom" id="hvB-z7-HA7"/>
+                            <constraint firstItem="yJw-9A-bHL" firstAttribute="leading" secondItem="rb0-yR-dUN" secondAttribute="leading" constant="16" id="iph-HU-xLu"/>
+                            <constraint firstItem="aY8-Ys-Gdh" firstAttribute="leading" secondItem="rb0-yR-dUN" secondAttribute="leading" id="lSk-9L-91r"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rb0-yR-dUN" secondAttribute="trailing" id="GED-h0-0aE"/>
+                    <constraint firstItem="rb0-yR-dUN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GgZ-d8-5ws"/>
+                    <constraint firstItem="rb0-yR-dUN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VXG-ol-MR1"/>
+                    <constraint firstAttribute="bottom" secondItem="rb0-yR-dUN" secondAttribute="bottom" id="aac-X4-82f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="skyText" destination="yJw-9A-bHL" id="L1b-W0-7yv"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

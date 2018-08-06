@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ln-XT-CgW">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ln-XT-CgW">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
             <objects>
                 <navigationController id="8Ln-XT-CgW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8S2-Nd-5Ng">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,17 +32,48 @@
             <objects>
                 <viewController storyboardIdentifier="HistoryVC" id="ouQ-xj-30Q" customClass="HistoryVC" customModule="PetMatched" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9h-W0-esm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs4-J2-YP4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs4-J2-YP4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-6J-EKz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-dislike" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-ni-iQy">
+                                        <rect key="frame" x="130" y="175" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xa4-ni-iQy" secondAttribute="height" multiplier="1:1" id="Pns-fy-pcm"/>
+                                            <constraint firstAttribute="height" constant="60" id="Y0v-km-Xiu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYs-vW-v7J">
+                                        <rect key="frame" x="78" y="247" width="165" height="43"/>
+                                        <string key="text">Your pet doesn't 
+has any history yet!</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20207223299999999" green="0.80077570679999999" blue="0.99934023620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VYs-vW-v7J" firstAttribute="top" secondItem="Xa4-ni-iQy" secondAttribute="bottom" constant="12" id="OlH-Dt-rwu"/>
+                                    <constraint firstItem="VYs-vW-v7J" firstAttribute="centerY" secondItem="gH5-6J-EKz" secondAttribute="centerY" constant="16" id="bVG-Vf-jAV"/>
+                                    <constraint firstItem="Xa4-ni-iQy" firstAttribute="centerX" secondItem="gH5-6J-EKz" secondAttribute="centerX" id="oln-mZ-EYx"/>
+                                    <constraint firstItem="VYs-vW-v7J" firstAttribute="centerX" secondItem="gH5-6J-EKz" secondAttribute="centerX" id="r4H-v6-nme"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tac-8G-ihg" firstAttribute="trailing" secondItem="gH5-6J-EKz" secondAttribute="trailing" id="6vu-pt-OzD"/>
+                            <constraint firstItem="gH5-6J-EKz" firstAttribute="leading" secondItem="tac-8G-ihg" secondAttribute="leading" id="S2V-Mz-fYo"/>
                             <constraint firstItem="tac-8G-ihg" firstAttribute="trailing" secondItem="Qs4-J2-YP4" secondAttribute="trailing" id="UDc-9L-hTs"/>
+                            <constraint firstItem="tac-8G-ihg" firstAttribute="bottom" secondItem="gH5-6J-EKz" secondAttribute="bottom" id="eUv-71-dyd"/>
+                            <constraint firstItem="gH5-6J-EKz" firstAttribute="top" secondItem="tac-8G-ihg" secondAttribute="top" id="en2-lv-5sc"/>
                             <constraint firstItem="Qs4-J2-YP4" firstAttribute="top" secondItem="tac-8G-ihg" secondAttribute="top" id="fFw-Rg-S2w"/>
                             <constraint firstItem="tac-8G-ihg" firstAttribute="bottom" secondItem="Qs4-J2-YP4" secondAttribute="bottom" id="meZ-j7-kzV"/>
                             <constraint firstItem="Qs4-J2-YP4" firstAttribute="leading" secondItem="tac-8G-ihg" secondAttribute="leading" id="w9C-MN-alX"/>
@@ -51,6 +83,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="7Z1-nh-Btj"/>
                     <connections>
+                        <outlet property="emptyView" destination="gH5-6J-EKz" id="hsR-Fq-aLl"/>
                         <outlet property="tableView" destination="Qs4-J2-YP4" id="D1g-Xm-Pdt"/>
                     </connections>
                 </viewController>
@@ -59,4 +92,7 @@
             <point key="canvasLocation" x="87" y="-66"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ico-dislike" width="483" height="485"/>
+    </resources>
 </document>

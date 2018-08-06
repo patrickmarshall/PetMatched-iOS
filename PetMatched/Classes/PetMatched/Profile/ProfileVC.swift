@@ -71,7 +71,8 @@ class ProfileVC: BaseViewController {
             }
         }, onFailure: { error in
             // If fail while calling API
-            self.showMessage(message: error, error: true)
+            print(error)
+            self.showMessage(message: "Connection Error!", error: true)
             self.stopLoading()
         })
         
@@ -94,7 +95,8 @@ class ProfileVC: BaseViewController {
             }
         }, onFailure: { error in
             // If fail while calling API
-            self.showMessage(message: error, error: true)
+            print(error)
+            self.showMessage(message: "Connection Error!", error: true)
             self.stopLoading()
         })
     }

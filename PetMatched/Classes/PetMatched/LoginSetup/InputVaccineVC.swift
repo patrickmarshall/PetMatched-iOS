@@ -54,7 +54,7 @@ class InputVaccineVC: BaseViewController {
                     if let result = responses.response?.vaccines {
                         self.vaccineList.removeAll()
                         for data in result {
-                            self.vaccineList.append(VaccineModel(id: data.id!, name: data.name!))
+                            self.vaccineList.append(VaccineModel(id: data.id!, name: data.name!, selected: false))
                         }
                     }
                     
@@ -81,10 +81,6 @@ class InputVaccineVC: BaseViewController {
                 if responses.error! {
                     self.showMessage(message: responses.errorMsg!.title!, error: true)
                 } else {
-                    // Move to Input Preference
-//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "InputPreferenceVC") as! InputPreferenceVC
-//                    self.navigationController?.pushViewController(vc, animated: true)
-                    
                     // Move to Main Tab Bar
                     self.navigationController?.popToRootViewController(animated: false)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -42,7 +42,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="LqS-Sa-PW2" secondAttribute="bottom" id="5h1-v1-zJ4"/>
-                            <constraint firstAttribute="height" constant="179" id="C04-mT-Yjn"/>
                             <constraint firstAttribute="trailing" secondItem="NuM-Vb-kuj" secondAttribute="trailing" constant="8" id="PUr-QO-iFA"/>
                             <constraint firstItem="LqS-Sa-PW2" firstAttribute="top" secondItem="NuM-Vb-kuj" secondAttribute="bottom" constant="4" id="lfj-Dg-SJH"/>
                             <constraint firstItem="NuM-Vb-kuj" firstAttribute="leading" secondItem="0OM-gC-TW2" secondAttribute="leading" constant="8" id="pu2-q5-dkb"/>
@@ -71,7 +70,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collHeight" destination="C04-mT-Yjn" id="KZr-Rv-xe0"/>
                 <outlet property="collectionView" destination="LqS-Sa-PW2" id="Ozf-L3-1tA"/>
             </connections>
             <point key="canvasLocation" x="35" y="78"/>

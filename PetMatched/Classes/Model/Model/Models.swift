@@ -13,10 +13,10 @@ public struct VaccineModel {
     public var name: String?
     public var selected: Bool?
     
-    public init(id: Int?, name: String?) {
+    public init(id: Int?, name: String?, selected: Bool?) {
         self.id = id
         self.name = name
-        self.selected = false
+        self.selected = selected
     }
 }
 
@@ -41,7 +41,7 @@ public struct ProfileDataModel {
     var city: Int?
     
     public func asParam()->[String: Any] {
-        return ["name":name!, "user_dob":dob!, "photo":photo!, "city":city!]
+        return ["name":name!, "user_dob":dob!, "sex":sex!, "photo":photo!, "city":city!]
     }
 }
 
@@ -50,8 +50,8 @@ public struct PetDataModel {
     var dob: String?
     var sex: String?
     var color: String?
-    var weight: String?
-    var breed: String?
+    var weight: Int?
+    var breed: Int?
     var photo: String?
     var cert: String?
     var desc: String?

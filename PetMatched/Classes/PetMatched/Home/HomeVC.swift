@@ -18,12 +18,15 @@ class HomeVC: BaseViewController {
     // API
     let itemPerCall: Int = 10
     var currentItem: Int = 0
+    var totalData: Int = 0
     var thereIsMore: Bool = true
     var requesting: Bool = false
     var firstTime: Bool = true
     var firstTimeLoad: Bool = true
     
     var matchedList: [DAOMatchedMatchedPet] = []
+    
+    @IBOutlet weak var emptyView: UIView!
     
     // Koloda View
     @IBOutlet weak var kolodaView: KolodaView!
@@ -64,6 +67,8 @@ class HomeVC: BaseViewController {
         self.setNavBarColor(color: UIColor.darkBlue)
         self.setLovedButton(caller: self)
         self.hideBackButton()
+        self.percentageLabel.isHidden = true
+        self.meterView.isHidden = true
     }
     
     override func loved() {
@@ -122,6 +127,7 @@ extension HomeVC {
     }
     
     func hideView() {
+        self.emptyView.isHidden = false
         self.kolodaView.isHidden = true
         self.percentageLabel.isHidden = true
         self.actionView.isHidden = true
@@ -130,10 +136,11 @@ extension HomeVC {
     }
     
     func unhideView() {
+        self.emptyView.isHidden = true
         self.kolodaView.isHidden = false
-        self.percentageLabel.isHidden = false
         self.actionView.isHidden = false
-        self.meterView.isHidden = false
+        self.percentageLabel.isHidden = true
+        self.meterView.isHidden = true
     }
     
     func getMatchedAPI() {
@@ -161,7 +168,7 @@ extension HomeVC {
                             self.currentItem += self.itemPerCall
                             
                             // If data is lower than item per cell then there is no data anymore
-                            if data.count < self.itemPerCall {
+                            if self.currentItem >= self.totalData {
                                 self.thereIsMore = false
                             }
                             
@@ -189,7 +196,8 @@ extension HomeVC {
                 self.requesting = false
             }, onFailure: { error in
                 // If fail while calling API
-                self.showMessage(message: error, error: true)
+                print(error)
+                self.showMessage(message: "Connection Error!", error: true)
                 self.stopLoading()
                 self.requesting = false
             })
@@ -241,13 +249,13 @@ extension HomeVC: KolodaViewDelegate {
                 }
             }, onFailure: { error in
                 // If fail while calling API
-                self.showMessage(message: error, error: true)
+                self.showMessage(message: "Connection Error!", error: true)
                 self.stopLoading()
             })
         }
     }
 }
-
+ 
 // MARK: KolodaViewDataSource
 
 extension HomeVC: KolodaViewDataSource {

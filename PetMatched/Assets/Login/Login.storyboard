@@ -37,11 +37,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rl-Il-STu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-husky" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-ub-rSx">
-                                        <rect key="frame" x="109.5" y="100" width="100" height="100"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-logo" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-ub-rSx">
+                                        <rect key="frame" x="97.5" y="100" width="124" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="rYi-ZI-XfY"/>
-                                            <constraint firstAttribute="width" constant="100" id="we4-RM-wuP"/>
+                                            <constraint firstAttribute="width" constant="124" id="we4-RM-wuP"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ia-1w-jAT" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
@@ -257,11 +257,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOo-6v-VP4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-husky" translatesAutoresizingMaskIntoConstraints="NO" id="vJW-0x-ZOB">
-                                        <rect key="frame" x="122.5" y="56" width="75" height="75"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-logo" translatesAutoresizingMaskIntoConstraints="NO" id="vJW-0x-ZOB">
+                                        <rect key="frame" x="110" y="56" width="100" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="BgO-V0-7kj"/>
-                                            <constraint firstAttribute="width" constant="75" id="vJR-GQ-XXV"/>
+                                            <constraint firstAttribute="width" constant="100" id="vJR-GQ-XXV"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTy-8i-CvE" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
@@ -634,6 +634,6 @@ We will send you your new password!</string>
     </scenes>
     <resources>
         <image name="ico-forgot" width="253" height="516"/>
-        <image name="ico-husky" width="473" height="516"/>
+        <image name="ico-logo" width="794" height="599"/>
     </resources>
 </document>

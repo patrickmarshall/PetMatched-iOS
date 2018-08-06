@@ -11,3 +11,9 @@ import Foundation
 protocol SettingDelegate {
     func changeValue(tag: Int, value: String)
 }
+
+protocol SettingProfileDelegate {
+    func pickerAction(tag: Int)
+    func changeImage()
+    func changeValue(tag: Int, value: String)
+}

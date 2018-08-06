@@ -278,30 +278,4 @@ extension InputProfileVC: UIImagePickerControllerDelegate, UINavigationControlle
         }
         present(controller, animated: true, completion: nil)
     }
-    
-//    func setUrlImage(urlImage:String) {
-//        self.urlImage = urlImage
-//        self.profileImage.contentMode = .scaleAspectFill
-//        self.profileImage.layer.masksToBounds = true
-//        self.profileImage.clipsToBounds = true
-//        self.profileImage.setLoad(isLoad: true, style: .white)
-//        self.profileImage.sd_setImage(with: URL(string: urlImage)) { (img, err, cache, url) in
-//            self.profileImage.setLoad(isLoad: false, style: .white)
-//            if err == nil {
-//                self.profileImage.image = img
-//            } else {
-//                self.profileImage.image = UIImage(named: "dummyPlaceholder")
-//            }
-//        }
-//    }
-//
-//    func doUploadToCloud(image:UIImage) {
-//        UploadImage.doUploadImage(image: self.profileImage.image!) { (result, error) in
-//            if error != "" {
-//                self.showMessage(message: error, error: true)
-//            } else {
-//                self.setUrlImage(urlImage: result)
-//            }
-//        }
-//    }
 }

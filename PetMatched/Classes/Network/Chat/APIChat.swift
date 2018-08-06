@@ -36,13 +36,13 @@ public enum APIChat: URLRequestConvertible {
     var path: String {
         switch self {
         case .getRoomList():
-            return "chat/room"
+            return "pet/rooms"
         case .getChatList(let roomid):
-            return "chat/room/\(roomid)"
+            return "pet/rooms/\(roomid)"
         case .startChat(_):
-            return "chat/start"
-        case .sendMessage(_, _, _):
-            return "chat/messages"
+            return "pet/rooms"
+        case .sendMessage(_, _, let roomid):
+            return "pet/rooms/\(roomid)"
         }
     }
     

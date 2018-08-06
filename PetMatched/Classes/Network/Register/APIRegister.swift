@@ -17,7 +17,6 @@ public enum APIRegister: URLRequestConvertible {
     case inputPet(name: String, dob: String, sex: String, furcolor: String, weight: Int, breed: Int, photo: String, cert: String, desc: String)
 //    case inputVaccine(vaccines: [Int])
     case inputVaccine(vaccines: String)
-    case inputPreferences(breed: Int, city: Int, ageMin: Int, ageMax: Int)
     case getProvince()
     case getCity(province: String)
     case getVaccine(variant: String)
@@ -31,8 +30,6 @@ public enum APIRegister: URLRequestConvertible {
         case .inputPet(_, _, _, _, _, _, _, _, _):
             return .post
         case .inputVaccine(_):
-            return .post
-        case .inputPreferences(_, _, _, _):
             return .post
         case .getProvince():
             return .get
@@ -49,13 +46,11 @@ public enum APIRegister: URLRequestConvertible {
     var path: String {
         switch self {
         case .inputProfile(_, _, _, _, _):
-            return "register/user-profile"
+            return "user/profile"
         case .inputPet(_, _, _, _, _, _, _, _, _):
-            return "register/pet"
+            return "pet"
         case .inputVaccine(_):
-            return "register/vaccine"
-        case .inputPreferences(_, _, _, _):
-            return "register/preference"
+            return "pet/vaccine"
         case .getProvince():
             return "provinces"
         case .getCity(let province):
@@ -76,8 +71,6 @@ public enum APIRegister: URLRequestConvertible {
             return ["name":name, "pet_dob":dob, "pet_sex":sex, "furcolor":furcolor, "weight":weight, "breed":breed, "pet_photo":photo, "breed_cert":cert, "pet_desc":desc]
         case .inputVaccine(let vaccines):
             return ["vaccines":vaccines]
-        case .inputPreferences(let breed, let city, let ageMin, let ageMax):
-            return ["breed_pref":breed, "city_pref":city, "age_min":ageMin, "age_max":ageMax]
         case .getProvince():
             return ["":""]
         case .getCity(_):
